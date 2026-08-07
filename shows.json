@@ -664,6 +664,32 @@
       ],
       "status": "go",
       "addedAt": "2026-08-07T15:25:30Z"
+    },
+    {
+      "title": "Circa: Wolf",
+      "category": "Magic, Circus & Spectacle",
+      "venue": "The Lafayette, Underbelly's Circus Hub on the Meadows",
+      "time": "18:20",
+      "dates": "7–29 Aug (not 12, 18, 25)",
+      "acclaim": "5★ One4Review · Scotsman critics' best of the 2025 Fringe · reviewed by The Stage",
+      "why": "Ten Circa acrobats moving as a pack — all instinct and trust — then exploding into gasp-out-loud lifts, jumps and aerials over Ori Lichtik's primal DJ rhythms. The purest hit of the Mythos: Ragnarök spectacle itch at this Fringe.",
+      "link": "https://www.edfringe.com/tickets/whats-on/circa-wolf",
+      "reviews": [
+        {
+          "outlet": "One4Review 5★",
+          "url": "https://one4review.co.uk/2025/08/circa-wolf-5/"
+        },
+        {
+          "outlet": "The Stage",
+          "url": "https://www.thestage.co.uk/reviews/circa-wolf-review-underbelly-circus-hub-on-the-meadows-edinburgh"
+        },
+        {
+          "outlet": "The Scotsman",
+          "url": "https://www.scotsman.com/arts-and-culture/edinburgh-festivals/edinburgh-fringe-dance-physical-theatre-reviews-circa-wolf-a-teen-odyssey-pickled-republic-5256014"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-07T17:20:00Z"
     }
   ],
   "doNotReadd": [
