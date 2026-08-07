@@ -1,0 +1,37 @@
+# Installed on the droplet as /etc/systemd/system/fringe-api.service
+#
+# Records per-show booked/seen marks for fringe.jmckalex.org. nginx proxies
+# /api/ to this; it listens on loopback only and is never exposed directly.
+
+[Unit]
+Description=Fringe shortlist status API
+After=network.target
+
+[Service]
+Type=simple
+User=web
+Group=web
+WorkingDirectory=/srv/fringe
+ExecStart=/usr/bin/node /srv/fringe/status-api.js
+Restart=on-failure
+RestartSec=5
+
+Environment=PORT=3003
+Environment=FRINGE_REPO=/srv/fringe
+Environment=FRINGE_STATUS=/var/lib/fringe/status.json
+Environment=FRINGE_OUT=/var/www/fringe/index.html
+
+# The shared write key lives in a 0600 file, NOT in an Environment= line here:
+# systemd exposes Environment= values to any local user via `systemctl show`,
+# regardless of this unit file's own permissions.
+EnvironmentFile=/etc/fringe/api.env
+
+# It only ever needs to write the store and the rendered page.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/fringe /var/www/fringe
+
+[Install]
+WantedBy=multi-user.target
