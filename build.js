@@ -115,19 +115,8 @@ const updatedStamp = buildDate.toLocaleString('en-GB', { timeZone: 'Europe/Londo
 const clientScript = `
 (function () {
   'use strict';
-  var API = '/api', KEY_STORE = 'fringe-key';
-
-  // A key handed over once as ?key=... is kept locally and stripped from the
-  // URL, so it does not linger in history or leak through a Referer header.
-  try {
-    var u = new URL(location.href);
-    if (u.searchParams.get('key')) {
-      localStorage.setItem(KEY_STORE, u.searchParams.get('key'));
-      u.searchParams.delete('key');
-      history.replaceState(null, '', u.pathname + (u.search || '') + u.hash);
-    }
-  } catch (e) {}
-  function key() { try { return localStorage.getItem(KEY_STORE) || ''; } catch (e) { return ''; } }
+  var API = '/api';
+  var who = null;
 
   var note = document.createElement('div');
   note.className = 'toast';
@@ -176,21 +165,88 @@ const clientScript = `
   function save(slug, state) {
     return fetch(API + '/status/' + encodeURIComponent(slug), {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Fringe-Key': key() },
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
       body: JSON.stringify({ state: state })
     }).then(function (r) {
       if (r.ok) return r.json();
+      if (r.status === 401) { setUser(null); showLogin(); throw new Error('Please sign in to change this.'); }
       return r.json().catch(function () { return {}; }).then(function (j) {
-        throw new Error(r.status === 401 ? 'Not authorised — open this page once with ?key=...' : (j.error || ('HTTP ' + r.status)));
+        throw new Error(j.error || ('HTTP ' + r.status));
       });
     });
   }
+
+  // --- sign in -------------------------------------------------------------
+
+  var bar = document.createElement('div');
+  bar.className = 'authbar';
+  document.body.appendChild(bar);
+
+  function setUser(u) {
+    who = u;
+    document.body.classList.toggle('signed-in', Boolean(u));
+    bar.innerHTML = u
+      ? '<span class="whoami">Signed in as ' + u + '</span> <button type="button" class="linkish" data-act="logout">Sign out</button>'
+      : '<button type="button" class="linkish" data-act="login">Sign in to mark shows</button>';
+  }
+
+  function showLogin() {
+    if (bar.querySelector('form')) return bar.querySelector('input').focus();
+    bar.innerHTML =
+      '<form class="login" autocomplete="on">' +
+      '<input name="user" placeholder="username" autocomplete="username" required>' +
+      '<input name="password" type="password" placeholder="password" autocomplete="current-password" required>' +
+      '<button type="submit">Sign in</button>' +
+      '<button type="button" class="linkish" data-act="cancel">Cancel</button>' +
+      '<span class="err" hidden></span>' +
+      '</form>';
+    bar.querySelector('input').focus();
+  }
+
+  bar.addEventListener('click', function (ev) {
+    var act = ev.target.dataset && ev.target.dataset.act;
+    if (act === 'login') showLogin();
+    if (act === 'cancel') setUser(who);
+    if (act === 'logout') {
+      fetch(API + '/logout', { method: 'POST', credentials: 'same-origin' })
+        .then(function () { setUser(null); });
+    }
+  });
+
+  bar.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var form = ev.target;
+    var err = form.querySelector('.err');
+    var btn = form.querySelector('button[type=submit]');
+    btn.disabled = true;
+    err.hidden = true;
+    fetch(API + '/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify({ user: form.user.value, password: form.password.value })
+    }).then(function (r) {
+      return r.json().then(function (j) {
+        if (!r.ok) throw new Error(j.error || 'sign in failed');
+        return j;
+      });
+    }).then(function (j) {
+      setUser(j.user);
+    }).catch(function (e) {
+      btn.disabled = false;
+      err.textContent = e.message;
+      err.hidden = false;
+    });
+  });
 
   document.addEventListener('click', function (ev) {
     var btn = ev.target.closest && ev.target.closest('.mark');
     if (!btn) return;
     var card = btn.closest('.card');
     if (!card || card.dataset.busy) return;
+
+    if (!who) return showLogin();
 
     var was = card.dataset.state || '';
     var next = was === btn.dataset.mark ? null : btn.dataset.mark;
@@ -214,6 +270,13 @@ const clientScript = `
       if (m && m.state && m.state !== card.dataset.state) apply(card, m.state);
     });
   }).catch(function () { /* offline or API down: the rendered page still stands */ });
+
+  // Establish who we are. A six-month cookie means this is usually already
+  // settled and the sign-in prompt never appears again on this device.
+  fetch(API + '/me', { credentials: 'same-origin' })
+    .then(function (r) { return r.json(); })
+    .then(function (j) { setUser(j.user); })
+    .catch(function () { setUser(null); });
 })();
 `;
 
@@ -279,6 +342,25 @@ const html = `<!DOCTYPE html>
   .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
              clip:rect(0 0 0 0); white-space:nowrap; border:0; }
   [hidden] { display:none !important; }
+  /* Until someone signs in the buttons would only ever refuse, so keep them
+     out of the way rather than dangling as bait. */
+  body:not(.signed-in) .marks { display:none; }
+  body:not(.signed-in) .card > .why { margin-bottom:.45rem; }
+
+  .authbar { position:fixed; right:.8rem; bottom:.8rem; z-index:11;
+             background:var(--card); border:1px solid var(--line); border-radius:9px;
+             padding:.5rem .7rem; box-shadow:0 3px 12px rgba(29,26,47,.14);
+             font:.82rem/1.3 Verdana, sans-serif; max-width:calc(100vw - 1.6rem); }
+  .authbar .whoami { color:var(--muted); }
+  .linkish { background:none; border:0; padding:0; margin:0 0 0 .4rem;
+             color:var(--accent); font:inherit; cursor:pointer; text-decoration:underline; }
+  .login { display:flex; flex-wrap:wrap; gap:.35rem; align-items:center; }
+  .login input { font:inherit; padding:.35rem .45rem; min-width:8.5rem;
+                 border:1px solid var(--line); border-radius:6px; background:var(--paper); color:var(--ink); }
+  .login button[type=submit] { font:inherit; padding:.38rem .7rem; cursor:pointer;
+                               background:var(--accent); color:#fff; border:0; border-radius:6px; }
+  .login .err { flex-basis:100%; color:#a3282f; }
+
   .toast { position:fixed; left:50%; bottom:1.2rem; transform:translateX(-50%);
            max-width:min(30rem, calc(100vw - 2rem)); z-index:10;
            background:var(--ink); color:#f4f0ff; font:.85rem/1.4 Verdana, sans-serif;

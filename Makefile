@@ -111,11 +111,12 @@ dev:
 	@mkdir -p $(DEV_DIR)
 	@[ -f $(DEV_DIR)/status.json ] || echo '{}' > $(DEV_DIR)/status.json
 	@FRINGE_STATUS=$(PWD)/$(DEV_DIR)/status.json FRINGE_OUT=$(PWD)/$(DEV_DIR)/index.html node build.js
+	@[ -f $(DEV_DIR)/users.json ] || printf 'dev' | node make-user.js dev $(DEV_DIR)/users.json
 	@echo ""
-	@echo "  http://localhost:$(DEV_PORT)/?key=devkey"
-	@echo "  (open that once — the key is remembered and stripped from the URL)"
+	@echo "  http://localhost:$(DEV_PORT)/     sign in as  dev / dev"
 	@echo ""
-	@FRINGE_KEY=devkey PORT=$(DEV_PORT) FRINGE_REPO=$(PWD) \
+	@FRINGE_SECRET=dev-secret-not-for-production PORT=$(DEV_PORT) FRINGE_REPO=$(PWD) \
+	  FRINGE_USERS=$(PWD)/$(DEV_DIR)/users.json \
 	  FRINGE_STATUS=$(PWD)/$(DEV_DIR)/status.json FRINGE_OUT=$(PWD)/$(DEV_DIR)/index.html \
 	  node status-api.js
 
