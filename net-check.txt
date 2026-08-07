@@ -1,0 +1,57 @@
+VERDICT: Partly fixed. edfringe.com IS now reachable (200) and so are festmag.com
+and ntfy.sh. scotsman.com gets through the proxy but Cloudflare bot-challenges it
+(HTTP/2 403, cf-mitigated: challenge). chortle.co.uk is still blocked at the proxy
+allowlist itself (CONNECT tunnel failed, 403) — add www.chortle.co.uk to the
+environment's Custom domain list.
+
+Run: 2026-08-07 17:10 UTC, Claude Code cloud environment.
+Command: curl -sS -m 20 -o /dev/null -w "%{http_code}\n" <url> 2>&1
+
+--- https://www.edfringe.com
+200
+--- https://www.scotsman.com
+403
+--- https://festmag.com
+200
+--- https://www.chortle.co.uk
+curl: (56) CONNECT tunnel failed, response 403
+000
+--- https://ntfy.sh
+200
+
+=== scotsman.com header probe (curl -sSI) ===
+HTTP/1.1 200 Connection Established
+
+HTTP/2 403
+date: Fri, 07 Aug 2026 17:10:54 GMT
+content-type: text/html; charset=UTF-8
+content-length: 5364
+cf-mitigated: challenge
+server: cloudflare
+server-timing: chlray;desc="a277e5bdcda8d6f4"
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+
+Reading: the proxy tunnel to scotsman.com SUCCEEDS ("200 Connection Established"),
+so the allowlist is fine for that host. The 403 comes from Cloudflare's bot
+challenge on the origin, aimed at the client (no browser UA / no JS). That is a
+site-side block, not a proxy block. Realistically not fixable from the allowlist;
+Scotsman verdicts will keep having to come from search snippets or other outlets.
+
+=== chortle.co.uk verbose (proxy layer) ===
+* Uses proxy env variable https_proxy == 'http://127.0.0.1:44753'
+* Establish HTTP proxy tunnel to www.chortle.co.uk:443
+> CONNECT www.chortle.co.uk:443 HTTP/1.1
+> Proxy-Connection: Keep-Alive
+< HTTP/1.1 403 Forbidden
+* CONNECT tunnel failed, response 403
+curl: (56) CONNECT tunnel failed, response 403
+
+Reading: this one IS the allowlist — the 403 is on CONNECT, before any TLS to
+Chortle. www.chortle.co.uk needs adding to the environment's Custom domain list
+at claude.ai/code (cloud icon > gear on the environment).
+
+Not tested here, but worth adding to the allowlist at the same time if they are
+not already: thestage.co.uk, thetimes.co.uk, telegraph.co.uk, theskinny.co.uk,
+list.co.uk, theatreweekly.com, broadwaybaby.com, comedy.co.uk, timeout.com.
+(theguardian.com deliberately stays OFF the list — see CLAUDE.md.)
