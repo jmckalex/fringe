@@ -2,9 +2,16 @@
 node_modules/
 *.log
 
-# Never commit credentials. The PAT that lets Cowork push lives in Cowork's
-# own config, never in this repo — this is a public repo and scrapers harvest
-# new commits within seconds.
+# Never commit credentials. This is a PUBLIC repo — scrapers harvest new
+# commits within seconds, so anything that lands here is compromised at once.
+#
+# PAT is a local scratch copy of the GitHub token kept in this directory. The
+# earlier patterns did not match it: *.pat needs a .pat extension and *token*
+# needs "token" in the name, so a file called plainly "PAT" slipped past both.
+PAT
+PAT.*
+pat.txt
 .env
 *.pat
 *token*
+*.secret

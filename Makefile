@@ -34,9 +34,16 @@ FILES := index.html
 #   --chmod                set sane permissions (rw for owner, r for group/world)
 #   --rsync-path="sudo rsync"  run rsync as root on the droplet so we can
 #                              write into /var/www and apply --chown
+#   --exclude              belt-and-braces: FILES is an explicit list, so
+#                          credentials cannot be uploaded anyway, but this
+#                          holds even if someone later switches to a wildcard
 RSYNC_FLAGS := -avz \
                --chown=$(REMOTE_OWNER) \
                --chmod=F644,D755 \
+               --exclude='PAT*' \
+               --exclude='*.pat' \
+               --exclude='.env' \
+               --exclude='*token*' \
                --rsync-path="sudo rsync"
 
 .PHONY: help build check push publish deploy-log sync dry-run preview ls tail-log provision
