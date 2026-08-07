@@ -95,6 +95,7 @@ const card = (show, isCopy = false) => {
           <h3><a href="${esc(ticketLink(show))}" target="_blank" rel="noopener">${esc(show.title)}</a></h3>
           <div class="badges">
             ${isNew(show) ? '<span class="badge new">New</span>' : ''}
+            ${show.wildcard ? '<span class="badge wildcardb" title="Outside the usual criteria — included on merit">Wildcard</span>' : ''}
             ${show.limited ? `<span class="badge limited">${esc(show.limited)}</span>` : ''}
             ${state === 'maybe' ? '<span class="badge maybeb">Maybe</span>' : ''}
             ${state === 'booked' ? '<span class="badge bookedb">Booked</span>' : ''}
@@ -434,6 +435,7 @@ const html = `<!DOCTYPE html>
   /* Bottom margin guarantees breathing room above the marks row even when the
      card is full and the auto margin below resolves to zero. */
   .why { margin:.45rem 0 .8rem; font-size:.92rem; }
+  .badge.wildcardb { background:#dcecea; color:#1f5c56; }
   .badge.maybeb { background:#fbf0d6; color:#8a6413; }
   .badge.bookedb { background:#e5dcf2; color:#54317f; }
   /* Maybe is the one mark that does NOT quieten the card: it means still to be

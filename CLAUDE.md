@@ -53,6 +53,11 @@ separate stylesheet. All interpolated values pass through `esc()`.
   reports titles whose derived URL 404s so a `link` can be set.
 - `reviews` — `[{outlet, url}]`, rendered as links beside the acclaim line. A bare
   `reviewUrl` string is still honoured.
+- `wildcard` — `true` for a show the sweep included *outside* the usual taste
+  categories, on exceptional merit. Renders a Wildcard badge, so an outside-the-net
+  pick never arrives disguised as a normal recommendation. The sweep may add at
+  most one per run, and only for two-outlet 5★, a serious award, or genuine
+  intellectual substance.
 - `doNotReadd[]` — `{title, reason}` for shows that must never come back. Consult
   this before adding anything.
 
