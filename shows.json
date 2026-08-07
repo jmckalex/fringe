@@ -221,7 +221,13 @@
       "acclaim": "Fest pick",
       "why": "Four decades of political storytelling — as close to spoken word as stand-up gets.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "Broadway Baby",
+          "url": "https://broadwaybaby.com/shows/mark-thomas-40-in-stand-up-years/833334"
+        }
+      ]
     },
     {
       "title": "Simon Amstell: I Love It Here",
@@ -257,7 +263,13 @@
       "why": "\"Hilarious, shambolic\" song-driven show about Isabel Perón — smart, musical, very Fringe.",
       "status": "go",
       "addedAt": "2026-08-07",
-      "link": "https://www.edfringe.com/tickets/whats-on/evita-too"
+      "link": "https://www.edfringe.com/tickets/whats-on/evita-too",
+      "reviews": [
+        {
+          "outlet": "Time Out 4★",
+          "url": "https://www.timeout.com/london/theatre/sh-t-theatre-evita-too-review-1"
+        }
+      ]
     },
     {
       "title": "Salty Brine: How Strange It Is",
@@ -302,7 +314,17 @@
       "acclaim": "Scotsman pick",
       "why": "A fully improvised musical from an audience-shouted title. Reliably joyous.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "The Skinny",
+          "url": "https://www.theskinny.co.uk/festivals/edinburgh-fringe/theatre/baby-wants-candy"
+        },
+        {
+          "outlet": "FringeReview",
+          "url": "https://fringereview.co.uk/review/edinburgh-fringe/2025/baby-wants-candy-2/"
+        }
+      ]
     },
     {
       "title": "Kristen Schaal: The Legend of Crystal Shell",
@@ -379,7 +401,13 @@
       "acclaim": "Global hit",
       "why": "Urban circus: BMX, basketball, breakdancing, beatboxing, drumming. Scratches the Mythos spectacle itch.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "The Stage",
+          "url": "https://www.thestage.co.uk/reviews/360-allstars-review-assembly-hall-edinburgh-urban-circus"
+        }
+      ]
     },
     {
       "title": "Mythos: Ragnarök",
@@ -408,7 +436,13 @@
       "why": "\"Fist-thumping, heart-wrenching\" spoken word backed by a live band.",
       "status": "go",
       "limited": "13, 20, 27 Aug only",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "All Edinburgh Theatre",
+          "url": "https://www.alledinburghtheatre.com/loud-poets-i-am-loud-scottish-storytelling-centre-edfringe-2025-review/"
+        }
+      ]
     },
     {
       "title": "Adding Up America: Solving the Race Equation",
@@ -430,7 +464,17 @@
       "acclaim": "Multi-award-winning (Charity Awards; Sheila McKechnie Change Makers Award)",
       "why": "LUNG's verbatim dance-theatre about suicides at HMP Woodhill, made with bereaved families — the closest thing at this Fringe to Punch's territory.",
       "status": "go",
-      "addedAt": "2026-08-07T11:11:00Z"
+      "addedAt": "2026-08-07T11:11:00Z",
+      "reviews": [
+        {
+          "outlet": "The Reviews Hub",
+          "url": "https://www.thereviewshub.com/woodhill-edinburgh-fringe-2023-summerhall/"
+        },
+        {
+          "outlet": "Everything Theatre",
+          "url": "https://everything-theatre.co.uk/2023/08/review-woodhill-edfringe/"
+        }
+      ]
     },
     {
       "title": "The Horse of Jenin",
@@ -486,7 +530,17 @@
       "acclaim": "\"Breathtaking\" — The Scotsman",
       "why": "Gravity & Other Myths' acrobatic meditation on mastery and the 10,000-hours rule — big-hearted, family-friendly spectacle.",
       "status": "go",
-      "addedAt": "2026-08-07T11:11:00Z"
+      "addedAt": "2026-08-07T11:11:00Z",
+      "reviews": [
+        {
+          "outlet": "The Scotsman 5★",
+          "url": "https://www.scotsman.com/arts-and-culture/edinburgh-festivals/dance-physical-theatre-circus-reviews-ten-thousand-hours-ari-the-spirit-of-korea-blips-4735478"
+        },
+        {
+          "outlet": "Theatre Weekly",
+          "url": "https://theatreweekly.com/edinburgh-review-ten-thousand-hours-at-assembly-hall/"
+        }
+      ]
     },
     {
       "title": "James Rowland: Team Viking",
