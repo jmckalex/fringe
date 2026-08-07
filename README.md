@@ -1,6 +1,6 @@
 # Fringe 2026 Shortlist — single source of truth
 
-A tiny site that lists Jason & Julia's Edinburgh Fringe 2026 recommendations, grouped
+A tiny site that lists Julia & Jason's Edinburgh Fringe 2026 recommendations, grouped
 by category. `shows.json` is the data (the single source of truth); `build.js`
 regenerates `index.html` from it. Claude's hourly review-watch task updates the repo
 when new top-rated, taste-matching shows appear in the press; the web server just

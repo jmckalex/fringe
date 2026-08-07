@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A single static page listing Jason & Julia's Edinburgh Fringe 2026 recommendations,
+A single static page listing Julia & Jason's Edinburgh Fringe 2026 recommendations,
 grouped by category. `shows.json` is the single source of truth; `build.js`
 regenerates `index.html` from it. Served from a DigitalOcean droplet at
 <https://fringe.jmckalex.org>.
