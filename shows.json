@@ -620,6 +620,50 @@
       ],
       "status": "go",
       "addedAt": "2026-08-07T14:40:00Z"
+    },
+    {
+      "title": "Bog Witch",
+      "category": "Visual & Inventive Theatre",
+      "venue": "Traverse Theatre (Theatre 1)",
+      "time": "times vary",
+      "dates": "2–30 Aug (not Mons)",
+      "acclaim": "4★ The Guardian · 4★ The Stage",
+      "why": "Bryony Kimmings back at the Fringe after seven years, on uprooting her family to a permaculture homestead. “Haunting and hilarious… a climate reckoning of both cosmic and quotidian proportions” — big-tech visual theatre with Lewis Gibson sound design that makes a storm scene startlingly visceral.",
+      "link": "https://www.traverse.co.uk/whats-on/bog-witch",
+      "reviews": [
+        {
+          "outlet": "The Guardian 4★",
+          "url": "https://www.theguardian.com/stage/2026/aug/07/edinburgh-festival-2026-10-terrific-shows-weve-already-reviewed"
+        },
+        {
+          "outlet": "Time Out",
+          "url": "https://www.timeout.com/edinburgh/theatre/bog-witch-review"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-07T15:25:00Z"
+    },
+    {
+      "title": "Sam Nicoresti: Baby Doomer",
+      "category": "Comedy & Storytelling",
+      "venue": "Summerhall",
+      "time": "check listing",
+      "dates": "6–31 Aug",
+      "acclaim": "5★ The Telegraph · 5★ The List · Edinburgh Comedy Award Best Show 2025",
+      "why": "Angry, absurd and political stand-up built round a misgendering in a department-store changing room — “uproariously funny, life-affirming, dumb and insightful all at once”. Exactly the weird comedy with substance underneath that they go for.",
+      "link": "https://www.edfringe.com/tickets/whats-on/sam-nicoresti-baby-doomer",
+      "reviews": [
+        {
+          "outlet": "The Guardian round-up",
+          "url": "https://www.theguardian.com/stage/2026/aug/07/edinburgh-festival-2026-10-terrific-shows-weve-already-reviewed"
+        },
+        {
+          "outlet": "Binge Fringe 5★",
+          "url": "https://www.bingefringe.com/2025/08/03/review-sam-nicoresti-baby-doomer-edfringe-2025-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85/"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-07T15:25:30Z"
     }
   ],
   "doNotReadd": [
