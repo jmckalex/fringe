@@ -561,7 +561,7 @@ ${droppedSection}
 </main>
 <footer>
   Ticket links search <a href="https://tickets.edfringe.com" target="_blank" rel="noopener">edfringe.com</a>.
-  Maintained automatically — an hourly review sweep (8am–8pm, through 12 Aug) adds newly acclaimed shows that match Julia &amp; Jason's tastes.
+  Maintained automatically — an hourly review sweep (7am–midnight, through 12 Aug) adds newly acclaimed shows that match Julia &amp; Jason's tastes.
   <br>Icons by <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome</a> (CC BY 4.0).
 </footer>
 <script>${clientScript}</script>

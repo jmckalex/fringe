@@ -67,6 +67,13 @@ and `dropped` move a card out of its category — `maybe` and `booked` stay put,
 since both are still shows you might go to. `maybe` is also the one mark that
 does not quieten the card: undecided means still needing attention.
 
+**Whose taste this is.** Julia and Jason, and the sharpest signals are not the
+category names but these: plays like Tom Stoppard's *Arcadia*, which they both
+love — wit and ideas in the same breath, where the intellectual content *is* the
+drama; Katherine Ryan's comedy, sharp and unsentimental; *Gilmore Girls*, for
+fast allusive dialogue with warmth under it. And a firm negative: **nothing
+whimsical or twee**. Warmth is welcome, cosiness without edge is not.
+
 **On the no-clowns rule.** Exclude a show only when clowning *is what the show is*
 — a clown persona piece, red-nose or whiteface character comedy, a bouffon or
 clown-troupe show. Do not exclude one merely because a blurb mentions clowning,
