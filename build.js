@@ -125,7 +125,11 @@ const html = `<!DOCTYPE html>
   main { max-width:62rem; margin:0 auto; padding:1.2rem 1.2rem 3rem; }
   h2 { font-size:1.25rem; color:var(--accent); border-bottom:2px solid var(--line); padding-bottom:.35rem; margin:2.2rem 0 1rem; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(19rem, 1fr)); gap:.9rem; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1rem 1.1rem; box-shadow:0 1px 3px rgba(29,26,47,.06); }
+  /* Column flex so the marks row can be pushed to the foot of the card: the
+     grid already stretches cards in a row to equal height, but without this the
+     buttons sit wherever the text happens to end, at a different height in
+     every card. */
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1rem 1.1rem; box-shadow:0 1px 3px rgba(29,26,47,.06); display:flex; flex-direction:column; }
   .card-head { display:flex; justify-content:space-between; gap:.5rem; align-items:baseline; flex-wrap:wrap; }
   .card h3 { margin:0; font-size:1.05rem; line-height:1.3; }
   .card h3 a { color:var(--ink); text-decoration:none; border-bottom:1px dotted var(--accent); }
@@ -137,7 +141,9 @@ const html = `<!DOCTYPE html>
   .badge.seenb { background:#e8e6ef; color:var(--muted); }
   .meta { margin:.45rem 0 0; font-size:.85rem; color:var(--muted); font-family:Verdana, sans-serif; }
   .acclaim { margin:.5rem 0 0; font-size:.85rem; color:var(--gold); font-weight:700; }
-  .why { margin:.45rem 0 0; font-size:.92rem; }
+  /* Bottom margin guarantees breathing room above the marks row even when the
+     card is full and the auto margin below resolves to zero. */
+  .why { margin:.45rem 0 .8rem; font-size:.92rem; }
   .badge.bookedb { background:#e5dcf2; color:#54317f; }
   .seen-section { opacity:.75; }
   .card.seen { background:#f3f1ee; }
@@ -149,7 +155,9 @@ const html = `<!DOCTYPE html>
   .card.booked .acclaim { color:#b3a281; }
   .card.booked .why, .card.booked .meta { color:var(--muted); }
 
-  .marks { display:flex; gap:.4rem; margin:.7rem 0 0; padding-top:.6rem; border-top:1px solid var(--line); }
+  /* margin-top:auto absorbs the leftover height, pinning this row to the foot
+     of every card so the buttons line up across a row regardless of text. */
+  .marks { display:flex; gap:.4rem; margin:auto 0 0; padding-top:.6rem; border-top:1px solid var(--line); }
   .mark { display:inline-flex; align-items:center; justify-content:center; gap:.3rem;
           width:2rem; height:2rem; padding:0; cursor:pointer;
           background:transparent; border:1px solid var(--line); border-radius:7px;
