@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+*.log
+
+# Never commit credentials. The PAT that lets Cowork push lives in Cowork's
+# own config, never in this repo — this is a public repo and scrapers harvest
+# new commits within seconds.
+.env
+*.pat
+*token*
