@@ -1,0 +1,91 @@
+ntfy reachability diagnostic
+Run: scheduled Fringe review watch, cloud environment (Claude Code on the web)
+Time: 2026-08-07 16:25 BST (Europe/London)
+
+VERDICT: ntfy.sh is NOT reachable from this cloud environment. The container's
+outbound HTTPS goes through a mandatory agent proxy whose network policy denies
+CONNECT to any host outside its allowlist. curl is present and working; the
+block is a policy denial at the proxy, not a curl or DNS problem. github.com is
+allowlisted (that is how git push works), example.com and ntfy.sh are not.
+
+ONE REDACTION, deliberate: this repo is public and a full ntfy topic URL is a
+capability secret -- anyone who knows it can post to both phones. The topic slug
+below is written as fringe-*** instead of in full. Nothing else is altered; the
+diagnostic content is unchanged, since what matters is the "ntfy.sh:443 -> 403"
+result rather than the slug. Removing the redaction would mean publishing the
+topic to a public repo permanently, via git history.
+
+--- combined output, verbatim (topic slug redacted as noted) ---
+
+=== command -v curl ===
+/usr/bin/curl
+
+=== 1) POST to ntfy.sh/fringe-*** ===
+curl: (56) CONNECT tunnel failed, response 403
+
+HTTP:000
+exit:56
+
+=== 2) https://example.com ===
+curl: (56) CONNECT tunnel failed, response 403
+HTTP:000
+exit:56
+
+=== 3) https://github.com ===
+HTTP:400
+exit:0
+
+--- end combined output ---
+
+Supporting evidence from the proxy's own status endpoint
+(curl -sS "$HTTPS_PROXY/__agentproxy/status"):
+
+  "enabled": true,
+  "port": 42811,
+  "recentRelayFailures": [
+    {
+      "ts": "2026-08-07T15:25:13.430Z",
+      "kind": "connect_rejected",
+      "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)",
+      "host": "ntfy.sh:443"
+    },
+    {
+      "ts": "2026-08-07T15:25:13.771Z",
+      "kind": "connect_rejected",
+      "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)",
+      "host": "example.com:443"
+    }
+  ]
+
+The proxy names the denial explicitly ("policy denial"), and names ntfy.sh:443
+as the rejected host. So this is settled: it is the environment's network
+policy, and no amount of retrying, changing curl flags, or using a different
+HTTP client from inside this container will change it.
+
+Notes on the two non-ntfy probes:
+
+- example.com -> 403 at CONNECT. Same denial. Confirms the block is a general
+  allowlist, not something specific to ntfy.sh.
+- github.com -> HTTP 400 with exit 0. The connection succeeded (github.com is
+  allowlisted); the 400 is just the proxied endpoint's answer to a bare GET.
+  Reaching it at all is the point -- it is why git fetch/push work.
+
+WHAT THIS MEANS FOR THE HOURLY WATCH
+
+The PushNotification tool still works -- it does not go through this proxy --
+so notifications continue to reach the phone and inbox. It is only the ntfy leg
+(step b, "reaches both phones") that is dead in the cloud runs. If the ntfy fan-out
+to Julia's phone matters, that leg needs one of:
+
+  1. Add ntfy.sh to the environment's network allowlist, if the environment's
+     network policy permits an egress allowlist. This is the direct fix.
+  2. Move the ntfy post to the droplet. The droplet already pulls from GitHub
+     every 10 minutes and has unrestricted outbound; fringe-deploy could post to
+     ntfy when HEAD moves, i.e. exactly when new shows land. This also has the
+     nice property of announcing shows only once they are actually live on the
+     site.
+  3. Accept PushNotification alone and drop the ntfy step from the prompt, if
+     Jason's phone is enough.
+
+Option 2 needs no environment changes and fits the existing git-as-transport
+design, so it is the one to reach for first.
