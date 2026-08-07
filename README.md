@@ -46,7 +46,7 @@ cron. `make sync` is a manual rsync override for when GitHub is unreachable.
 **A fine-grained Personal Access Token** so Cowork's scheduled task can push:
 
 - GitHub → Settings → Developer settings → Fine-grained tokens
-- Repository access: *only* `jmckalex/fringe-2026`
+- Repository access: *only* `jmckalex/fringe`
 - Permissions: Contents → Read and write (nothing else)
 - Expiration: 1 September 2026
 
