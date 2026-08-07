@@ -27,7 +27,7 @@ const slug = show => slugify(show.title);
 // Without one, fall back to the durable status recorded in shows.json.
 const stateOf = show => {
   const mark = marks[slug(show)];
-  if (mark && 'state' in mark) return mark.state === 'booked' || mark.state === 'seen' ? mark.state : null;
+  if (mark && 'state' in mark) return ['booked', 'seen', 'dropped'].includes(mark.state) ? mark.state : null;
   return show.status === 'seen' ? 'seen' : null;
 };
 
@@ -59,6 +59,7 @@ const isNew = show =>
 const ICON = {
   bookmark: '<svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg>',
   check: '<svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>',
+  xmark: '<svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>',
   gear: '<svg viewBox="0 0 512 512" aria-hidden="true"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>'
 };
 
@@ -96,6 +97,7 @@ const card = (show, isCopy = false) => {
             ${show.limited ? `<span class="badge limited">${esc(show.limited)}</span>` : ''}
             ${state === 'booked' ? '<span class="badge bookedb">Booked</span>' : ''}
             ${state === 'seen' ? '<span class="badge seenb">Seen it</span>' : ''}
+            ${state === 'dropped' ? '<span class="badge droppedb">Not for us</span>' : ''}
           </div>
         </div>
         <p class="meta">${esc(show.venue)}${show.time && show.time !== 'varies' ? ' · ' + esc(show.time) : ''} · ${esc(show.dates)}</p>
@@ -104,6 +106,7 @@ const card = (show, isCopy = false) => {
         <div class="marks">
           ${marker(show, 'booked', ICON.bookmark, 'Mark as booked')}
           ${marker(show, 'seen', ICON.check, 'Mark as seen')}
+          ${marker(show, 'dropped', ICON.xmark, 'Not interested')}
         </div>
       </article>`;
 };
@@ -112,7 +115,7 @@ const card = (show, isCopy = false) => {
 // hunted for among 40 cards. These are copies — the canonical card stays in its
 // category, and the client keeps the two in step.
 const recent = data.shows
-  .filter(s => isNew(s) && stateOf(s) !== 'seen')
+  .filter(s => isNew(s) && !['seen', 'dropped'].includes(stateOf(s)))
   .sort((a, b) => String(b.addedAt).localeCompare(String(a.addedAt)));
 
 const recentSection = `
@@ -123,14 +126,16 @@ const recentSection = `
 
 // Forty cards is a lot of thumb on a phone. The contents sit under the recent
 // band, and every heading links back up to them.
-const liveCount = cat => data.shows.filter(s => s.category === cat && stateOf(s) !== 'seen').length;
+const liveCount = cat => data.shows.filter(s => s.category === cat && !['seen', 'dropped'].includes(stateOf(s))).length;
 const seenCount = data.shows.filter(s => stateOf(s) === 'seen').length;
+const droppedCount = data.shows.filter(s => stateOf(s) === 'dropped').length;
 
 const toc = `
     <nav class="toc" id="toc" aria-label="Contents">
       <ul>
 ${data.categoryOrder.map((cat, i) => `        <li data-for="sec-${i}"${liveCount(cat) ? '' : ' hidden'}><a href="#sec-${i}">${esc(cat)} <span class="n">${liveCount(cat)}</span></a></li>`).join('\n')}
         <li data-for="sec-seen"${seenCount ? '' : ' hidden'}><a href="#sec-seen">Already seen <span class="n">${seenCount}</span></a></li>
+        <li data-for="sec-dropped"${droppedCount ? '' : ' hidden'}><a href="#sec-dropped">Not interested <span class="n">${droppedCount}</span></a></li>
       </ul>
     </nav>`;
 
@@ -138,7 +143,7 @@ ${data.categoryOrder.map((cat, i) => `        <li data-for="sec-${i}"${liveCount
 // to move a card when its state changes — including the last card leaving a
 // category, or the first one arriving in a previously empty "Already seen".
 const sections = data.categoryOrder.map((cat, i) => {
-  const shows = data.shows.filter(s => s.category === cat && stateOf(s) !== 'seen');
+  const shows = data.shows.filter(s => s.category === cat && !['seen', 'dropped'].includes(stateOf(s)));
   return `
     <section data-cat="${i}" id="sec-${i}"${shows.length ? '' : ' hidden'}>
       <h2><a href="#toc" class="backlink">${esc(cat)}</a></h2>
@@ -151,6 +156,19 @@ const seenSection = `
     <section class="seen-section" id="sec-seen"${seenShows.length ? '' : ' hidden'}>
       <h2><a href="#toc" class="backlink">Already seen (loved, but done)</a></h2>
       <div class="grid">${seenShows.map(s => card(s)).join('')}</div>
+    </section>`;
+
+// Rejected recommendations. Collapsed with <details> rather than removed: the
+// point is to get them out of the way, but they stay in shows.json so the sweep
+// never offers them again, and a wrong call can be undone.
+const droppedShows = data.shows.filter(s => stateOf(s) === 'dropped');
+const droppedSection = `
+    <section class="dropped-section" id="sec-dropped"${droppedShows.length ? '' : ' hidden'}>
+      <h2><a href="#toc" class="backlink">Not interested</a></h2>
+      <details>
+        <summary><span class="n">${droppedShows.length}</span> set aside</summary>
+        <div class="grid">${droppedShows.map(s => card(s)).join('')}</div>
+      </details>
     </section>`;
 
 const updatedStamp = buildDate.toLocaleString('en-GB', { timeZone: 'Europe/London', weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
@@ -188,6 +206,9 @@ const clientScript = `
         var n = entry.querySelector('.n');
         if (n) n.textContent = cards;
       }
+      var summaryCount = s.querySelector('summary .n');
+      if (summaryCount) { summaryCount.textContent = cards;
+      }
     });
   }
 
@@ -196,27 +217,28 @@ const clientScript = `
     // between sections. A copy of a seen show is hidden instead, since it has
     // no business sitting at the top of the page any more.
     if (card.dataset.copy) {
-      card.hidden = state === 'seen';
+      card.hidden = state === 'seen' || state === 'dropped';
       tidy();
       return;
     }
-    var target = state === 'seen'
-      ? document.querySelector('.seen-section .grid')
+    var target = state === 'seen' ? document.querySelector('.seen-section .grid')
+      : state === 'dropped' ? document.querySelector('.dropped-section .grid')
       : document.querySelector('main section[data-cat="' + card.dataset.cat + '"] .grid');
     if (target && card.parentElement !== target) target.appendChild(card);
     tidy();
   }
 
   function paint(card, state) {
-    card.classList.remove('booked', 'seen');
+    card.classList.remove('booked', 'seen', 'dropped');
     if (state) card.classList.add(state);
     card.dataset.state = state || '';
 
     var badges = card.querySelector('.badges');
-    var stale = badges.querySelector('.bookedb, .seenb');
+    var stale = badges.querySelector('.bookedb, .seenb, .droppedb');
     if (stale) stale.remove();
     if (state === 'booked') badges.insertAdjacentHTML('beforeend', '<span class="badge bookedb">Booked</span>');
     if (state === 'seen') badges.insertAdjacentHTML('beforeend', '<span class="badge seenb">Seen it</span>');
+    if (state === 'dropped') badges.insertAdjacentHTML('beforeend', '<span class="badge droppedb">Not for us</span>');
 
     Array.prototype.forEach.call(card.querySelectorAll('.mark'), function (b) {
       var on = b.dataset.mark === state;
@@ -433,6 +455,15 @@ const html = `<!DOCTYPE html>
      so it reads as a summary rather than another category. */
   .recent-section > h2 { color:var(--gold); border-bottom-color:#e8d6ac; }
   .recent-section .card { background:#fffdf7; border-color:#ecdcb4; }
+  .badge.droppedb { background:#efe6e6; color:#8a5a5a; }
+  /* Set-aside shows are collapsed out of the way; when opened they read as
+     archive rather than recommendation. */
+  .dropped-section { opacity:.7; }
+  .dropped-section .card { background:#f6f3f3; border-color:#e3d9d9; box-shadow:none; }
+  .dropped-section summary { cursor:pointer; color:var(--muted); font:.85rem/1.4 Verdana, sans-serif;
+                             padding:.3rem 0 .6rem; }
+  .dropped-section summary:hover { color:var(--accent); }
+  .mark-dropped.on { background:#9a6a6a; border-color:#9a6a6a; }
   .seen-section { opacity:.75; }
   .card.seen { background:#f3f1ee; }
 
@@ -515,6 +546,7 @@ ${recentSection}
 ${toc}
 ${sections}
 ${seenSection}
+${droppedSection}
 </main>
 <footer>
   Ticket links search <a href="https://tickets.edfringe.com" target="_blank" rel="noopener">edfringe.com</a>.

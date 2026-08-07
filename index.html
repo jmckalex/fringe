@@ -59,6 +59,15 @@
      so it reads as a summary rather than another category. */
   .recent-section > h2 { color:var(--gold); border-bottom-color:#e8d6ac; }
   .recent-section .card { background:#fffdf7; border-color:#ecdcb4; }
+  .badge.droppedb { background:#efe6e6; color:#8a5a5a; }
+  /* Set-aside shows are collapsed out of the way; when opened they read as
+     archive rather than recommendation. */
+  .dropped-section { opacity:.7; }
+  .dropped-section .card { background:#f6f3f3; border-color:#e3d9d9; box-shadow:none; }
+  .dropped-section summary { cursor:pointer; color:var(--muted); font:.85rem/1.4 Verdana, sans-serif;
+                             padding:.3rem 0 .6rem; }
+  .dropped-section summary:hover { color:var(--accent); }
+  .mark-dropped.on { background:#9a6a6a; border-color:#9a6a6a; }
   .seen-section { opacity:.75; }
   .card.seen { background:#f3f1ee; }
 
@@ -134,7 +143,7 @@
   </div>
   <h1>Jason &amp; Julia's Fringe 2026 Shortlist</h1>
   <p>Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns</p>
-  <span class="stamp">Last updated Fri 7 Aug, 16:45 (UK)</span>
+  <span class="stamp">Last updated Fri 7 Aug, 16:53 (UK)</span>
 </header>
 <main>
 
@@ -149,6 +158,7 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall · check listing · 6–31 Aug</p>
@@ -157,6 +167,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="sam-nicoresti-baby-doomer" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="sam-nicoresti-baby-doomer" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="sam-nicoresti-baby-doomer" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="bog-witch" data-state="" data-cat="1" data-copy="1">
@@ -164,6 +175,7 @@
           <h3><a href="https://www.traverse.co.uk/whats-on/bog-witch" target="_blank" rel="noopener">Bog Witch</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -175,6 +187,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="bog-witch" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="bog-witch" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="bog-witch" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-state="" data-cat="2" data-copy="1">
@@ -182,6 +195,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/john-luke-roberts-what-i-talk-about-when-i-run-about-talking" target="_blank" rel="noopener">John-Luke Roberts: What I Talk About When I Run About, Talking</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -193,6 +207,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-state="" data-cat="2" data-copy="1">
@@ -200,6 +215,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/my-grandpa-doesn-t-follow-me-on-instagram" target="_blank" rel="noopener">My Grandpa Doesn't Follow Me On Instagram</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -211,6 +227,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="james-rowland-team-viking" data-state="" data-cat="2" data-copy="1">
@@ -218,6 +235,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/james-rowland-team-viking" target="_blank" rel="noopener">James Rowland: Team Viking</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -229,6 +247,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="james-rowland-team-viking" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="james-rowland-team-viking" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="james-rowland-team-viking" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="woodhill" data-state="" data-cat="0" data-copy="1">
@@ -236,6 +255,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/woodhill" target="_blank" rel="noopener">Woodhill</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -247,6 +267,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="woodhill" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="woodhill" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="woodhill" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="the-horse-of-jenin" data-state="" data-cat="2" data-copy="1">
@@ -254,6 +275,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/the-horse-of-jenin" target="_blank" rel="noopener">The Horse of Jenin</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -265,6 +287,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="the-horse-of-jenin" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="the-horse-of-jenin" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="the-horse-of-jenin" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="one-man-musical" data-state="" data-cat="3" data-copy="1">
@@ -272,6 +295,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/one-man-musical" target="_blank" rel="noopener">One Man Musical</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -283,6 +307,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="one-man-musical" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="one-man-musical" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="one-man-musical" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="tell-me" data-state="" data-cat="4" data-copy="1">
@@ -290,6 +315,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/tell-me" target="_blank" rel="noopener">Tell Me</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -301,6 +327,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="tell-me" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="tell-me" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="tell-me" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card copy" data-slug="ten-thousand-hours" data-state="" data-cat="4" data-copy="1">
@@ -308,6 +335,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/ten-thousand-hours" target="_blank" rel="noopener">Ten Thousand Hours</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -319,6 +347,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="ten-thousand-hours" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="ten-thousand-hours" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="ten-thousand-hours" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article></div>
     </section>
@@ -332,6 +361,7 @@
         <li data-for="sec-4"><a href="#sec-4">Magic, Circus &amp; Spectacle <span class="n">5</span></a></li>
         <li data-for="sec-5"><a href="#sec-5">Spoken Word <span class="n">2</span></a></li>
         <li data-for="sec-seen"><a href="#sec-seen">Already seen <span class="n">1</span></a></li>
+        <li data-for="sec-dropped" hidden><a href="#sec-dropped">Not interested <span class="n">0</span></a></li>
       </ul>
     </nav>
 
@@ -346,6 +376,7 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Traverse Theatre · 7–30 Aug (not 10, 17, 24)</p>
@@ -354,12 +385,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="cathy" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="cathy" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="cathy" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="gameplay" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/gameplay" target="_blank" rel="noopener">Gameplay</a></h3>
           <div class="badges">
+            
             
             
             
@@ -372,12 +405,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="gameplay" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="gameplay" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="gameplay" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="prophets" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/prophets" target="_blank" rel="noopener">Prophets</a></h3>
           <div class="badges">
+            
             
             
             
@@ -390,12 +425,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="prophets" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="prophets" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="prophets" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="the-second-best-school-shooting" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/the-second-best-school-shooting" target="_blank" rel="noopener">The Second Best School Shooting</a></h3>
           <div class="badges">
+            
             
             
             
@@ -408,12 +445,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="the-second-best-school-shooting" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="the-second-best-school-shooting" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="the-second-best-school-shooting" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="badgers" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/badgers" target="_blank" rel="noopener">Badgers</a></h3>
           <div class="badges">
+            
             
             
             
@@ -426,12 +465,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="badgers" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="badgers" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="badgers" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="man-or-bear" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/man-or-bear" target="_blank" rel="noopener">Man or Bear</a></h3>
           <div class="badges">
+            
             
             
             
@@ -444,12 +485,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="man-or-bear" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="man-or-bear" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="man-or-bear" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="mayflies" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/mayflies" target="_blank" rel="noopener">Mayflies</a></h3>
           <div class="badges">
+            
             
             
             
@@ -462,6 +505,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="mayflies" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="mayflies" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="mayflies" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="mohan-a-partition-story" data-state="" data-cat="0">
@@ -472,6 +516,7 @@
             <span class="badge limited">From 18 Aug</span>
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Courtyard · 15:25 · 18–31 Aug</p>
@@ -480,6 +525,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="mohan-a-partition-story" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="mohan-a-partition-story" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="mohan-a-partition-story" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="a-trial-after-an-enemy-of-the-people" data-state="" data-cat="0">
@@ -490,6 +536,7 @@
             <span class="badge limited">7–10 Aug only</span>
             
             
+            
           </div>
         </div>
         <p class="meta">Royal Lyceum (Edinburgh International Festival) · 19:30 / 15:00 · 7–10 Aug only</p>
@@ -498,6 +545,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="a-trial-after-an-enemy-of-the-people" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="a-trial-after-an-enemy-of-the-people" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="a-trial-after-an-enemy-of-the-people" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="woodhill" data-state="" data-cat="0">
@@ -505,6 +553,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/woodhill" target="_blank" rel="noopener">Woodhill</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -516,6 +565,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="woodhill" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="woodhill" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="woodhill" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article></div>
     </section>
@@ -530,6 +580,7 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Underbelly Cowgate · 5–30 Aug</p>
@@ -538,12 +589,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="book-of-shadows" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="book-of-shadows" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="book-of-shadows" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="dracula-lucy-s-dream" data-state="" data-cat="1">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/dracula-lucy-s-dream" target="_blank" rel="noopener">Dracula: Lucy's Dream</a></h3>
           <div class="badges">
+            
             
             
             
@@ -556,6 +609,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="dracula-lucy-s-dream" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="dracula-lucy-s-dream" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="dracula-lucy-s-dream" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="bog-witch" data-state="" data-cat="1">
@@ -563,6 +617,7 @@
           <h3><a href="https://www.traverse.co.uk/whats-on/bog-witch" target="_blank" rel="noopener">Bog Witch</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -574,6 +629,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="bog-witch" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="bog-witch" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="bog-witch" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article></div>
     </section>
@@ -588,6 +644,7 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Courtyard · 21:30 · 5–30 Aug</p>
@@ -596,12 +653,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="elf-lyons-is-the-woman-on-the-edge" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="elf-lyons-is-the-woman-on-the-edge" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="elf-lyons-is-the-woman-on-the-edge" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="kirsty-mann-corpse" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/kirsty-mann-corpse" target="_blank" rel="noopener">Kirsty Mann: Corpse</a></h3>
           <div class="badges">
+            
             
             
             
@@ -614,12 +673,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="kirsty-mann-corpse" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="kirsty-mann-corpse" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="kirsty-mann-corpse" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="steve-burns-alive" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/steve-burns-alive" target="_blank" rel="noopener">Steve Burns: Alive</a></h3>
           <div class="badges">
+            
             
             
             
@@ -632,12 +693,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="steve-burns-alive" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="steve-burns-alive" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="steve-burns-alive" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="ahir-shah-golden" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/ahir-shah-golden" target="_blank" rel="noopener">Ahir Shah: Golden</a></h3>
           <div class="badges">
+            
             
             
             
@@ -650,12 +713,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="ahir-shah-golden" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="ahir-shah-golden" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="ahir-shah-golden" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="amanda-knox-cartwheel" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/amanda-knox-cartwheel" target="_blank" rel="noopener">Amanda Knox: Cartwheel</a></h3>
           <div class="badges">
+            
             
             
             
@@ -668,12 +733,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="amanda-knox-cartwheel" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="amanda-knox-cartwheel" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="amanda-knox-cartwheel" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="susie-mccabe-coming-of-rage" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/susie-mccabe-coming-of-rage" target="_blank" rel="noopener">Susie McCabe: Coming of Rage</a></h3>
           <div class="badges">
+            
             
             
             
@@ -686,12 +753,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="susie-mccabe-coming-of-rage" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="susie-mccabe-coming-of-rage" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="susie-mccabe-coming-of-rage" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="mark-thomas-40-in-stand-up-years" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/mark-thomas-40-in-stand-up-years" target="_blank" rel="noopener">Mark Thomas: 40 in Stand-up Years</a></h3>
           <div class="badges">
+            
             
             
             
@@ -704,6 +773,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="mark-thomas-40-in-stand-up-years" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="mark-thomas-40-in-stand-up-years" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="mark-thomas-40-in-stand-up-years" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="simon-amstell-i-love-it-here" data-state="" data-cat="2">
@@ -714,6 +784,7 @@
             <span class="badge limited">8–9 Aug only</span>
             
             
+            
           </div>
         </div>
         <p class="meta">see edfringe.com · 8–9 Aug only</p>
@@ -722,6 +793,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="simon-amstell-i-love-it-here" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="simon-amstell-i-love-it-here" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="simon-amstell-i-love-it-here" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="mr-chonkers-work-in-chonkers" data-state="" data-cat="2">
@@ -732,6 +804,7 @@
             <span class="badge limited">10 Aug only</span>
             
             
+            
           </div>
         </div>
         <p class="meta">Monkey Barrel 4 · 23:55 · 10 Aug only</p>
@@ -740,6 +813,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="mr-chonkers-work-in-chonkers" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="mr-chonkers-work-in-chonkers" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="mr-chonkers-work-in-chonkers" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="the-horse-of-jenin" data-state="" data-cat="2">
@@ -747,6 +821,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/the-horse-of-jenin" target="_blank" rel="noopener">The Horse of Jenin</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -758,6 +833,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="the-horse-of-jenin" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="the-horse-of-jenin" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="the-horse-of-jenin" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="james-rowland-team-viking" data-state="" data-cat="2">
@@ -765,6 +841,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/james-rowland-team-viking" target="_blank" rel="noopener">James Rowland: Team Viking</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -776,6 +853,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="james-rowland-team-viking" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="james-rowland-team-viking" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="james-rowland-team-viking" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-state="" data-cat="2">
@@ -783,6 +861,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/my-grandpa-doesn-t-follow-me-on-instagram" target="_blank" rel="noopener">My Grandpa Doesn't Follow Me On Instagram</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -794,6 +873,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-state="" data-cat="2">
@@ -801,6 +881,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/john-luke-roberts-what-i-talk-about-when-i-run-about-talking" target="_blank" rel="noopener">John-Luke Roberts: What I Talk About When I Run About, Talking</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -812,6 +893,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="sam-nicoresti-baby-doomer" data-state="" data-cat="2">
@@ -819,6 +901,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/sam-nicoresti-baby-doomer" target="_blank" rel="noopener">Sam Nicoresti: Baby Doomer</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -830,6 +913,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="sam-nicoresti-baby-doomer" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="sam-nicoresti-baby-doomer" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="sam-nicoresti-baby-doomer" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article></div>
     </section>
@@ -844,6 +928,7 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Zoo Southside · 18:25 · 7–30 Aug</p>
@@ -852,12 +937,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="sh-t-theatre-evita-too" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="sh-t-theatre-evita-too" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="sh-t-theatre-evita-too" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="salty-brine-how-strange-it-is" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/salty-brine-how-strange-it-is-the-neutral-milk-hotel-show" target="_blank" rel="noopener">Salty Brine: How Strange It Is</a></h3>
           <div class="badges">
+            
             
             
             
@@ -870,12 +957,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="salty-brine-how-strange-it-is" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="salty-brine-how-strange-it-is" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="salty-brine-how-strange-it-is" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="tether" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/tether" target="_blank" rel="noopener">Tether</a></h3>
           <div class="badges">
+            
             
             
             
@@ -888,12 +977,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="tether" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="tether" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="tether" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="blackbox" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/blackbox" target="_blank" rel="noopener">Blackbox</a></h3>
           <div class="badges">
+            
             
             
             
@@ -906,12 +997,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="blackbox" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="blackbox" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="blackbox" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="baby-wants-candy" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/baby-wants-candy" target="_blank" rel="noopener">Baby Wants Candy</a></h3>
           <div class="badges">
+            
             
             
             
@@ -924,12 +1017,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="baby-wants-candy" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="baby-wants-candy" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="baby-wants-candy" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/kristen-schaal-the-legend-of-crystal-shell" target="_blank" rel="noopener">Kristen Schaal: The Legend of Crystal Shell</a></h3>
           <div class="badges">
+            
             
             
             
@@ -942,6 +1037,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="the-galloping-cure" data-state="" data-cat="3">
@@ -952,6 +1048,7 @@
             <span class="badge limited">9–12 Aug only</span>
             
             
+            
           </div>
         </div>
         <p class="meta">Festival Theatre (Edinburgh International Festival) · 9–12 Aug only</p>
@@ -960,12 +1057,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="the-galloping-cure" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="the-galloping-cure" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="the-galloping-cure" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="bernie-dieter-s-club-kabarett" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/bernie-dieter-s-club-kabarett" target="_blank" rel="noopener">Bernie Dieter's Club Kabarett</a></h3>
           <div class="badges">
+            
             
             
             
@@ -978,6 +1077,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="bernie-dieter-s-club-kabarett" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="bernie-dieter-s-club-kabarett" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="bernie-dieter-s-club-kabarett" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="one-man-musical" data-state="" data-cat="3">
@@ -985,6 +1085,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/one-man-musical" target="_blank" rel="noopener">One Man Musical</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -996,6 +1097,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="one-man-musical" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="one-man-musical" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="one-man-musical" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article></div>
     </section>
@@ -1010,6 +1112,7 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Palais du Variété, Assembly George Square Gardens · 18:20 · 5–30 Aug (not 17)</p>
@@ -1018,12 +1121,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="ben-hart-the-labyrinth" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="ben-hart-the-labyrinth" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="ben-hart-the-labyrinth" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="kevin-quantum-invisible-force" data-state="" data-cat="4">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/kevin-quantum-invisible-force" target="_blank" rel="noopener">Kevin Quantum: Invisible Force</a></h3>
           <div class="badges">
+            
             
             
             
@@ -1036,12 +1141,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="kevin-quantum-invisible-force" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="kevin-quantum-invisible-force" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="kevin-quantum-invisible-force" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="360-allstars" data-state="" data-cat="4">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/360-allstars" target="_blank" rel="noopener">360 ALLSTARS</a></h3>
           <div class="badges">
+            
             
             
             
@@ -1054,6 +1161,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="360-allstars" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="360-allstars" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="360-allstars" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="tell-me" data-state="" data-cat="4">
@@ -1061,6 +1169,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/tell-me" target="_blank" rel="noopener">Tell Me</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -1072,6 +1181,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="tell-me" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="tell-me" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="tell-me" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="ten-thousand-hours" data-state="" data-cat="4">
@@ -1079,6 +1189,7 @@
           <h3><a href="https://www.edfringe.com/tickets/whats-on/ten-thousand-hours" target="_blank" rel="noopener">Ten Thousand Hours</a></h3>
           <div class="badges">
             <span class="badge new">New</span>
+            
             
             
             
@@ -1090,6 +1201,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="ten-thousand-hours" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="ten-thousand-hours" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="ten-thousand-hours" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article></div>
     </section>
@@ -1104,6 +1216,7 @@
             <span class="badge limited">13, 20, 27 Aug only</span>
             
             
+            
           </div>
         </div>
         <p class="meta">Scottish Storytelling Centre · 20:30 · 13, 20, 27 Aug only</p>
@@ -1112,12 +1225,14 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="loud-poets" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="loud-poets" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="loud-poets" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article>
       <article class="card" data-slug="adding-up-america-solving-the-race-equation" data-state="" data-cat="5">
         <div class="card-head">
           <h3><a href="https://www.edfringe.com/tickets/whats-on/adding-up-america-solving-the-race-equation" target="_blank" rel="noopener">Adding Up America: Solving the Race Equation</a></h3>
           <div class="badges">
+            
             
             
             
@@ -1130,6 +1245,7 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="adding-up-america-solving-the-race-equation" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="adding-up-america-solving-the-race-equation" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="adding-up-america-solving-the-race-equation" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article></div>
     </section>
@@ -1145,6 +1261,7 @@
             
             
             <span class="badge seenb">Seen it</span>
+            
           </div>
         </div>
         <p class="meta">Music Hall, Assembly Rooms · 21:25 · until 29 Aug</p>
@@ -1153,8 +1270,17 @@
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="mythos-ragnarok" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen on" data-slug="mythos-ragnarok" data-mark="seen" aria-pressed="true" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+          <button type="button" class="mark mark-dropped" data-slug="mythos-ragnarok" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
         </div>
       </article></div>
+    </section>
+
+    <section class="dropped-section" id="sec-dropped" hidden>
+      <h2><a href="#toc" class="backlink">Not interested</a></h2>
+      <details>
+        <summary><span class="n">0</span> set aside</summary>
+        <div class="grid"></div>
+      </details>
     </section>
 </main>
 <footer>
@@ -1193,6 +1319,9 @@
         var n = entry.querySelector('.n');
         if (n) n.textContent = cards;
       }
+      var summaryCount = s.querySelector('summary .n');
+      if (summaryCount) { summaryCount.textContent = cards;
+      }
     });
   }
 
@@ -1201,27 +1330,28 @@
     // between sections. A copy of a seen show is hidden instead, since it has
     // no business sitting at the top of the page any more.
     if (card.dataset.copy) {
-      card.hidden = state === 'seen';
+      card.hidden = state === 'seen' || state === 'dropped';
       tidy();
       return;
     }
-    var target = state === 'seen'
-      ? document.querySelector('.seen-section .grid')
+    var target = state === 'seen' ? document.querySelector('.seen-section .grid')
+      : state === 'dropped' ? document.querySelector('.dropped-section .grid')
       : document.querySelector('main section[data-cat="' + card.dataset.cat + '"] .grid');
     if (target && card.parentElement !== target) target.appendChild(card);
     tidy();
   }
 
   function paint(card, state) {
-    card.classList.remove('booked', 'seen');
+    card.classList.remove('booked', 'seen', 'dropped');
     if (state) card.classList.add(state);
     card.dataset.state = state || '';
 
     var badges = card.querySelector('.badges');
-    var stale = badges.querySelector('.bookedb, .seenb');
+    var stale = badges.querySelector('.bookedb, .seenb, .droppedb');
     if (stale) stale.remove();
     if (state === 'booked') badges.insertAdjacentHTML('beforeend', '<span class="badge bookedb">Booked</span>');
     if (state === 'seen') badges.insertAdjacentHTML('beforeend', '<span class="badge seenb">Seen it</span>');
+    if (state === 'dropped') badges.insertAdjacentHTML('beforeend', '<span class="badge droppedb">Not for us</span>');
 
     Array.prototype.forEach.call(card.querySelectorAll('.mark'), function (b) {
       var on = b.dataset.mark === state;

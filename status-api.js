@@ -9,7 +9,7 @@
 //   GET  /api/me              -> {"user": name|null}                public
 //   POST /api/login           -> body {"user","password"}, sets cookie
 //   POST /api/logout          -> clears the cookie
-//   POST /api/status/:slug    -> body {"state":"booked"|"seen"|null}, signed in
+//   POST /api/status/:slug    -> body {"state":"booked"|"seen"|"dropped"|null}, signed in
 //
 // Reading is public — the shortlist is meant to be shareable. Only writes need
 // an account. Sessions are a signed cookie lasting six months, so signing in is
@@ -233,8 +233,8 @@ const server = http.createServer((req, res) => {
       } catch {
         return send(res, 400, { error: 'body must be JSON' });
       }
-      if (!(state === 'booked' || state === 'seen' || state === null)) {
-        return send(res, 400, { error: 'state must be "booked", "seen" or null' });
+      if (!(state === 'booked' || state === 'seen' || state === 'dropped' || state === null)) {
+        return send(res, 400, { error: 'state must be "booked", "seen", "dropped" or null' });
       }
 
       serialise(async () => {
