@@ -9,6 +9,7 @@
 //   GET  /api/me              -> {"user": name|null}                public
 //   POST /api/login           -> body {"user","password"}, sets cookie
 //   POST /api/logout          -> clears the cookie
+//   GET  /api/events          -> server-sent event stream of marks         public
 //   POST /api/status/:slug    -> body {"state":"maybe"|"booked"|"seen"|"dropped"|null}, signed in
 //
 // Reading is public — the shortlist is meant to be shareable. Only writes need
@@ -160,6 +161,49 @@ const withinRate = () => {
   return true;
 };
 
+// --- live updates ----------------------------------------------------------
+//
+// Open pages subscribe to a server-sent event stream, so a mark made on one
+// phone lands on the other without a reload. One-way and text-only, so it needs
+// no dependencies and EventSource reconnects by itself if the link drops.
+//
+// Reads are public, matching /api/status: seeing that a show was booked reveals
+// nothing that the rendered page does not already show.
+
+const listeners = new Set();
+
+const broadcast = payload => {
+  const frame = `data: ${JSON.stringify(payload)}\n\n`;
+  for (const res of listeners) {
+    try { res.write(frame); } catch { listeners.delete(res); }
+  }
+};
+
+const openStream = (req, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream; charset=utf-8',
+    'Cache-Control': 'no-cache, no-transform',
+    'Connection': 'keep-alive',
+    // nginx buffers proxied responses by default, which would hold events back
+    // until the buffer filled. This asks it not to, belt-and-braces with the
+    // proxy_buffering off in the site config.
+    'X-Accel-Buffering': 'no'
+  });
+  res.write('retry: 3000\n\n');
+  listeners.add(res);
+
+  // Comment frames keep the connection from being reaped by an idle timeout
+  // somewhere in the middle.
+  const beat = setInterval(() => {
+    try { res.write(': keep-alive\n\n'); } catch { /* cleaned up on close */ }
+  }, 25000);
+
+  req.on('close', () => {
+    clearInterval(beat);
+    listeners.delete(res);
+  });
+};
+
 const send = (res, code, body) => {
   const payload = JSON.stringify(body);
   res.writeHead(code, {
@@ -182,6 +226,7 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && route === '/health') return send(res, 200, { ok: true });
   if (req.method === 'GET' && route === '/status') return send(res, 200, readMarks());
   if (req.method === 'GET' && route === '/me') return send(res, 200, { user: readSession(req.headers.cookie) });
+  if (req.method === 'GET' && route === '/events') return openStream(req, res);
 
   if (req.method === 'POST' && route === '/logout') {
     res.setHeader('Set-Cookie', cookieFor('', req, 0));
@@ -262,6 +307,7 @@ const server = http.createServer((req, res) => {
         // Rebuild is scheduled, not awaited: the mark is already durable, and
         // coalescing bursts keeps one click from meaning one node process.
         scheduleRebuild();
+        broadcast({ slug, state });
         send(res, 200, { slug, state });
       });
     });

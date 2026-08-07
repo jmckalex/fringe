@@ -390,6 +390,21 @@ const clientScript = `
     });
   }).catch(function () { /* offline or API down: the rendered page still stands */ });
 
+  // Live updates: a mark made on another device arrives here without a reload.
+  // Applying our own echo back is harmless, since apply() is idempotent.
+  try {
+    var stream = new EventSource(API + '/events');
+    stream.onmessage = function (ev) {
+      var msg;
+      try { msg = JSON.parse(ev.data); } catch (e) { return; }
+      if (!msg || !msg.slug) return;
+      var card = document.querySelector('.card[data-slug="' + msg.slug + '"]');
+      if (card && (msg.state || '') !== (card.dataset.state || '')) {
+        apply(card, msg.state || null);
+      }
+    };
+  } catch (e) { /* no EventSource: the page just needs a reload, as before */ }
+
   // Establish who we are. A six-month cookie means this is usually already
   // settled and the sign-in prompt never appears again on this device.
   fetch(API + '/me', { credentials: 'same-origin' })
