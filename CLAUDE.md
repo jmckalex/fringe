@@ -173,11 +173,19 @@ Widening the allowlist is done per-environment at claude.ai/code — the cloud
 icon above the message box, then the gear on the environment. **Custom** takes a
 domain list; **Full** allows everything.
 
-**The Guardian is deliberately excluded from that list.** Their `robots.txt`
-states that Guardian content may not be used "for large language models (LLMs),
-machine learning and/or artificial intelligence-related purposes". So: do not
-fetch theguardian.com. Using a Guardian verdict reported elsewhere is fine, and
-putting a Guardian URL in `reviews[]` is fine — linking is not ingesting.
+**Two outlets are deliberately excluded from that list**, and not for technical
+reasons. **The Guardian** states in `robots.txt` that its content may not be used
+"for large language models (LLMs), machine learning and/or artificial
+intelligence-related purposes". **The New York Times** goes further, prohibiting
+use for "the development of any software, machine learning, artificial
+intelligence (AI), and/or large language models (LLMs)" and naming
+`anthropic-ai` and `ClaudeBot` with `Disallow: /`.
+
+So: do not fetch theguardian.com or nytimes.com, from any machine — it is a
+stated policy, not an obstacle. Using a verdict either reports, when a search
+result or another outlet carries it, is fine; so is putting their article URL in
+`reviews[]`. Linking is not ingesting. Apply the same treatment to any
+publication that adopts the same policy.
 
 ## Updating from press reviews
 
