@@ -132,7 +132,13 @@
       "acclaim": "Plexus Polaire, UK premiere",
       "why": "Wordless, life-sized-puppetry Dracula told from Lucy's perspective. Extraordinary stagecraft.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "Chicago Maroon",
+          "url": "https://chicagomaroon.com/45562/arts/blood-death-and-sex-plexus-polaires-dracula-lucys-dream/"
+        }
+      ]
     },
     {
       "title": "Elf Lyons is The Woman on the Edge",
@@ -154,7 +160,13 @@
       "acclaim": "Adelaide Fringe award winner",
       "why": "Comedian and working doctor tells a real-life ghost story — the Adam Kay slot.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "The List",
+          "url": "https://list.co.uk/news/kirsty-mann-corpse-theatre-review-a-haunting-follow-up-48052"
+        }
+      ]
     },
     {
       "title": "Steve Burns: Alive",
@@ -324,7 +336,17 @@
       "acclaim": "Fest cabaret pick",
       "why": "Weimar punk cabaret with sword-swallowing and fire-breathing. Raucous, not clowny — front rows get teased.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "Theatre Weekly",
+          "url": "https://theatreweekly.com/edinburgh-fringe-review-bernie-dieters-club-kabarett-at-underbelly-circus-hub/"
+        },
+        {
+          "outlet": "Fest",
+          "url": "https://festmag.com/2025/08/04/review-bernie-dieters-club-kabarett/"
+        }
+      ]
     },
     {
       "title": "Ben Hart: The Labyrinth",
@@ -368,7 +390,13 @@
       "acclaim": "30+ five-star reviews",
       "why": "Norse gods, professional wrestling, hard-rock Viking soundtrack.",
       "status": "seen",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "The Skinny",
+          "url": "https://www.theskinny.co.uk/festivals/edinburgh-fringe/theatre/mythos-ragnarok-underbelly-circus-hub"
+        }
+      ]
     },
     {
       "title": "Loud Poets",
@@ -413,7 +441,13 @@
       "acclaim": "Fringe First winner · 5★ Guardian · Rolling Stone Top 10",
       "why": "Alaa Shehada blends storytelling, mask work and stand-up: a Palestinian boy's resilience, told through a five-metre horse built from debris in Jenin.",
       "status": "go",
-      "addedAt": "2026-08-07T11:11:00Z"
+      "addedAt": "2026-08-07T11:11:00Z",
+      "reviews": [
+        {
+          "outlet": "The Scotsman",
+          "url": "https://www.scotsman.com/arts-and-culture/edinburgh-festivals/edinburgh-fringe-theatre-reviews-the-horse-of-jenin-ordinary-decent-criminal-consumed-5265557"
+        }
+      ]
     },
     {
       "title": "One Man Musical",
@@ -424,7 +458,13 @@
       "acclaim": "Guardian's No.1 comedy show of 2024 · Chortle Best Show 2024",
       "why": "Flo & Joan's gleeful spoof musical about a certain musical-theatre impresario, starring Edward Easton with the sisters playing live — \"better than Cats\".",
       "status": "go",
-      "addedAt": "2026-08-07T11:11:00Z"
+      "addedAt": "2026-08-07T11:11:00Z",
+      "reviews": [
+        {
+          "outlet": "Chortle",
+          "url": "https://www.chortle.co.uk/review/2024/08/11/56285/one_man_musical,_from_flo_&_joan"
+        }
+      ]
     },
     {
       "title": "Tell Me",
@@ -457,7 +497,17 @@
       "acclaim": "5★ Lisa in the Theatre · returning for its 10th anniversary",
       "why": "A true story about giving his best mate a Viking funeral — a comic ode to death, friendship and the absurdity of life. Pure Adam Kay territory: storytelling with real substance.",
       "status": "go",
-      "addedAt": "2026-08-07T13:20:00Z"
+      "addedAt": "2026-08-07T13:20:00Z",
+      "reviews": [
+        {
+          "outlet": "Lisa in the Theatre 5★",
+          "url": "https://www.lisainthetheatre.com/post/team-viking-review"
+        },
+        {
+          "outlet": "The Wee Review",
+          "url": "https://theweereview.com/review/team-viking/"
+        }
+      ]
     },
     {
       "title": "My Grandpa Doesn't Follow Me On Instagram",
