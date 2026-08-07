@@ -141,9 +141,15 @@ sweep can push — but arbitrary hosts answer `403` to `CONNECT`. Consequences:
 - **The sweep cannot post to ntfy.** `fringe-deploy.sh` does it instead, from the
   droplet, when new shows actually go live. The topic URL is a capability and
   lives in `/etc/fringe/ntfy.env`, root-only, never in this public repo.
-- **The sweep may not be able to fetch edfringe.com or review sites**, in which
-  case star ratings come from search snippets and `link` is a derived guess.
-  `make check-links` is how bad links get caught.
+- **Reachability varies per outlet, and for two different reasons.** After
+  widening the allowlist, edfringe.com and festmag.com resolve, so ticket links
+  can genuinely be verified. `www.chortle.co.uk` is refused at `CONNECT` — an
+  allowlist gap, fixable by adding it. `scotsman.com` tunnels fine and then
+  returns a Cloudflare `403 cf-mitigated: challenge`: a site-side bot block that
+  no allowlist entry can fix. When a review cannot be read, the rating comes
+  from search results and the commit message should say so.
+- **Allowlist entries are exact hosts.** A bare `chortle.co.uk` does not cover
+  `www.chortle.co.uk`; use a leading `*.` or list both.
 
 Widening the allowlist is done per-environment at claude.ai/code — the cloud
 icon above the message box, then the gear on the environment. **Custom** takes a
