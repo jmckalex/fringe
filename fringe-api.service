@@ -20,10 +20,19 @@ Environment=PORT=3003
 Environment=FRINGE_REPO=/srv/fringe
 Environment=FRINGE_STATUS=/var/lib/fringe/status.json
 Environment=FRINGE_OUT=/var/www/fringe/index.html
+Environment=FRINGE_USERS=/etc/fringe/users.json
 
-# The shared write key lives in a 0600 file, NOT in an Environment= line here:
+# The session-signing secret lives in a 0600 file, NOT in an Environment= line:
 # systemd exposes Environment= values to any local user via `systemctl show`,
 # regardless of this unit file's own permissions.
+#
+# Note the asymmetry, which is easy to get wrong: systemd reads this file as
+# root before dropping to User=web, so 0600 root:root is fine here. users.json
+# is read by the process itself, as web, so it needs to be group-readable:
+#
+#   /etc/fringe            0750 root:web
+#   /etc/fringe/users.json 0640 root:web   (web reads hashes, cannot write them)
+#   /etc/fringe/api.env    0600 root:root  (web never reads this at all)
 EnvironmentFile=/etc/fringe/api.env
 
 # It only ever needs to write the store and the rendered page.
