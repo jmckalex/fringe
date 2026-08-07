@@ -708,6 +708,43 @@
       ],
       "status": "go",
       "addedAt": "2026-08-07T20:20:00Z"
+    },
+    {
+      "title": "Celia Pacquola: Gift Horse",
+      "category": "Comedy & Storytelling",
+      "venue": "Assembly Roxy",
+      "time": "18:15",
+      "dates": "8–14 Aug only",
+      "acclaim": "5★ Chortle; Most Outstanding Show, Melbourne Comedy Festival 2026",
+      "why": "Steve Bennett calls it the Rolls-Royce of stand-up — a gag every couple of lines, craftsmanship hidden under what sounds like conversation. Fast, dense, warm but never soft: the Gilmore Girls signal in stand-up form.",
+      "link": "https://www.edfringe.com/tickets/whats-on/celia-pacquola-gift-horse",
+      "reviews": [
+        {
+          "outlet": "Chortle 5★",
+          "url": "https://www.chortle.co.uk/review/2026/04/15/60383/celia_pacquola:_gift_horse"
+        }
+      ],
+      "status": "go",
+      "limited": "8–14 Aug only",
+      "addedAt": "2026-08-07T23:20:00Z"
+    },
+    {
+      "title": "Frankie McNair: Huge Ass Mindset",
+      "category": "Comedy & Storytelling",
+      "venue": "The Den, Gilded Balloon Teviot",
+      "time": "19:00",
+      "dates": "5–30 Aug",
+      "acclaim": "5★ Chortle, 5★ Glam Adelaide; shortlisted for Most Outstanding Show, Melbourne 2026",
+      "why": "Defiance, not a trauma dump — Chortle calls it proud, powerful and hilarious, vaulting from harrowing to joyously funny. Unsentimental and absurd in the way they like, with none of the cosiness.",
+      "link": "https://www.edfringe.com/tickets/whats-on/frankie-mcnair-huge-ass-mindset",
+      "reviews": [
+        {
+          "outlet": "Chortle 5★",
+          "url": "https://www.chortle.co.uk/review/2026/04/16/60394/frankie_mcnair:_huge_ass_mindset"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-07T23:20:00Z"
     }
   ],
   "doNotReadd": [
