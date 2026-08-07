@@ -89,3 +89,50 @@ to Julia's phone matters, that leg needs one of:
 
 Option 2 needs no environment changes and fits the existing git-as-transport
 design, so it is the one to reach for first.
+
+SECOND FINDING, NOT ASKED FOR BUT MORE SERIOUS THAN THE NTFY ONE
+
+While doing the actual review sweep on this run I hit the same egress wall, and
+it degrades the watch itself rather than just its notification leg. The same
+allowlist that blocks ntfy.sh blocks every review site. Attempted and refused
+with EGRESS_BLOCKED:
+
+  www.thestage.co.uk
+  www.timeout.com
+  www.chortle.co.uk
+  www.edfringe.com
+
+Web *search* still works -- it goes out through Anthropic's API rather than this
+proxy -- so the run can still see search results and snippets. But it cannot
+open a single review to read it, and it cannot open edfringe at all. Two
+concrete consequences for the job as written in the scheduled prompt:
+
+- "VERIFY it resolves before using it" for edfringe links is not currently
+  possible from a cloud run. edfringe.com cannot be fetched. Any link added
+  would be a guess at the kebab-case slug.
+- Star ratings and the substance of a review have to be inferred from search
+  snippets rather than read from the review. That is thin evidence on which to
+  put a show in front of you, and it is how a wrong call gets made.
+
+So the hourly watch is running at reduced power, and will keep doing so until
+edfringe.com and the review outlets are allowlisted for this environment. Worth
+fixing at the same time as ntfy, and by the same mechanism (option 1 above).
+
+SWEEP RESULT FOR THIS RUN: no new shows.
+
+Not a consequence of the egress block -- there was genuinely nothing to add. The
+Fringe opened today, 7 August, so the first real crop of reviews has not landed
+yet. Searches across the priority outlets turned up previews, top-picks lists
+and programme listings, but no new 5-star review, and no 4-star from a major
+outlet with the kind of praise that clears the bar. The early finds that did
+exist were already swept in by earlier runs today (Bog Witch, Sam Nicoresti,
+John-Luke Roberts). shows.json is untouched by this run.
+
+One show worth a note for next run: ROLEPLAY (Hannah Reilly, Summerhall Tech
+Cube Zero, 17:50, 7-31 Aug) -- a one-woman comedy-thriller about a feminist
+podcaster who reinvents herself as an online persona, produced by Francesca
+Moody of Fleabag and Baby Reindeer, transferring to Soho Theatre after the
+Fringe. It fits the taste well and is nearly sold out, but it has no published
+review yet, so it does not qualify under the rules and has not been added. If it
+reviews well in the next day or two it should go straight in.
+
