@@ -53,7 +53,8 @@ const isNew = show =>
 // Font Awesome Free 6.7.2 — icons CC BY 4.0 (attributed in the footer).
 const ICON = {
   bookmark: '<svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg>',
-  check: '<svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>'
+  check: '<svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>',
+  gear: '<svg viewBox="0 0 512 512" aria-hidden="true"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>'
 };
 
 const marker = (show, kind, icon, label) => {
@@ -179,38 +180,58 @@ const clientScript = `
 
   // --- sign in -------------------------------------------------------------
 
-  var bar = document.createElement('div');
-  bar.className = 'authbar';
-  document.body.appendChild(bar);
+  var gear = document.getElementById('gear');
+  var bar = document.getElementById('gearmenu');
+
+  function render() {
+    bar.innerHTML = who
+      ? '<span class="whoami">Signed in as ' + who + '</span>' +
+        '<button type="button" class="linkish" data-act="logout">Sign out</button>'
+      : '<span class="whoami">Sign in to mark shows as booked or seen.</span>' +
+        '<form class="login" autocomplete="on">' +
+        '<input name="user" placeholder="username" autocomplete="username" required>' +
+        '<input name="password" type="password" placeholder="password" autocomplete="current-password" required>' +
+        '<button type="submit">Sign in</button>' +
+        '<span class="err" hidden></span>' +
+        '</form>';
+  }
+
+  function openMenu(focus) {
+    bar.hidden = false;
+    gear.setAttribute('aria-expanded', 'true');
+    var first = bar.querySelector('input');
+    if (focus && first) first.focus();
+  }
+  function closeMenu() {
+    bar.hidden = true;
+    gear.setAttribute('aria-expanded', 'false');
+  }
 
   function setUser(u) {
     who = u;
     document.body.classList.toggle('signed-in', Boolean(u));
-    bar.innerHTML = u
-      ? '<span class="whoami">Signed in as ' + u + '</span> <button type="button" class="linkish" data-act="logout">Sign out</button>'
-      : '<button type="button" class="linkish" data-act="login">Sign in to mark shows</button>';
+    render();
   }
 
-  function showLogin() {
-    if (bar.querySelector('form')) return bar.querySelector('input').focus();
-    bar.innerHTML =
-      '<form class="login" autocomplete="on">' +
-      '<input name="user" placeholder="username" autocomplete="username" required>' +
-      '<input name="password" type="password" placeholder="password" autocomplete="current-password" required>' +
-      '<button type="submit">Sign in</button>' +
-      '<button type="button" class="linkish" data-act="cancel">Cancel</button>' +
-      '<span class="err" hidden></span>' +
-      '</form>';
-    bar.querySelector('input').focus();
-  }
+  // Kept as the name the mark handler calls when a write comes back 401.
+  function showLogin() { render(); openMenu(true); }
+
+  gear.addEventListener('click', function (ev) {
+    ev.stopPropagation();
+    if (bar.hidden) openMenu(true); else closeMenu();
+  });
+
+  document.addEventListener('click', function (ev) {
+    if (!bar.hidden && !bar.contains(ev.target) && ev.target !== gear) closeMenu();
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape' && !bar.hidden) { closeMenu(); gear.focus(); }
+  });
 
   bar.addEventListener('click', function (ev) {
-    var act = ev.target.dataset && ev.target.dataset.act;
-    if (act === 'login') showLogin();
-    if (act === 'cancel') setUser(who);
-    if (act === 'logout') {
+    if (ev.target.dataset && ev.target.dataset.act === 'logout') {
       fetch(API + '/logout', { method: 'POST', credentials: 'same-origin' })
-        .then(function () { setUser(null); });
+        .then(function () { setUser(null); closeMenu(); });
     }
   });
 
@@ -233,6 +254,7 @@ const clientScript = `
       });
     }).then(function (j) {
       setUser(j.user);
+      closeMenu();
     }).catch(function (e) {
       btn.disabled = false;
       err.textContent = e.message;
@@ -347,15 +369,28 @@ const html = `<!DOCTYPE html>
   body:not(.signed-in) .marks { display:none; }
   body:not(.signed-in) .card > .why { margin-bottom:.45rem; }
 
-  .authbar { position:fixed; right:.8rem; bottom:.8rem; z-index:11;
-             background:var(--card); border:1px solid var(--line); border-radius:9px;
-             padding:.5rem .7rem; box-shadow:0 3px 12px rgba(29,26,47,.14);
-             font:.82rem/1.3 Verdana, sans-serif; max-width:calc(100vw - 1.6rem); }
-  .authbar .whoami { color:var(--muted); }
-  .linkish { background:none; border:0; padding:0; margin:0 0 0 .4rem;
+  /* Settings live in a gear menu in the header rather than a floating panel:
+     anything pinned to the viewport is permanently in the way on a phone. */
+  header { position:relative; }
+  .settings { position:absolute; top:.7rem; right:.7rem; text-align:right; z-index:12; }
+  .gearbtn { display:inline-flex; align-items:center; justify-content:center;
+             width:2.1rem; height:2.1rem; padding:0; cursor:pointer;
+             background:transparent; border:1px solid rgba(244,240,255,.25); border-radius:8px;
+             color:#c9c2e2; transition:color .12s, border-color .12s, background .12s; }
+  .gearbtn svg { width:1rem; height:1rem; fill:currentColor; display:block; }
+  .gearbtn:hover, .gearbtn[aria-expanded="true"] { color:#fff; border-color:rgba(244,240,255,.6); background:rgba(244,240,255,.1); }
+  .gearbtn:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+  .gearmenu { position:absolute; top:2.5rem; right:0; min-width:14rem;
+              background:var(--card); color:var(--ink); text-align:left;
+              border:1px solid var(--line); border-radius:9px; padding:.7rem .8rem;
+              box-shadow:0 6px 20px rgba(29,26,47,.28);
+              font:.82rem/1.4 Verdana, sans-serif;
+              max-width:calc(100vw - 1.6rem); }
+  .gearmenu .whoami { display:block; color:var(--muted); margin-bottom:.4rem; }
+  .linkish { background:none; border:0; padding:0; margin:0;
              color:var(--accent); font:inherit; cursor:pointer; text-decoration:underline; }
-  .login { display:flex; flex-wrap:wrap; gap:.35rem; align-items:center; }
-  .login input { font:inherit; padding:.35rem .45rem; min-width:8.5rem;
+  .login { display:flex; flex-wrap:wrap; gap:.4rem; align-items:center; }
+  .login input { font:inherit; padding:.4rem .45rem; width:100%;
                  border:1px solid var(--line); border-radius:6px; background:var(--paper); color:var(--ink); }
   .login button[type=submit] { font:inherit; padding:.38rem .7rem; cursor:pointer;
                                background:var(--accent); color:#fff; border:0; border-radius:6px; }
@@ -371,6 +406,12 @@ const html = `<!DOCTYPE html>
 </head>
 <body>
 <header>
+  <div class="settings">
+    <button type="button" id="gear" class="gearbtn" aria-haspopup="true" aria-expanded="false" title="Settings">
+      <span class="sr-only">Settings</span>${ICON.gear}
+    </button>
+    <div id="gearmenu" class="gearmenu" hidden></div>
+  </div>
   <h1>${esc(data.title)}</h1>
   <p>${esc(data.subtitle)}</p>
   <span class="stamp">Last updated ${esc(updatedStamp)} (UK)</span>
