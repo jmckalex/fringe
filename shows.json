@@ -7,7 +7,7 @@
     "Visual & Inventive Theatre",
     "Comedy & Storytelling",
     "Music, Musicals & Cabaret",
-    "Magic & Spectacle",
+    "Magic, Circus & Spectacle",
     "Spoken Word"
   ],
   "shows": [
@@ -326,7 +326,7 @@
     },
     {
       "title": "Ben Hart: The Labyrinth",
-      "category": "Magic & Spectacle",
+      "category": "Magic, Circus & Spectacle",
       "venue": "Palais du Variété, Assembly George Square Gardens",
       "time": "18:20",
       "dates": "5–30 Aug (not 17)",
@@ -337,7 +337,7 @@
     },
     {
       "title": "Kevin Quantum: Invisible Force",
-      "category": "Magic & Spectacle",
+      "category": "Magic, Circus & Spectacle",
       "venue": "Assembly Rooms (Ballroom)",
       "time": "18:45",
       "dates": "6–31 Aug",
@@ -348,7 +348,7 @@
     },
     {
       "title": "360 ALLSTARS",
-      "category": "Magic & Spectacle",
+      "category": "Magic, Circus & Spectacle",
       "venue": "Assembly Hall",
       "time": "varies",
       "dates": "August",
@@ -359,7 +359,7 @@
     },
     {
       "title": "Mythos: Ragnarök",
-      "category": "Magic & Spectacle",
+      "category": "Magic, Circus & Spectacle",
       "venue": "Music Hall, Assembly Rooms",
       "time": "21:25",
       "dates": "until 29 Aug",
@@ -390,12 +390,80 @@
       "why": "Monique DeBose blending live music, storytelling and sharp social insight.",
       "status": "go",
       "addedAt": "2026-08-07"
+    },
+    {
+      "title": "Woodhill",
+      "category": "Drama & New Writing",
+      "venue": "Zoo Southside",
+      "time": "varies",
+      "dates": "7–30 Aug",
+      "acclaim": "Multi-award-winning (Charity Awards; Sheila McKechnie Change Makers Award)",
+      "why": "LUNG's verbatim dance-theatre about suicides at HMP Woodhill, made with bereaved families — the closest thing at this Fringe to Punch's territory.",
+      "status": "go",
+      "addedAt": "2026-08-07T11:11:00Z"
+    },
+    {
+      "title": "The Horse of Jenin",
+      "category": "Comedy & Storytelling",
+      "venue": "Pleasance Dome",
+      "time": "13:15",
+      "dates": "August (see edfringe)",
+      "acclaim": "Fringe First winner · 5★ Guardian · Rolling Stone Top 10",
+      "why": "Alaa Shehada blends storytelling, mask work and stand-up: a Palestinian boy's resilience, told through a five-metre horse built from debris in Jenin.",
+      "status": "go",
+      "addedAt": "2026-08-07T11:11:00Z"
+    },
+    {
+      "title": "One Man Musical",
+      "category": "Music, Musicals & Cabaret",
+      "venue": "Pleasance Beyond",
+      "time": "16:50",
+      "dates": "5–30 Aug",
+      "acclaim": "Guardian's No.1 comedy show of 2024 · Chortle Best Show 2024",
+      "why": "Flo & Joan's gleeful spoof musical about a certain musical-theatre impresario, starring Edward Easton with the sisters playing live — \"better than Cats\".",
+      "status": "go",
+      "addedAt": "2026-08-07T11:11:00Z"
+    },
+    {
+      "title": "Tell Me",
+      "category": "Magic, Circus & Spectacle",
+      "venue": "Summerhall (Dissection Room)",
+      "time": "19:00",
+      "dates": "6–31 Aug (not Mon/Tue)",
+      "acclaim": "5★ Pink Prince Theatre · 4★ Guardian",
+      "why": "Sadiq Ali Company (The Chosen Haram): Chinese pole and aerial circus-theatre tracing HIV across two eras. \"Stunning, soulful, a total triumph.\"",
+      "status": "go",
+      "addedAt": "2026-08-07T11:11:00Z"
+    },
+    {
+      "title": "Ten Thousand Hours",
+      "category": "Magic, Circus & Spectacle",
+      "venue": "Assembly Hall",
+      "time": "varies",
+      "dates": "August (see edfringe)",
+      "acclaim": "\"Breathtaking\" — The Scotsman",
+      "why": "Gravity & Other Myths' acrobatic meditation on mastery and the 10,000-hours rule — big-hearted, family-friendly spectacle.",
+      "status": "go",
+      "addedAt": "2026-08-07T11:11:00Z"
     }
   ],
   "doNotReadd": [
-    { "title": "Underground Monk Show", "reason": "clown show — excluded by taste" },
-    { "title": "Creepy Boys: SLUGS", "reason": "clown show — excluded by taste" },
-    { "title": "Bigfoot Ripped My Dog In Half I Saw It", "reason": "clowning — excluded by taste" },
-    { "title": "Mythos: Ragnarök", "reason": "already seen in a previous year" }
-  ]
+    {
+      "title": "Underground Monk Show",
+      "reason": "clown show — excluded by taste"
+    },
+    {
+      "title": "Creepy Boys: SLUGS",
+      "reason": "clown show — excluded by taste"
+    },
+    {
+      "title": "Bigfoot Ripped My Dog In Half I Saw It",
+      "reason": "clowning — excluded by taste"
+    },
+    {
+      "title": "Mythos: Ragnarök",
+      "reason": "already seen in a previous year"
+    }
+  ],
+  "seeded": "2026-08-07"
 }

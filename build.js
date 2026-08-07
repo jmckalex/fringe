@@ -11,10 +11,19 @@ const ticketLink = show => show.link || `https://tickets.edfringe.com/whats-on?q
 
 const buildDate = new Date();
 const NEW_WINDOW_DAYS = 3;
-const isNew = show => {
-  const added = new Date(show.addedAt + 'T12:00:00Z');
-  return (buildDate - added) / 86400000 <= NEW_WINDOW_DAYS && show.addedAt !== data.shows.reduce((min, s) => s.addedAt < min ? s.addedAt : min, '9999');
-};
+
+// addedAt comes in two shapes: a plain date for the hand-seeded batch
+// ("2026-08-07"), and a full ISO timestamp from the review sweep
+// ("2026-08-07T11:11:00Z"). Appending a time to the latter yields an Invalid
+// Date, so normalise before comparing.
+const addedAt = show => new Date(/T/.test(show.addedAt) ? show.addedAt : show.addedAt + 'T12:00:00Z');
+
+// The seeded batch is never badged "New" — on day one every show would be.
+// data.seeded records that batch; fall back to the earliest addedAt without it.
+const seedStamp = data.seeded || data.shows.reduce((min, s) => (s.addedAt < min ? s.addedAt : min), '9999');
+
+const isNew = show =>
+  (buildDate - addedAt(show)) / 86400000 <= NEW_WINDOW_DAYS && show.addedAt !== seedStamp;
 
 const card = show => `
       <article class="card${show.status === 'seen' ? ' seen' : ''}">

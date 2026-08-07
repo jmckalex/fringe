@@ -56,11 +56,17 @@ filtered out of their category and collected into an "Already seen" section at t
 bottom. Deleting instead of retiring lets the watcher re-add the show later.
 
 *The "New" badge.* A show is badged New if `addedAt` is within 3 days of the build
-**and** its `addedAt` is not the earliest value in the file (`build.js:16`). That
-second clause suppresses the badge for the seed cohort — all 34 shows currently share
-`addedAt: 2026-08-07`, so nothing is badged today. Badges appear only once genuinely
-newer shows are appended. Adding a show with an *older* `addedAt` than the current
-minimum would silently un-badge everything else.
+**and** `addedAt` differs from the top-level `seeded` value. That second clause
+suppresses the badge for the hand-seeded batch, which would otherwise all be badged
+on day one.
+
+`addedAt` deliberately comes in two shapes, and this is load-bearing: the seeded
+batch uses a plain date (`"2026-08-07"`, matching `seeded` exactly), while the review
+sweep writes full ISO timestamps (`"2026-08-07T11:11:00Z"`). That difference is what
+distinguishes a swept-in show from a seeded one *added the same day* — so do not
+"tidy" the timestamps to plain dates, or those shows lose their badge. `build.js`
+normalises both before doing date arithmetic; appending a time to an already-full
+timestamp yields `Invalid Date`, which fails silently as "not new".
 
 Ticket links: if a show has no `link`, `build.js` synthesises an edfringe search for
 the exact quoted title. The `updated` field at the top of `shows.json` is metadata
