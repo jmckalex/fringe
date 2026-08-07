@@ -445,6 +445,17 @@
       "why": "Gravity & Other Myths' acrobatic meditation on mastery and the 10,000-hours rule — big-hearted, family-friendly spectacle.",
       "status": "go",
       "addedAt": "2026-08-07T11:11:00Z"
+    },
+    {
+      "title": "James Rowland: Team Viking",
+      "category": "Comedy & Storytelling",
+      "venue": "Pleasance Courtyard (Beside)",
+      "time": "14:05",
+      "dates": "5–31 Aug",
+      "acclaim": "5★ Lisa in the Theatre · returning for its 10th anniversary",
+      "why": "A true story about giving his best mate a Viking funeral — a comic ode to death, friendship and the absurdity of life. Pure Adam Kay territory: storytelling with real substance.",
+      "status": "go",
+      "addedAt": "2026-08-07T13:20:00Z"
     }
   ],
   "doNotReadd": [
@@ -463,6 +474,10 @@
     {
       "title": "Mythos: Ragnarök",
       "reason": "already seen in a previous year"
+    },
+    {
+      "title": "My Grandpa Doesn't Follow Me On Instagram",
+      "reason": "5★ Binge Fringe, but billed as blending comedy with clowning — excluded by taste"
     }
   ],
   "seeded": "2026-08-07"
