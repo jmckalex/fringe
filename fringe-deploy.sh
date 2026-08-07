@@ -39,3 +39,44 @@ fi
 node build.js >/dev/null
 install -m 644 -o web -g web index.html "$WEBROOT/index.html"
 echo "$(date -Is) fringe-deploy: published $(git rev-parse --short HEAD)"
+
+# Announce new shows to both phones via ntfy.
+#
+# This lives here rather than in the review sweep because the cloud environment
+# the sweep runs in cannot reach ntfy.sh: its outbound HTTPS goes through a
+# proxy that answers 403 to CONNECT for anything outside its allowlist (github
+# is allowed, which is why git push works). The droplet has no such limit.
+#
+# It also announces at the right moment — when the shows are actually live on
+# the site, not when they were committed.
+#
+# The topic URL is a capability: anyone holding it can push to both phones. It
+# therefore lives in /etc/fringe/ntfy.env on the droplet, never in this public
+# repo. Absent file, absent notification, no error.
+if [ "$before" != "$after" ] && [ -r /etc/fringe/ntfy.env ]; then
+    . /etc/fringe/ntfy.env
+    if [ -n "${NTFY_URL:-}" ]; then
+        # Compare the two committed versions of shows.json properly rather than
+        # grepping the diff: "title" appears in doNotReadd[] too, and a rejected
+        # clown show is not something to announce as a recommendation.
+        added=$(node -e '
+          const { execSync } = require("child_process");
+          const titles = r => JSON.parse(execSync("git show " + r + ":shows.json", {encoding:"utf8"})).shows.map(s => s.title);
+          try {
+            const before = new Set(titles(process.argv[1]));
+            console.log(titles(process.argv[2]).filter(t => !before.has(t)).join("; "));
+          } catch (e) { /* first run, or unreadable ref: say nothing */ }
+        ' "$before" "$after" 2>/dev/null)
+
+        if [ -n "$added" ]; then
+            curl -sS -m 20 \
+                 -H "Title: New on the Fringe shortlist" \
+                 -H "Tags: performing_arts" \
+                 -H "Click: https://fringe.jmckalex.org" \
+                 -d "$added — now live at https://fringe.jmckalex.org" \
+                 "$NTFY_URL" >/dev/null \
+              && echo "$(date -Is) fringe-deploy: notified ntfy ($added)" \
+              || echo "$(date -Is) fringe-deploy: ntfy post FAILED"
+        fi
+    fi
+fi

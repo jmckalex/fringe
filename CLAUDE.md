@@ -131,6 +131,30 @@ rebuilt as often as hourly and carries a visible timestamp.
 All nginx, certbot, and systemd work happens **on the droplet over ssh** — the laptop
 only holds source files and pushes them.
 
+## What the cloud sweep can and cannot reach
+
+The hourly review watch runs in a Claude Code cloud environment whose outbound
+HTTPS goes through a proxy with an allowlist (the environment's **Network
+access** setting, default **Trusted**). github.com is allowed — that is why the
+sweep can push — but arbitrary hosts answer `403` to `CONNECT`. Consequences:
+
+- **The sweep cannot post to ntfy.** `fringe-deploy.sh` does it instead, from the
+  droplet, when new shows actually go live. The topic URL is a capability and
+  lives in `/etc/fringe/ntfy.env`, root-only, never in this public repo.
+- **The sweep may not be able to fetch edfringe.com or review sites**, in which
+  case star ratings come from search snippets and `link` is a derived guess.
+  `make check-links` is how bad links get caught.
+
+Widening the allowlist is done per-environment at claude.ai/code — the cloud
+icon above the message box, then the gear on the environment. **Custom** takes a
+domain list; **Full** allows everything.
+
+**The Guardian is deliberately excluded from that list.** Their `robots.txt`
+states that Guardian content may not be used "for large language models (LLMs),
+machine learning and/or artificial intelligence-related purposes". So: do not
+fetch theguardian.com. Using a Guardian verdict reported elsewhere is fine, and
+putting a Guardian URL in `reviews[]` is fine — linking is not ingesting.
+
 ## Updating from press reviews
 
 New finds are appended to `shows.json` → `shows` with `addedAt` set to the current
