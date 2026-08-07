@@ -38,6 +38,15 @@ fi
 
 node build.js >/dev/null
 install -m 644 -o web -g web index.html "$WEBROOT/index.html"
+
+# The status API is a long-running service: pulling new code does not change
+# what is already in memory. Restart it when its own sources move, or a fix
+# sits on disk doing nothing until someone notices.
+if git diff --name-only "$before" "$after" | grep -qE '^(status-api\.js|slug\.js)$'; then
+    systemctl restart fringe-api \
+      && echo "$(date -Is) fringe-deploy: restarted fringe-api (its sources changed)" \
+      || echo "$(date -Is) fringe-deploy: fringe-api restart FAILED"
+fi
 echo "$(date -Is) fringe-deploy: published $(git rev-parse --short HEAD)"
 
 # Announce new shows to both phones via ntfy.
