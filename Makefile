@@ -46,7 +46,7 @@ RSYNC_FLAGS := -avz \
                --exclude='*token*' \
                --rsync-path="sudo rsync"
 
-.PHONY: help build check push publish deploy-log sync dry-run preview ls tail-log provision
+.PHONY: help build check push publish deploy-log sync dry-run preview dev ls tail-log provision
 
 help:
 	@echo "Targets:"
@@ -101,6 +101,23 @@ dry-run: build check
 
 preview: build
 	open index.html
+
+# Local end-to-end: runs the status API and serves the page from one origin so
+# the mark buttons actually work. State goes to .dev/status.json, never to the
+# droplet. Ctrl-C to stop.
+DEV_DIR := .dev
+DEV_PORT := 3999
+dev:
+	@mkdir -p $(DEV_DIR)
+	@[ -f $(DEV_DIR)/status.json ] || echo '{}' > $(DEV_DIR)/status.json
+	@FRINGE_STATUS=$(PWD)/$(DEV_DIR)/status.json FRINGE_OUT=$(PWD)/$(DEV_DIR)/index.html node build.js
+	@echo ""
+	@echo "  http://localhost:$(DEV_PORT)/?key=devkey"
+	@echo "  (open that once — the key is remembered and stripped from the URL)"
+	@echo ""
+	@FRINGE_KEY=devkey PORT=$(DEV_PORT) FRINGE_REPO=$(PWD) \
+	  FRINGE_STATUS=$(PWD)/$(DEV_DIR)/status.json FRINGE_OUT=$(PWD)/$(DEV_DIR)/index.html \
+	  node status-api.js
 
 ls:
 	ssh $(REMOTE_HOST) 'ls -la $(REMOTE_PATH)'

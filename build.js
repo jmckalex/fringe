@@ -20,11 +20,8 @@ try {
 // Stable key for a show. Derived from the title rather than stored, so
 // shows.json keeps its current shape and the sweep needs no changes. The
 // trade-off: retitling a show orphans its mark (reported at the end of a build).
-const slug = show => String(show.title).toLowerCase()
-  .normalize('NFKD').replace(/[̀-ͯ]/g, '')
-  .replace(/&/g, ' and ')
-  .replace(/[^a-z0-9]+/g, '-')
-  .replace(/^-|-$/g, '');
+const slugify = require('./slug');
+const slug = show => slugify(show.title);
 
 // An explicit mark always wins, including a mark of null meaning "clear it".
 // Without one, fall back to the durable status recorded in shows.json.
@@ -59,17 +56,20 @@ const ICON = {
   check: '<svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>'
 };
 
-// Inert in phase 1 — the markup and styling land first so the look can be
-// judged; the click handling and API arrive in later phases.
 const marker = (show, kind, icon, label) => {
   const on = stateOf(show) === kind;
   return `<button type="button" class="mark mark-${kind}${on ? ' on' : ''}" data-slug="${esc(slug(show))}" data-mark="${kind}" aria-pressed="${on}" title="${esc(label)}"><span class="sr-only">${esc(label)}</span>${icon}</button>`;
 };
 
+// data-cat carries the show's category as an index into categoryOrder, so the
+// client can put a card back where it came from after un-marking it as seen
+// without having to match category names through attribute-selector escaping.
+const catIndex = show => data.categoryOrder.indexOf(show.category);
+
 const card = show => {
   const state = stateOf(show);
   return `
-      <article class="card${state ? ' ' + state : ''}" data-slug="${esc(slug(show))}" data-state="${state || ''}">
+      <article class="card${state ? ' ' + state : ''}" data-slug="${esc(slug(show))}" data-state="${state || ''}" data-cat="${catIndex(show)}">
         <div class="card-head">
           <h3><a href="${esc(ticketLink(show))}" target="_blank" rel="noopener">${esc(show.title)}</a></h3>
           <div class="badges">
@@ -89,24 +89,133 @@ const card = show => {
       </article>`;
 };
 
-const sections = data.categoryOrder.map(cat => {
+// Sections are always emitted, hidden when empty, so the client has somewhere
+// to move a card when its state changes — including the last card leaving a
+// category, or the first one arriving in a previously empty "Already seen".
+const sections = data.categoryOrder.map((cat, i) => {
   const shows = data.shows.filter(s => s.category === cat && stateOf(s) !== 'seen');
-  if (!shows.length) return '';
   return `
-    <section>
+    <section data-cat="${i}"${shows.length ? '' : ' hidden'}>
       <h2>${esc(cat)}</h2>
       <div class="grid">${shows.map(card).join('')}</div>
     </section>`;
 }).join('');
 
 const seenShows = data.shows.filter(s => stateOf(s) === 'seen');
-const seenSection = seenShows.length ? `
-    <section class="seen-section">
+const seenSection = `
+    <section class="seen-section"${seenShows.length ? '' : ' hidden'}>
       <h2>Already seen (loved, but done)</h2>
       <div class="grid">${seenShows.map(card).join('')}</div>
-    </section>` : '';
+    </section>`;
 
 const updatedStamp = buildDate.toLocaleString('en-GB', { timeZone: 'Europe/London', weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+
+// Marks are applied optimistically and reverted if the write fails, so a tap
+// feels instant on a phone but never lies about what was actually saved.
+const clientScript = `
+(function () {
+  'use strict';
+  var API = '/api', KEY_STORE = 'fringe-key';
+
+  // A key handed over once as ?key=... is kept locally and stripped from the
+  // URL, so it does not linger in history or leak through a Referer header.
+  try {
+    var u = new URL(location.href);
+    if (u.searchParams.get('key')) {
+      localStorage.setItem(KEY_STORE, u.searchParams.get('key'));
+      u.searchParams.delete('key');
+      history.replaceState(null, '', u.pathname + (u.search || '') + u.hash);
+    }
+  } catch (e) {}
+  function key() { try { return localStorage.getItem(KEY_STORE) || ''; } catch (e) { return ''; } }
+
+  var note = document.createElement('div');
+  note.className = 'toast';
+  note.hidden = true;
+  document.body.appendChild(note);
+  var noteTimer;
+  function toast(msg) {
+    note.textContent = msg;
+    note.hidden = false;
+    clearTimeout(noteTimer);
+    noteTimer = setTimeout(function () { note.hidden = true; }, 4000);
+  }
+
+  function grids() { return document.querySelectorAll('main section'); }
+  function tidy() {
+    grids().forEach(function (s) { s.hidden = !s.querySelector('.card'); });
+  }
+
+  function place(card, state) {
+    var target = state === 'seen'
+      ? document.querySelector('.seen-section .grid')
+      : document.querySelector('main section[data-cat="' + card.dataset.cat + '"] .grid');
+    if (target && card.parentElement !== target) target.appendChild(card);
+    tidy();
+  }
+
+  function apply(card, state) {
+    card.classList.remove('booked', 'seen');
+    if (state) card.classList.add(state);
+    card.dataset.state = state || '';
+
+    var badges = card.querySelector('.badges');
+    var stale = badges.querySelector('.bookedb, .seenb');
+    if (stale) stale.remove();
+    if (state === 'booked') badges.insertAdjacentHTML('beforeend', '<span class="badge bookedb">Booked</span>');
+    if (state === 'seen') badges.insertAdjacentHTML('beforeend', '<span class="badge seenb">Seen it</span>');
+
+    Array.prototype.forEach.call(card.querySelectorAll('.mark'), function (b) {
+      var on = b.dataset.mark === state;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    place(card, state);
+  }
+
+  function save(slug, state) {
+    return fetch(API + '/status/' + encodeURIComponent(slug), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Fringe-Key': key() },
+      body: JSON.stringify({ state: state })
+    }).then(function (r) {
+      if (r.ok) return r.json();
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        throw new Error(r.status === 401 ? 'Not authorised — open this page once with ?key=...' : (j.error || ('HTTP ' + r.status)));
+      });
+    });
+  }
+
+  document.addEventListener('click', function (ev) {
+    var btn = ev.target.closest && ev.target.closest('.mark');
+    if (!btn) return;
+    var card = btn.closest('.card');
+    if (!card || card.dataset.busy) return;
+
+    var was = card.dataset.state || '';
+    var next = was === btn.dataset.mark ? null : btn.dataset.mark;
+
+    card.dataset.busy = '1';
+    apply(card, next);
+    save(card.dataset.slug, next)
+      .catch(function (err) {
+        apply(card, was || null);
+        toast(err.message);
+      })
+      .then(function () { delete card.dataset.busy; });
+  });
+
+  // Catch up on marks made elsewhere since this page was rendered. Only marks
+  // that exist are applied: a show marked seen in shows.json has no mark, and
+  // clearing it here would wrongly drag it out of the Already seen section.
+  fetch(API + '/status').then(function (r) { return r.json(); }).then(function (marks) {
+    Array.prototype.forEach.call(document.querySelectorAll('.card'), function (card) {
+      var m = marks[card.dataset.slug];
+      if (m && m.state && m.state !== card.dataset.state) apply(card, m.state);
+    });
+  }).catch(function () { /* offline or API down: the rendered page still stands */ });
+})();
+`;
 
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -169,6 +278,11 @@ const html = `<!DOCTYPE html>
   .mark-seen.on { background:#6f6a80; border-color:#6f6a80; }
   .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
              clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+  [hidden] { display:none !important; }
+  .toast { position:fixed; left:50%; bottom:1.2rem; transform:translateX(-50%);
+           max-width:min(30rem, calc(100vw - 2rem)); z-index:10;
+           background:var(--ink); color:#f4f0ff; font:.85rem/1.4 Verdana, sans-serif;
+           padding:.6rem .9rem; border-radius:8px; box-shadow:0 4px 14px rgba(29,26,47,.3); }
   footer { text-align:center; font-size:.8rem; color:var(--muted); padding:0 1rem 2.5rem; }
   footer a { color:var(--accent); }
 </style>
@@ -188,11 +302,15 @@ ${seenSection}
   Maintained automatically — an hourly review sweep (8am–8pm, through 11 Aug) adds newly acclaimed shows that match Jason &amp; Julia's tastes.
   <br>Icons by <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome</a> (CC BY 4.0).
 </footer>
+<script>${clientScript}</script>
 </body>
 </html>
 `;
 
-fs.writeFileSync(path.join(dir, 'index.html'), html);
+// FRINGE_OUT lets the status API render directly into the web root: it runs as
+// `web` and cannot write into the root-owned clone, but the clone is readable.
+const outPath = process.env.FRINGE_OUT || path.join(dir, 'index.html');
+fs.writeFileSync(outPath, html);
 
 const counts = data.shows.reduce((a, s) => (a[stateOf(s) || 'open']++, a), { open: 0, booked: 0, seen: 0 });
 console.log(`Built index.html: ${data.shows.length} shows across ${data.categoryOrder.length} categories ` +

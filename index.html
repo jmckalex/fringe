@@ -59,6 +59,11 @@
   .mark-seen.on { background:#6f6a80; border-color:#6f6a80; }
   .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
              clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+  [hidden] { display:none !important; }
+  .toast { position:fixed; left:50%; bottom:1.2rem; transform:translateX(-50%);
+           max-width:min(30rem, calc(100vw - 2rem)); z-index:10;
+           background:var(--ink); color:#f4f0ff; font:.85rem/1.4 Verdana, sans-serif;
+           padding:.6rem .9rem; border-radius:8px; box-shadow:0 4px 14px rgba(29,26,47,.3); }
   footer { text-align:center; font-size:.8rem; color:var(--muted); padding:0 1rem 2.5rem; }
   footer a { color:var(--accent); }
 </style>
@@ -67,14 +72,14 @@
 <header>
   <h1>Jason &amp; Julia's Fringe 2026 Shortlist</h1>
   <p>Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns</p>
-  <span class="stamp">Last updated Fri 7 Aug, 13:03 (UK)</span>
+  <span class="stamp">Last updated Fri 7 Aug, 13:21 (UK)</span>
 </header>
 <main>
 
-    <section>
+    <section data-cat="0">
       <h2>Drama &amp; New Writing</h2>
       <div class="grid">
-      <article class="card" data-slug="cathy" data-state="">
+      <article class="card" data-slug="cathy" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Cathy%22" target="_blank" rel="noopener">Cathy</a></h3>
           <div class="badges">
@@ -92,7 +97,7 @@
           <button type="button" class="mark mark-seen" data-slug="cathy" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="gameplay" data-state="">
+      <article class="card" data-slug="gameplay" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Gameplay%22" target="_blank" rel="noopener">Gameplay</a></h3>
           <div class="badges">
@@ -110,7 +115,7 @@
           <button type="button" class="mark mark-seen" data-slug="gameplay" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="prophets" data-state="">
+      <article class="card" data-slug="prophets" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Prophets%22" target="_blank" rel="noopener">Prophets</a></h3>
           <div class="badges">
@@ -128,7 +133,7 @@
           <button type="button" class="mark mark-seen" data-slug="prophets" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="the-second-best-school-shooting" data-state="">
+      <article class="card" data-slug="the-second-best-school-shooting" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22The%20Second%20Best%20School%20Shooting%22" target="_blank" rel="noopener">The Second Best School Shooting</a></h3>
           <div class="badges">
@@ -146,7 +151,7 @@
           <button type="button" class="mark mark-seen" data-slug="the-second-best-school-shooting" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="badgers" data-state="">
+      <article class="card" data-slug="badgers" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Badgers%22" target="_blank" rel="noopener">Badgers</a></h3>
           <div class="badges">
@@ -164,7 +169,7 @@
           <button type="button" class="mark mark-seen" data-slug="badgers" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="man-or-bear" data-state="">
+      <article class="card" data-slug="man-or-bear" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Man%20or%20Bear%22" target="_blank" rel="noopener">Man or Bear</a></h3>
           <div class="badges">
@@ -182,7 +187,7 @@
           <button type="button" class="mark mark-seen" data-slug="man-or-bear" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="mayflies" data-state="">
+      <article class="card" data-slug="mayflies" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Mayflies%22" target="_blank" rel="noopener">Mayflies</a></h3>
           <div class="badges">
@@ -200,7 +205,7 @@
           <button type="button" class="mark mark-seen" data-slug="mayflies" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="mohan-a-partition-story" data-state="">
+      <article class="card" data-slug="mohan-a-partition-story" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Mohan%3A%20A%20Partition%20Story%22" target="_blank" rel="noopener">Mohan: A Partition Story</a></h3>
           <div class="badges">
@@ -218,7 +223,7 @@
           <button type="button" class="mark mark-seen" data-slug="mohan-a-partition-story" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="a-trial-after-an-enemy-of-the-people" data-state="">
+      <article class="card" data-slug="a-trial-after-an-enemy-of-the-people" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22A%20Trial%20%E2%80%93%20after%20An%20Enemy%20of%20the%20People%22" target="_blank" rel="noopener">A Trial – after An Enemy of the People</a></h3>
           <div class="badges">
@@ -236,7 +241,7 @@
           <button type="button" class="mark mark-seen" data-slug="a-trial-after-an-enemy-of-the-people" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="woodhill" data-state="">
+      <article class="card" data-slug="woodhill" data-state="" data-cat="0">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Woodhill%22" target="_blank" rel="noopener">Woodhill</a></h3>
           <div class="badges">
@@ -255,10 +260,10 @@
         </div>
       </article></div>
     </section>
-    <section>
+    <section data-cat="1">
       <h2>Visual &amp; Inventive Theatre</h2>
       <div class="grid">
-      <article class="card" data-slug="book-of-shadows" data-state="">
+      <article class="card" data-slug="book-of-shadows" data-state="" data-cat="1">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Book%20of%20Shadows%22" target="_blank" rel="noopener">Book of Shadows</a></h3>
           <div class="badges">
@@ -276,7 +281,7 @@
           <button type="button" class="mark mark-seen" data-slug="book-of-shadows" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="dracula-lucy-s-dream" data-state="">
+      <article class="card" data-slug="dracula-lucy-s-dream" data-state="" data-cat="1">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Dracula%3A%20Lucy's%20Dream%22" target="_blank" rel="noopener">Dracula: Lucy's Dream</a></h3>
           <div class="badges">
@@ -295,10 +300,10 @@
         </div>
       </article></div>
     </section>
-    <section>
+    <section data-cat="2">
       <h2>Comedy &amp; Storytelling</h2>
       <div class="grid">
-      <article class="card" data-slug="elf-lyons-is-the-woman-on-the-edge" data-state="">
+      <article class="card" data-slug="elf-lyons-is-the-woman-on-the-edge" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Elf%20Lyons%20is%20The%20Woman%20on%20the%20Edge%22" target="_blank" rel="noopener">Elf Lyons is The Woman on the Edge</a></h3>
           <div class="badges">
@@ -316,7 +321,7 @@
           <button type="button" class="mark mark-seen" data-slug="elf-lyons-is-the-woman-on-the-edge" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="kirsty-mann-corpse" data-state="">
+      <article class="card" data-slug="kirsty-mann-corpse" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Kirsty%20Mann%3A%20Corpse%22" target="_blank" rel="noopener">Kirsty Mann: Corpse</a></h3>
           <div class="badges">
@@ -334,7 +339,7 @@
           <button type="button" class="mark mark-seen" data-slug="kirsty-mann-corpse" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="steve-burns-alive" data-state="">
+      <article class="card" data-slug="steve-burns-alive" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Steve%20Burns%3A%20Alive%22" target="_blank" rel="noopener">Steve Burns: Alive</a></h3>
           <div class="badges">
@@ -352,7 +357,7 @@
           <button type="button" class="mark mark-seen" data-slug="steve-burns-alive" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="ahir-shah-golden" data-state="">
+      <article class="card" data-slug="ahir-shah-golden" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Ahir%20Shah%3A%20Golden%22" target="_blank" rel="noopener">Ahir Shah: Golden</a></h3>
           <div class="badges">
@@ -370,7 +375,7 @@
           <button type="button" class="mark mark-seen" data-slug="ahir-shah-golden" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="amanda-knox-cartwheel" data-state="">
+      <article class="card" data-slug="amanda-knox-cartwheel" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Amanda%20Knox%3A%20Cartwheel%22" target="_blank" rel="noopener">Amanda Knox: Cartwheel</a></h3>
           <div class="badges">
@@ -388,7 +393,7 @@
           <button type="button" class="mark mark-seen" data-slug="amanda-knox-cartwheel" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="susie-mccabe-coming-of-rage" data-state="">
+      <article class="card" data-slug="susie-mccabe-coming-of-rage" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Susie%20McCabe%3A%20Coming%20of%20Rage%22" target="_blank" rel="noopener">Susie McCabe: Coming of Rage</a></h3>
           <div class="badges">
@@ -406,7 +411,7 @@
           <button type="button" class="mark mark-seen" data-slug="susie-mccabe-coming-of-rage" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="mark-thomas-40-in-stand-up-years" data-state="">
+      <article class="card" data-slug="mark-thomas-40-in-stand-up-years" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Mark%20Thomas%3A%2040%20in%20Stand-up%20Years%22" target="_blank" rel="noopener">Mark Thomas: 40 in Stand-up Years</a></h3>
           <div class="badges">
@@ -424,7 +429,7 @@
           <button type="button" class="mark mark-seen" data-slug="mark-thomas-40-in-stand-up-years" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="simon-amstell-i-love-it-here" data-state="">
+      <article class="card" data-slug="simon-amstell-i-love-it-here" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Simon%20Amstell%3A%20I%20Love%20It%20Here%22" target="_blank" rel="noopener">Simon Amstell: I Love It Here</a></h3>
           <div class="badges">
@@ -442,7 +447,7 @@
           <button type="button" class="mark mark-seen" data-slug="simon-amstell-i-love-it-here" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="mr-chonkers-work-in-chonkers" data-state="">
+      <article class="card" data-slug="mr-chonkers-work-in-chonkers" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Mr%20Chonkers%3A%20Work%20in%20Chonkers%22" target="_blank" rel="noopener">Mr Chonkers: Work in Chonkers</a></h3>
           <div class="badges">
@@ -460,7 +465,7 @@
           <button type="button" class="mark mark-seen" data-slug="mr-chonkers-work-in-chonkers" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="the-horse-of-jenin" data-state="">
+      <article class="card" data-slug="the-horse-of-jenin" data-state="" data-cat="2">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22The%20Horse%20of%20Jenin%22" target="_blank" rel="noopener">The Horse of Jenin</a></h3>
           <div class="badges">
@@ -479,10 +484,10 @@
         </div>
       </article></div>
     </section>
-    <section>
+    <section data-cat="3">
       <h2>Music, Musicals &amp; Cabaret</h2>
       <div class="grid">
-      <article class="card" data-slug="sh-t-theatre-evita-too" data-state="">
+      <article class="card" data-slug="sh-t-theatre-evita-too" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Sh!t%20Theatre%3A%20Evita%20Too%22" target="_blank" rel="noopener">Sh!t Theatre: Evita Too</a></h3>
           <div class="badges">
@@ -500,7 +505,7 @@
           <button type="button" class="mark mark-seen" data-slug="sh-t-theatre-evita-too" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="salty-brine-how-strange-it-is" data-state="">
+      <article class="card" data-slug="salty-brine-how-strange-it-is" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Salty%20Brine%3A%20How%20Strange%20It%20Is%22" target="_blank" rel="noopener">Salty Brine: How Strange It Is</a></h3>
           <div class="badges">
@@ -518,7 +523,7 @@
           <button type="button" class="mark mark-seen" data-slug="salty-brine-how-strange-it-is" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="tether" data-state="">
+      <article class="card" data-slug="tether" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Tether%22" target="_blank" rel="noopener">Tether</a></h3>
           <div class="badges">
@@ -536,7 +541,7 @@
           <button type="button" class="mark mark-seen" data-slug="tether" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="blackbox" data-state="">
+      <article class="card" data-slug="blackbox" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Blackbox%22" target="_blank" rel="noopener">Blackbox</a></h3>
           <div class="badges">
@@ -554,7 +559,7 @@
           <button type="button" class="mark mark-seen" data-slug="blackbox" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="baby-wants-candy" data-state="">
+      <article class="card" data-slug="baby-wants-candy" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Baby%20Wants%20Candy%22" target="_blank" rel="noopener">Baby Wants Candy</a></h3>
           <div class="badges">
@@ -572,7 +577,7 @@
           <button type="button" class="mark mark-seen" data-slug="baby-wants-candy" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-state="">
+      <article class="card" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Kristen%20Schaal%3A%20The%20Legend%20of%20Crystal%20Shell%22" target="_blank" rel="noopener">Kristen Schaal: The Legend of Crystal Shell</a></h3>
           <div class="badges">
@@ -590,7 +595,7 @@
           <button type="button" class="mark mark-seen" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="the-galloping-cure" data-state="">
+      <article class="card" data-slug="the-galloping-cure" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22The%20Galloping%20Cure%22" target="_blank" rel="noopener">The Galloping Cure</a></h3>
           <div class="badges">
@@ -608,7 +613,7 @@
           <button type="button" class="mark mark-seen" data-slug="the-galloping-cure" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="bernie-dieter-s-club-kabarett" data-state="">
+      <article class="card" data-slug="bernie-dieter-s-club-kabarett" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Bernie%20Dieter's%20Club%20Kabarett%22" target="_blank" rel="noopener">Bernie Dieter's Club Kabarett</a></h3>
           <div class="badges">
@@ -626,7 +631,7 @@
           <button type="button" class="mark mark-seen" data-slug="bernie-dieter-s-club-kabarett" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="one-man-musical" data-state="">
+      <article class="card" data-slug="one-man-musical" data-state="" data-cat="3">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22One%20Man%20Musical%22" target="_blank" rel="noopener">One Man Musical</a></h3>
           <div class="badges">
@@ -645,10 +650,10 @@
         </div>
       </article></div>
     </section>
-    <section>
+    <section data-cat="4">
       <h2>Magic, Circus &amp; Spectacle</h2>
       <div class="grid">
-      <article class="card" data-slug="ben-hart-the-labyrinth" data-state="">
+      <article class="card" data-slug="ben-hart-the-labyrinth" data-state="" data-cat="4">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Ben%20Hart%3A%20The%20Labyrinth%22" target="_blank" rel="noopener">Ben Hart: The Labyrinth</a></h3>
           <div class="badges">
@@ -666,7 +671,7 @@
           <button type="button" class="mark mark-seen" data-slug="ben-hart-the-labyrinth" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="kevin-quantum-invisible-force" data-state="">
+      <article class="card" data-slug="kevin-quantum-invisible-force" data-state="" data-cat="4">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Kevin%20Quantum%3A%20Invisible%20Force%22" target="_blank" rel="noopener">Kevin Quantum: Invisible Force</a></h3>
           <div class="badges">
@@ -684,7 +689,7 @@
           <button type="button" class="mark mark-seen" data-slug="kevin-quantum-invisible-force" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="360-allstars" data-state="">
+      <article class="card" data-slug="360-allstars" data-state="" data-cat="4">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22360%20ALLSTARS%22" target="_blank" rel="noopener">360 ALLSTARS</a></h3>
           <div class="badges">
@@ -702,7 +707,7 @@
           <button type="button" class="mark mark-seen" data-slug="360-allstars" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="tell-me" data-state="">
+      <article class="card" data-slug="tell-me" data-state="" data-cat="4">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Tell%20Me%22" target="_blank" rel="noopener">Tell Me</a></h3>
           <div class="badges">
@@ -720,7 +725,7 @@
           <button type="button" class="mark mark-seen" data-slug="tell-me" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="ten-thousand-hours" data-state="">
+      <article class="card" data-slug="ten-thousand-hours" data-state="" data-cat="4">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Ten%20Thousand%20Hours%22" target="_blank" rel="noopener">Ten Thousand Hours</a></h3>
           <div class="badges">
@@ -739,10 +744,10 @@
         </div>
       </article></div>
     </section>
-    <section>
+    <section data-cat="5">
       <h2>Spoken Word</h2>
       <div class="grid">
-      <article class="card" data-slug="loud-poets" data-state="">
+      <article class="card" data-slug="loud-poets" data-state="" data-cat="5">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Loud%20Poets%22" target="_blank" rel="noopener">Loud Poets</a></h3>
           <div class="badges">
@@ -760,7 +765,7 @@
           <button type="button" class="mark mark-seen" data-slug="loud-poets" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
         </div>
       </article>
-      <article class="card" data-slug="adding-up-america-solving-the-race-equation" data-state="">
+      <article class="card" data-slug="adding-up-america-solving-the-race-equation" data-state="" data-cat="5">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Adding%20Up%20America%3A%20Solving%20the%20Race%20Equation%22" target="_blank" rel="noopener">Adding Up America: Solving the Race Equation</a></h3>
           <div class="badges">
@@ -783,7 +788,7 @@
     <section class="seen-section">
       <h2>Already seen (loved, but done)</h2>
       <div class="grid">
-      <article class="card seen" data-slug="mythos-ragnarok" data-state="seen">
+      <article class="card seen" data-slug="mythos-ragnarok" data-state="seen" data-cat="4">
         <div class="card-head">
           <h3><a href="https://tickets.edfringe.com/whats-on?q=%22Mythos%3A%20Ragnar%C3%B6k%22" target="_blank" rel="noopener">Mythos: Ragnarök</a></h3>
           <div class="badges">
@@ -808,5 +813,109 @@
   Maintained automatically — an hourly review sweep (8am–8pm, through 11 Aug) adds newly acclaimed shows that match Jason &amp; Julia's tastes.
   <br>Icons by <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome</a> (CC BY 4.0).
 </footer>
+<script>
+(function () {
+  'use strict';
+  var API = '/api', KEY_STORE = 'fringe-key';
+
+  // A key handed over once as ?key=... is kept locally and stripped from the
+  // URL, so it does not linger in history or leak through a Referer header.
+  try {
+    var u = new URL(location.href);
+    if (u.searchParams.get('key')) {
+      localStorage.setItem(KEY_STORE, u.searchParams.get('key'));
+      u.searchParams.delete('key');
+      history.replaceState(null, '', u.pathname + (u.search || '') + u.hash);
+    }
+  } catch (e) {}
+  function key() { try { return localStorage.getItem(KEY_STORE) || ''; } catch (e) { return ''; } }
+
+  var note = document.createElement('div');
+  note.className = 'toast';
+  note.hidden = true;
+  document.body.appendChild(note);
+  var noteTimer;
+  function toast(msg) {
+    note.textContent = msg;
+    note.hidden = false;
+    clearTimeout(noteTimer);
+    noteTimer = setTimeout(function () { note.hidden = true; }, 4000);
+  }
+
+  function grids() { return document.querySelectorAll('main section'); }
+  function tidy() {
+    grids().forEach(function (s) { s.hidden = !s.querySelector('.card'); });
+  }
+
+  function place(card, state) {
+    var target = state === 'seen'
+      ? document.querySelector('.seen-section .grid')
+      : document.querySelector('main section[data-cat="' + card.dataset.cat + '"] .grid');
+    if (target && card.parentElement !== target) target.appendChild(card);
+    tidy();
+  }
+
+  function apply(card, state) {
+    card.classList.remove('booked', 'seen');
+    if (state) card.classList.add(state);
+    card.dataset.state = state || '';
+
+    var badges = card.querySelector('.badges');
+    var stale = badges.querySelector('.bookedb, .seenb');
+    if (stale) stale.remove();
+    if (state === 'booked') badges.insertAdjacentHTML('beforeend', '<span class="badge bookedb">Booked</span>');
+    if (state === 'seen') badges.insertAdjacentHTML('beforeend', '<span class="badge seenb">Seen it</span>');
+
+    Array.prototype.forEach.call(card.querySelectorAll('.mark'), function (b) {
+      var on = b.dataset.mark === state;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    place(card, state);
+  }
+
+  function save(slug, state) {
+    return fetch(API + '/status/' + encodeURIComponent(slug), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Fringe-Key': key() },
+      body: JSON.stringify({ state: state })
+    }).then(function (r) {
+      if (r.ok) return r.json();
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        throw new Error(r.status === 401 ? 'Not authorised — open this page once with ?key=...' : (j.error || ('HTTP ' + r.status)));
+      });
+    });
+  }
+
+  document.addEventListener('click', function (ev) {
+    var btn = ev.target.closest && ev.target.closest('.mark');
+    if (!btn) return;
+    var card = btn.closest('.card');
+    if (!card || card.dataset.busy) return;
+
+    var was = card.dataset.state || '';
+    var next = was === btn.dataset.mark ? null : btn.dataset.mark;
+
+    card.dataset.busy = '1';
+    apply(card, next);
+    save(card.dataset.slug, next)
+      .catch(function (err) {
+        apply(card, was || null);
+        toast(err.message);
+      })
+      .then(function () { delete card.dataset.busy; });
+  });
+
+  // Catch up on marks made elsewhere since this page was rendered. Only marks
+  // that exist are applied: a show marked seen in shows.json has no mark, and
+  // clearing it here would wrongly drag it out of the Already seen section.
+  fetch(API + '/status').then(function (r) { return r.json(); }).then(function (marks) {
+    Array.prototype.forEach.call(document.querySelectorAll('.card'), function (card) {
+      var m = marks[card.dataset.slug];
+      if (m && m.state && m.state !== card.dataset.state) apply(card, m.state);
+    });
+  }).catch(function () { /* offline or API down: the rendered page still stands */ });
+})();
+</script>
 </body>
 </html>
