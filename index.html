@@ -34,7 +34,12 @@
   /* Bottom margin guarantees breathing room above the marks row even when the
      card is full and the auto margin below resolves to zero. */
   .why { margin:.45rem 0 .8rem; font-size:.92rem; }
+  .badge.maybeb { background:#fbf0d6; color:#8a6413; }
   .badge.bookedb { background:#e5dcf2; color:#54317f; }
+  /* Maybe is the one mark that does NOT quieten the card: it means still to be
+     decided, so it should keep drawing the eye rather than settle out of view. */
+  .card.maybe { border-color:var(--gold); box-shadow:0 1px 3px rgba(201,150,46,.25); }
+  .mark-maybe.on { background:var(--gold); border-color:var(--gold); }
   html { scroll-behavior:smooth; }
   h2 .backlink { color:inherit; text-decoration:none; }
   h2 .backlink:hover { text-decoration:underline; }
@@ -143,7 +148,7 @@
   </div>
   <h1>Jason &amp; Julia's Fringe 2026 Shortlist</h1>
   <p>Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns</p>
-  <span class="stamp">Last updated Fri 7 Aug, 18:13 (UK)</span>
+  <span class="stamp">Last updated Fri 7 Aug, 18:29 (UK)</span>
 </header>
 <main>
 
@@ -159,12 +164,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">The Lafayette, Underbelly's Circus Hub on the Meadows · 18:20 · 7–29 Aug (not 12, 18, 25)</p>
         <p class="acclaim">5★ One4Review · Scotsman critics' best of the 2025 Fringe · reviewed by The Stage <span class="reviews"><a href="https://one4review.co.uk/2025/08/circa-wolf-5/" target="_blank" rel="noopener">One4Review 5★</a> · <a href="https://www.thestage.co.uk/reviews/circa-wolf-review-underbelly-circus-hub-on-the-meadows-edinburgh" target="_blank" rel="noopener">The Stage</a> · <a href="https://www.scotsman.com/arts-and-culture/edinburgh-festivals/edinburgh-fringe-dance-physical-theatre-reviews-circa-wolf-a-teen-odyssey-pickled-republic-5256014" target="_blank" rel="noopener">The Scotsman</a></span></p>
         <p class="why">Ten Circa acrobats moving as a pack — all instinct and trust — then exploding into gasp-out-loud lifts, jumps and aerials over Ori Lichtik's primal DJ rhythms. The purest hit of the Mythos: Ragnarök spectacle itch at this Fringe.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="circa-wolf" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="circa-wolf" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="circa-wolf" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="circa-wolf" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -179,12 +186,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall · check listing · 6–31 Aug</p>
         <p class="acclaim">5★ The Telegraph · 5★ The List · Edinburgh Comedy Award Best Show 2025 <span class="reviews"><a href="https://www.theguardian.com/stage/2026/aug/07/edinburgh-festival-2026-10-terrific-shows-weve-already-reviewed" target="_blank" rel="noopener">The Guardian round-up</a> · <a href="https://www.bingefringe.com/2025/08/03/review-sam-nicoresti-baby-doomer-edfringe-2025-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85/" target="_blank" rel="noopener">Binge Fringe 5★</a></span></p>
         <p class="why">Angry, absurd and political stand-up built round a misgendering in a department-store changing room — “uproariously funny, life-affirming, dumb and insightful all at once”. Exactly the weird comedy with substance underneath that they go for.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="sam-nicoresti-baby-doomer" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="sam-nicoresti-baby-doomer" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="sam-nicoresti-baby-doomer" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="sam-nicoresti-baby-doomer" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -199,12 +208,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Traverse Theatre (Theatre 1) · times vary · 2–30 Aug (not Mons)</p>
         <p class="acclaim">4★ The Guardian · 4★ The Stage <span class="reviews"><a href="https://www.theguardian.com/stage/2026/aug/07/edinburgh-festival-2026-10-terrific-shows-weve-already-reviewed" target="_blank" rel="noopener">The Guardian 4★</a> · <a href="https://www.timeout.com/edinburgh/theatre/bog-witch-review" target="_blank" rel="noopener">Time Out</a></span></p>
         <p class="why">Bryony Kimmings back at the Fringe after seven years, on uprooting her family to a permaculture homestead. “Haunting and hilarious… a climate reckoning of both cosmic and quotidian proportions” — big-tech visual theatre with Lewis Gibson sound design that makes a storm scene startlingly visceral.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="bog-witch" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="bog-witch" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="bog-witch" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="bog-witch" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -219,12 +230,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Monkey Barrel 4 · 14:10 · 5–30 Aug (not 19)</p>
         <p class="acclaim">5★ Midlothian View · 5★ Counter Culture <span class="reviews"><a href="https://midlothianview.com/news/john-luke-roberts-hilariously-confronts-mortality-in-must-see-fringe-return" target="_blank" rel="noopener">Midlothian View 5★</a></span></p>
         <p class="why">His first new show in four years: surreal wordplay and absurdist stand-up turned on his own health scares and mortality — an endoscopy at 11am on Remembrance Sunday. Weird comedy with real substance underneath.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -239,12 +252,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Underbelly Cowgate · 20:25 · 5–30 Aug</p>
         <p class="acclaim">5★ Binge Fringe <span class="reviews"><a href="https://www.bingefringe.com/2026/08/07/review-my-grandpa-doesnt-follow-me-on-instagram-cackling-jackal-productions-edinburgh-fringe-2026-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85/" target="_blank" rel="noopener">Binge Fringe 5★</a></span></p>
         <p class="why">Trans storyteller Yoz Mensch retraces a Cornwall-to-Highlands road trip with her grandpa. A trained clown, she uses the craft for character and physicality, not face paint — this is Adam Kay-style storytelling with real substance.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -259,12 +274,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Courtyard (Beside) · 14:05 · 5–31 Aug</p>
         <p class="acclaim">5★ Lisa in the Theatre · returning for its 10th anniversary <span class="reviews"><a href="https://www.lisainthetheatre.com/post/team-viking-review" target="_blank" rel="noopener">Lisa in the Theatre 5★</a> · <a href="https://theweereview.com/review/team-viking/" target="_blank" rel="noopener">The Wee Review</a></span></p>
         <p class="why">A true story about giving his best mate a Viking funeral — a comic ode to death, friendship and the absurdity of life. Pure Adam Kay territory: storytelling with real substance.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="james-rowland-team-viking" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="james-rowland-team-viking" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="james-rowland-team-viking" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="james-rowland-team-viking" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -279,12 +296,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Zoo Southside · 7–30 Aug</p>
         <p class="acclaim">Multi-award-winning (Charity Awards; Sheila McKechnie Change Makers Award) <span class="reviews"><a href="https://www.thereviewshub.com/woodhill-edinburgh-fringe-2023-summerhall/" target="_blank" rel="noopener">The Reviews Hub</a> · <a href="https://everything-theatre.co.uk/2023/08/review-woodhill-edfringe/" target="_blank" rel="noopener">Everything Theatre</a></span></p>
         <p class="why">LUNG's verbatim dance-theatre about suicides at HMP Woodhill, made with bereaved families — the closest thing at this Fringe to Punch's territory.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="woodhill" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="woodhill" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="woodhill" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="woodhill" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -299,12 +318,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Dome · 13:15 · August (see edfringe)</p>
         <p class="acclaim">Fringe First winner · 5★ Guardian · Rolling Stone Top 10 <span class="reviews"><a href="https://www.scotsman.com/arts-and-culture/edinburgh-festivals/edinburgh-fringe-theatre-reviews-the-horse-of-jenin-ordinary-decent-criminal-consumed-5265557" target="_blank" rel="noopener">The Scotsman</a></span></p>
         <p class="why">Alaa Shehada blends storytelling, mask work and stand-up: a Palestinian boy's resilience, told through a five-metre horse built from debris in Jenin.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="the-horse-of-jenin" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="the-horse-of-jenin" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="the-horse-of-jenin" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="the-horse-of-jenin" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -319,12 +340,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Beyond · 16:50 · 5–30 Aug</p>
         <p class="acclaim">Guardian's No.1 comedy show of 2024 · Chortle Best Show 2024 <span class="reviews"><a href="https://www.chortle.co.uk/review/2024/08/11/56285/one_man_musical,_from_flo_&amp;_joan" target="_blank" rel="noopener">Chortle</a></span></p>
         <p class="why">Flo &amp; Joan's gleeful spoof musical about a certain musical-theatre impresario, starring Edward Easton with the sisters playing live — &quot;better than Cats&quot;.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="one-man-musical" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="one-man-musical" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="one-man-musical" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="one-man-musical" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -339,12 +362,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall (Dissection Room) · 19:00 · 6–31 Aug (not Mon/Tue)</p>
         <p class="acclaim">5★ Pink Prince Theatre · 4★ Guardian</p>
         <p class="why">Sadiq Ali Company (The Chosen Haram): Chinese pole and aerial circus-theatre tracing HIV across two eras. &quot;Stunning, soulful, a total triumph.&quot;</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="tell-me" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="tell-me" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="tell-me" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="tell-me" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -359,12 +384,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Assembly Hall · August (see edfringe)</p>
         <p class="acclaim">&quot;Breathtaking&quot; — The Scotsman <span class="reviews"><a href="https://www.scotsman.com/arts-and-culture/edinburgh-festivals/dance-physical-theatre-circus-reviews-ten-thousand-hours-ari-the-spirit-of-korea-blips-4735478" target="_blank" rel="noopener">The Scotsman 5★</a> · <a href="https://theatreweekly.com/edinburgh-review-ten-thousand-hours-at-assembly-hall/" target="_blank" rel="noopener">Theatre Weekly</a></span></p>
         <p class="why">Gravity &amp; Other Myths' acrobatic meditation on mastery and the 10,000-hours rule — big-hearted, family-friendly spectacle.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="ten-thousand-hours" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="ten-thousand-hours" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="ten-thousand-hours" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="ten-thousand-hours" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -397,12 +424,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Traverse Theatre · 7–30 Aug (not 10, 17, 24)</p>
         <p class="acclaim">Fest top theatre pick</p>
         <p class="why">Elaine C. Smith returns to the Fringe after 26 years — a sharp-tongued widow confronting family secrets. The Traverse is the home of Punch-style new writing.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="cathy" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="cathy" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="cathy" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="cathy" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -417,12 +446,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Dome · 5–31 Aug</p>
         <p class="acclaim">Critics' pick (Natasha Tripney)</p>
         <p class="why">Doc-drama about Vasili Arkhipov, the Soviet officer who refused to fire nuclear weapons during the Cuban Missile Crisis.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="gameplay" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="gameplay" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="gameplay" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="gameplay" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -437,12 +468,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Assembly Roxy · 17:45 · 5–31 Aug</p>
         <p class="acclaim">2026 ART Award winner</p>
         <p class="why">Psychological thriller: a Scottish researcher meets a religious cult controlling a remote British Overseas Territory. Wicker Man atmosphere.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="prophets" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="prophets" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="prophets" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="prophets" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -457,12 +490,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Courtyard · 12:45 · 5–30 Aug (not 12, 19, 26)</p>
         <p class="acclaim">Produced by Matthew Lillard &amp; Adam McKay</p>
         <p class="why">Darkly comic play about a real school shooting — hard-hitting in the Punch vein.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="the-second-best-school-shooting" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="the-second-best-school-shooting" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="the-second-best-school-shooting" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="the-second-best-school-shooting" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -477,12 +512,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Traverse Theatre · 6–30 Aug</p>
         <p class="acclaim">Bristol Old Vic / Theatre Royal Plymouth co-production</p>
         <p class="why">A modern folk tale about a podcaster who digs up something sinister, with live music by Jakabol.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="badgers" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="badgers" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="badgers" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="badgers" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -497,12 +534,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall · 6–30 Aug</p>
         <p class="acclaim">&quot;Really strong, resonant new writing&quot;</p>
         <p class="why">Three women navigating persistent male violence, inspired by the viral debate; directed by Ursula Martinez.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="man-or-bear" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="man-or-bear" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="man-or-bear" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="man-or-bear" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -517,12 +556,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Rear Warehouse at Brown's of Leith · 16:00 · 7–30 Aug (not 11, 18, 25)</p>
         <p class="acclaim">Fest &amp; Skinny pick</p>
         <p class="why">Grid Iron's site-specific adaptation of Andrew O'Hagan's novel, performed in a former Leith metalworks.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="mayflies" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="mayflies" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="mayflies" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="mayflies" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -537,12 +578,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Courtyard · 15:25 · 18–31 Aug</p>
         <p class="acclaim">By Fringe First winner Niall Moorjani</p>
         <p class="why">The writer's grandfather's Partition experience, blended with live music.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="mohan-a-partition-story" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="mohan-a-partition-story" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="mohan-a-partition-story" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="mohan-a-partition-story" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -557,12 +600,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Royal Lyceum (Edinburgh International Festival) · 19:30 / 15:00 · 7–10 Aug only</p>
         <p class="acclaim">EIF headliner</p>
         <p class="why">Wagner Moura in a courtroom reimagining of Ibsen — the audience sits as the jury.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="a-trial-after-an-enemy-of-the-people" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="a-trial-after-an-enemy-of-the-people" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="a-trial-after-an-enemy-of-the-people" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="a-trial-after-an-enemy-of-the-people" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -577,12 +622,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Zoo Southside · 7–30 Aug</p>
         <p class="acclaim">Multi-award-winning (Charity Awards; Sheila McKechnie Change Makers Award) <span class="reviews"><a href="https://www.thereviewshub.com/woodhill-edinburgh-fringe-2023-summerhall/" target="_blank" rel="noopener">The Reviews Hub</a> · <a href="https://everything-theatre.co.uk/2023/08/review-woodhill-edfringe/" target="_blank" rel="noopener">Everything Theatre</a></span></p>
         <p class="why">LUNG's verbatim dance-theatre about suicides at HMP Woodhill, made with bereaved families — the closest thing at this Fringe to Punch's territory.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="woodhill" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="woodhill" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="woodhill" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="woodhill" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -601,12 +648,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Underbelly Cowgate · 5–30 Aug</p>
         <p class="acclaim">From the makers of Fringe hit Space Hippo</p>
         <p class="why">Occult mystery told entirely through shadow puppetry — for fans of The Ice Hole's lo-fi invention.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="book-of-shadows" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="book-of-shadows" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="book-of-shadows" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="book-of-shadows" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -621,12 +670,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance at EICC · 17:30 · 6–29 Aug</p>
         <p class="acclaim">Plexus Polaire, UK premiere <span class="reviews"><a href="https://chicagomaroon.com/45562/arts/blood-death-and-sex-plexus-polaires-dracula-lucys-dream/" target="_blank" rel="noopener">Chicago Maroon</a></span></p>
         <p class="why">Wordless, life-sized-puppetry Dracula told from Lucy's perspective. Extraordinary stagecraft.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="dracula-lucy-s-dream" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="dracula-lucy-s-dream" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="dracula-lucy-s-dream" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="dracula-lucy-s-dream" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -641,12 +692,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Traverse Theatre (Theatre 1) · times vary · 2–30 Aug (not Mons)</p>
         <p class="acclaim">4★ The Guardian · 4★ The Stage <span class="reviews"><a href="https://www.theguardian.com/stage/2026/aug/07/edinburgh-festival-2026-10-terrific-shows-weve-already-reviewed" target="_blank" rel="noopener">The Guardian 4★</a> · <a href="https://www.timeout.com/edinburgh/theatre/bog-witch-review" target="_blank" rel="noopener">Time Out</a></span></p>
         <p class="why">Bryony Kimmings back at the Fringe after seven years, on uprooting her family to a permaculture homestead. “Haunting and hilarious… a climate reckoning of both cosmic and quotidian proportions” — big-tech visual theatre with Lewis Gibson sound design that makes a storm scene startlingly visceral.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="bog-witch" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="bog-witch" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="bog-witch" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="bog-witch" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -665,12 +718,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Courtyard · 21:30 · 5–30 Aug</p>
         <p class="acclaim">5★ Telegraph · 4★ Guardian · 4★ Sunday Times</p>
         <p class="why">Your past favourite — theatrical show about love, riffing on Vertigo, Apollo 13 and Pagliacci.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="elf-lyons-is-the-woman-on-the-edge" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="elf-lyons-is-the-woman-on-the-edge" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="elf-lyons-is-the-woman-on-the-edge" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="elf-lyons-is-the-woman-on-the-edge" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -685,12 +740,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall · 6–30 Aug</p>
         <p class="acclaim">Adelaide Fringe award winner <span class="reviews"><a href="https://list.co.uk/news/kirsty-mann-corpse-theatre-review-a-haunting-follow-up-48052" target="_blank" rel="noopener">The List</a></span></p>
         <p class="why">Comedian and working doctor tells a real-life ghost story — the Adam Kay slot.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="kirsty-mann-corpse" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="kirsty-mann-corpse" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="kirsty-mann-corpse" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="kirsty-mann-corpse" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -705,12 +762,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">see edfringe.com · August</p>
         <p class="acclaim">Insider must-see pick <span class="reviews"><a href="https://exeuntnyc.com/reviews/review-steve-burns-alive-at-la-mama/" target="_blank" rel="noopener">Exeunt (New York run)</a></span></p>
         <p class="why">The former Blue's Clues host on parasocial fame and internet mythology.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="steve-burns-alive" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="steve-burns-alive" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="steve-burns-alive" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="steve-burns-alive" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -725,12 +784,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Courtyard · 19:30 · until 30 Aug</p>
         <p class="acclaim">2023 Edinburgh Comedy Award winner</p>
         <p class="why">Cerebral, moving stand-up — storytelling with real substance.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="ahir-shah-golden" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="ahir-shah-golden" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="ahir-shah-golden" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="ahir-shah-golden" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -745,12 +806,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">see edfringe.com · August</p>
         <p class="acclaim">Much buzzed-about debut</p>
         <p class="why">Yes, that Amanda Knox — stand-up about her wrongful imprisonment.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="amanda-knox-cartwheel" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="amanda-knox-cartwheel" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="amanda-knox-cartwheel" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="amanda-knox-cartwheel" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -765,12 +828,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Assembly George Square · 20:45 · 5–30 Aug (not 17)</p>
         <p class="acclaim">Fest comedy pick <span class="reviews"><a href="https://festmag.com/2026/08/06/review-susie-mccabe-coming-of-rage/" target="_blank" rel="noopener">Fest (Fringe 2026)</a> · <a href="https://www.scotsman.com/arts-and-culture/theatre-and-stage/susie-mccabe-coming-of-rage-glasgow-comedy-festival-review-scathing-humour-6527837" target="_blank" rel="noopener">The Scotsman</a></span></p>
         <p class="why">Glasgow favourite on the health crisis that hit her at 44.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="susie-mccabe-coming-of-rage" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="susie-mccabe-coming-of-rage" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="susie-mccabe-coming-of-rage" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="susie-mccabe-coming-of-rage" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -785,12 +850,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">The Stand · 18:05 · 5–30 Aug (not 20)</p>
         <p class="acclaim">Fest pick <span class="reviews"><a href="https://broadwaybaby.com/shows/mark-thomas-40-in-stand-up-years/833334" target="_blank" rel="noopener">Broadway Baby</a></span></p>
         <p class="why">Four decades of political storytelling — as close to spoken word as stand-up gets.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="mark-thomas-40-in-stand-up-years" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="mark-thomas-40-in-stand-up-years" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="mark-thomas-40-in-stand-up-years" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="mark-thomas-40-in-stand-up-years" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -805,12 +872,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">see edfringe.com · 8–9 Aug only</p>
         <p class="acclaim">Rare Fringe appearance <span class="reviews"><a href="https://www.chortle.co.uk/review/2026/02/28/60022/simon_amstell:_i_love_it_here" target="_blank" rel="noopener">Chortle</a></span></p>
         <p class="why">In town for two nights only.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="simon-amstell-i-love-it-here" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="simon-amstell-i-love-it-here" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="simon-amstell-i-love-it-here" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="simon-amstell-i-love-it-here" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -825,12 +894,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Monkey Barrel 4 · 23:55 · 10 Aug only</p>
         <p class="acclaim">Your past favourite</p>
         <p class="why">John Norris work-in-progress — one late-night one-off.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="mr-chonkers-work-in-chonkers" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="mr-chonkers-work-in-chonkers" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="mr-chonkers-work-in-chonkers" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="mr-chonkers-work-in-chonkers" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -845,12 +916,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Dome · 13:15 · August (see edfringe)</p>
         <p class="acclaim">Fringe First winner · 5★ Guardian · Rolling Stone Top 10 <span class="reviews"><a href="https://www.scotsman.com/arts-and-culture/edinburgh-festivals/edinburgh-fringe-theatre-reviews-the-horse-of-jenin-ordinary-decent-criminal-consumed-5265557" target="_blank" rel="noopener">The Scotsman</a></span></p>
         <p class="why">Alaa Shehada blends storytelling, mask work and stand-up: a Palestinian boy's resilience, told through a five-metre horse built from debris in Jenin.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="the-horse-of-jenin" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="the-horse-of-jenin" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="the-horse-of-jenin" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="the-horse-of-jenin" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -865,12 +938,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Courtyard (Beside) · 14:05 · 5–31 Aug</p>
         <p class="acclaim">5★ Lisa in the Theatre · returning for its 10th anniversary <span class="reviews"><a href="https://www.lisainthetheatre.com/post/team-viking-review" target="_blank" rel="noopener">Lisa in the Theatre 5★</a> · <a href="https://theweereview.com/review/team-viking/" target="_blank" rel="noopener">The Wee Review</a></span></p>
         <p class="why">A true story about giving his best mate a Viking funeral — a comic ode to death, friendship and the absurdity of life. Pure Adam Kay territory: storytelling with real substance.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="james-rowland-team-viking" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="james-rowland-team-viking" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="james-rowland-team-viking" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="james-rowland-team-viking" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -885,12 +960,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Underbelly Cowgate · 20:25 · 5–30 Aug</p>
         <p class="acclaim">5★ Binge Fringe <span class="reviews"><a href="https://www.bingefringe.com/2026/08/07/review-my-grandpa-doesnt-follow-me-on-instagram-cackling-jackal-productions-edinburgh-fringe-2026-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85/" target="_blank" rel="noopener">Binge Fringe 5★</a></span></p>
         <p class="why">Trans storyteller Yoz Mensch retraces a Cornwall-to-Highlands road trip with her grandpa. A trained clown, she uses the craft for character and physicality, not face paint — this is Adam Kay-style storytelling with real substance.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -905,12 +982,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Monkey Barrel 4 · 14:10 · 5–30 Aug (not 19)</p>
         <p class="acclaim">5★ Midlothian View · 5★ Counter Culture <span class="reviews"><a href="https://midlothianview.com/news/john-luke-roberts-hilariously-confronts-mortality-in-must-see-fringe-return" target="_blank" rel="noopener">Midlothian View 5★</a></span></p>
         <p class="why">His first new show in four years: surreal wordplay and absurdist stand-up turned on his own health scares and mortality — an endoscopy at 11am on Remembrance Sunday. Weird comedy with real substance underneath.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="john-luke-roberts-what-i-talk-about-when-i-run-about-talking" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -925,12 +1004,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall · check listing · 6–31 Aug</p>
         <p class="acclaim">5★ The Telegraph · 5★ The List · Edinburgh Comedy Award Best Show 2025 <span class="reviews"><a href="https://www.theguardian.com/stage/2026/aug/07/edinburgh-festival-2026-10-terrific-shows-weve-already-reviewed" target="_blank" rel="noopener">The Guardian round-up</a> · <a href="https://www.bingefringe.com/2025/08/03/review-sam-nicoresti-baby-doomer-edfringe-2025-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85/" target="_blank" rel="noopener">Binge Fringe 5★</a></span></p>
         <p class="why">Angry, absurd and political stand-up built round a misgendering in a department-store changing room — “uproariously funny, life-affirming, dumb and insightful all at once”. Exactly the weird comedy with substance underneath that they go for.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="sam-nicoresti-baby-doomer" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="sam-nicoresti-baby-doomer" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="sam-nicoresti-baby-doomer" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="sam-nicoresti-baby-doomer" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -949,12 +1030,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Zoo Southside · 18:25 · 7–30 Aug</p>
         <p class="acclaim">4★ Time Out <span class="reviews"><a href="https://www.timeout.com/london/theatre/sh-t-theatre-evita-too-review-1" target="_blank" rel="noopener">Time Out 4★</a></span></p>
         <p class="why">&quot;Hilarious, shambolic&quot; song-driven show about Isabel Perón — smart, musical, very Fringe.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="sh-t-theatre-evita-too" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="sh-t-theatre-evita-too" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="sh-t-theatre-evita-too" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="sh-t-theatre-evita-too" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -969,12 +1052,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall · 21:30 · 6–30 Aug (not 12, 17, 24)</p>
         <p class="acclaim">Fest cabaret pick</p>
         <p class="why">Acclaimed cabaret storyteller splicing Neutral Milk Hotel's In the Aeroplane Over the Sea with Anne Frank's diary.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="salty-brine-how-strange-it-is" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="salty-brine-how-strange-it-is" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="salty-brine-how-strange-it-is" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="salty-brine-how-strange-it-is" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -989,12 +1074,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall (Main Hall) · 6–31 Aug</p>
         <p class="acclaim">Skinny theatre highlight</p>
         <p class="why">Scottish-Korean co-production spanning three generations through folk songs, love letters and war stories.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="tether" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="tether" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="tether" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="tether" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1009,12 +1096,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Underbelly Cowgate · 12:40 · 5–30 Aug (not 17)</p>
         <p class="acclaim">Fest &amp; Skinny pick</p>
         <p class="why">Hip-hop theatre about Henry &quot;Box&quot; Brown, who mailed himself out of slavery. Great lunchtime slot.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="blackbox" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="blackbox" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="blackbox" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="blackbox" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1029,12 +1118,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Assembly George Square · August</p>
         <p class="acclaim">Scotsman pick <span class="reviews"><a href="https://www.theskinny.co.uk/festivals/edinburgh-fringe/theatre/baby-wants-candy" target="_blank" rel="noopener">The Skinny</a> · <a href="https://fringereview.co.uk/review/edinburgh-fringe/2025/baby-wants-candy-2/" target="_blank" rel="noopener">FringeReview</a></span></p>
         <p class="why">A fully improvised musical from an audience-shouted title. Reliably joyous.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="baby-wants-candy" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="baby-wants-candy" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="baby-wants-candy" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="baby-wants-candy" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1049,12 +1140,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">see edfringe.com · August</p>
         <p class="acclaim">Insider must-see pick</p>
         <p class="why">Comedy play with an original score — Schaal with her Bob's Burgers co-star John Roberts.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="kristen-schaal-the-legend-of-crystal-shell" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1069,12 +1162,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Festival Theatre (Edinburgh International Festival) · 9–12 Aug only</p>
         <p class="acclaim">Scottish Opera co-production, world premiere</p>
         <p class="why">New opera about the opioid crisis — the Punch end of the spectrum, set to music.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="the-galloping-cure" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="the-galloping-cure" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="the-galloping-cure" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="the-galloping-cure" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1089,12 +1184,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Underbelly's Circus Hub on the Meadows · 19:20 · 7–29 Aug (not 17, 24)</p>
         <p class="acclaim">Fest cabaret pick <span class="reviews"><a href="https://theatreweekly.com/edinburgh-fringe-review-bernie-dieters-club-kabarett-at-underbelly-circus-hub/" target="_blank" rel="noopener">Theatre Weekly</a> · <a href="https://festmag.com/2025/08/04/review-bernie-dieters-club-kabarett/" target="_blank" rel="noopener">Fest</a></span></p>
         <p class="why">Weimar punk cabaret with sword-swallowing and fire-breathing. Raucous, not clowny — front rows get teased.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="bernie-dieter-s-club-kabarett" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="bernie-dieter-s-club-kabarett" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="bernie-dieter-s-club-kabarett" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="bernie-dieter-s-club-kabarett" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1109,12 +1206,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Pleasance Beyond · 16:50 · 5–30 Aug</p>
         <p class="acclaim">Guardian's No.1 comedy show of 2024 · Chortle Best Show 2024 <span class="reviews"><a href="https://www.chortle.co.uk/review/2024/08/11/56285/one_man_musical,_from_flo_&amp;_joan" target="_blank" rel="noopener">Chortle</a></span></p>
         <p class="why">Flo &amp; Joan's gleeful spoof musical about a certain musical-theatre impresario, starring Edward Easton with the sisters playing live — &quot;better than Cats&quot;.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="one-man-musical" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="one-man-musical" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="one-man-musical" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="one-man-musical" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1133,12 +1232,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Palais du Variété, Assembly George Square Gardens · 18:20 · 5–30 Aug (not 17)</p>
         <p class="acclaim">&quot;Edinburgh's superstar magician&quot;</p>
         <p class="why">Mind-reading and reality-bending with heavy audience involvement — for fans of the pickpocket show.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="ben-hart-the-labyrinth" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="ben-hart-the-labyrinth" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="ben-hart-the-labyrinth" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="ben-hart-the-labyrinth" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1153,12 +1254,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Assembly Rooms (Ballroom) · 18:45 · 6–31 Aug</p>
         <p class="acclaim">Trained by Penn &amp; Teller</p>
         <p class="why">Big-gasp, science-flavoured magic — a strong alternative if Ben Hart's timing doesn't fit.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="kevin-quantum-invisible-force" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="kevin-quantum-invisible-force" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="kevin-quantum-invisible-force" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="kevin-quantum-invisible-force" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1173,12 +1276,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Assembly Hall · August</p>
         <p class="acclaim">Global hit <span class="reviews"><a href="https://www.thestage.co.uk/reviews/360-allstars-review-assembly-hall-edinburgh-urban-circus" target="_blank" rel="noopener">The Stage</a></span></p>
         <p class="why">Urban circus: BMX, basketball, breakdancing, beatboxing, drumming. Scratches the Mythos spectacle itch.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="360-allstars" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="360-allstars" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="360-allstars" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="360-allstars" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1193,12 +1298,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Summerhall (Dissection Room) · 19:00 · 6–31 Aug (not Mon/Tue)</p>
         <p class="acclaim">5★ Pink Prince Theatre · 4★ Guardian</p>
         <p class="why">Sadiq Ali Company (The Chosen Haram): Chinese pole and aerial circus-theatre tracing HIV across two eras. &quot;Stunning, soulful, a total triumph.&quot;</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="tell-me" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="tell-me" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="tell-me" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="tell-me" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1213,12 +1320,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Assembly Hall · August (see edfringe)</p>
         <p class="acclaim">&quot;Breathtaking&quot; — The Scotsman <span class="reviews"><a href="https://www.scotsman.com/arts-and-culture/edinburgh-festivals/dance-physical-theatre-circus-reviews-ten-thousand-hours-ari-the-spirit-of-korea-blips-4735478" target="_blank" rel="noopener">The Scotsman 5★</a> · <a href="https://theatreweekly.com/edinburgh-review-ten-thousand-hours-at-assembly-hall/" target="_blank" rel="noopener">Theatre Weekly</a></span></p>
         <p class="why">Gravity &amp; Other Myths' acrobatic meditation on mastery and the 10,000-hours rule — big-hearted, family-friendly spectacle.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="ten-thousand-hours" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="ten-thousand-hours" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="ten-thousand-hours" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="ten-thousand-hours" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1233,12 +1342,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">The Lafayette, Underbelly's Circus Hub on the Meadows · 18:20 · 7–29 Aug (not 12, 18, 25)</p>
         <p class="acclaim">5★ One4Review · Scotsman critics' best of the 2025 Fringe · reviewed by The Stage <span class="reviews"><a href="https://one4review.co.uk/2025/08/circa-wolf-5/" target="_blank" rel="noopener">One4Review 5★</a> · <a href="https://www.thestage.co.uk/reviews/circa-wolf-review-underbelly-circus-hub-on-the-meadows-edinburgh" target="_blank" rel="noopener">The Stage</a> · <a href="https://www.scotsman.com/arts-and-culture/edinburgh-festivals/edinburgh-fringe-dance-physical-theatre-reviews-circa-wolf-a-teen-odyssey-pickled-republic-5256014" target="_blank" rel="noopener">The Scotsman</a></span></p>
         <p class="why">Ten Circa acrobats moving as a pack — all instinct and trust — then exploding into gasp-out-loud lifts, jumps and aerials over Ori Lichtik's primal DJ rhythms. The purest hit of the Mythos: Ragnarök spectacle itch at this Fringe.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="circa-wolf" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="circa-wolf" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="circa-wolf" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="circa-wolf" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1257,12 +1368,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Scottish Storytelling Centre · 20:30 · 13, 20, 27 Aug only</p>
         <p class="acclaim">Fringe institution <span class="reviews"><a href="https://www.alledinburghtheatre.com/loud-poets-i-am-loud-scottish-storytelling-centre-edfringe-2025-review/" target="_blank" rel="noopener">All Edinburgh Theatre</a></span></p>
         <p class="why">&quot;Fist-thumping, heart-wrenching&quot; spoken word backed by a live band.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="loud-poets" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="loud-poets" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="loud-poets" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="loud-poets" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1277,12 +1390,14 @@
             
             
             
+            
           </div>
         </div>
         <p class="meta">Assembly Roxy · August</p>
         <p class="acclaim">Theatre Weekly pick</p>
         <p class="why">Monique DeBose blending live music, storytelling and sharp social insight.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="adding-up-america-solving-the-race-equation" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="adding-up-america-solving-the-race-equation" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen" data-slug="adding-up-america-solving-the-race-equation" data-mark="seen" aria-pressed="false" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="adding-up-america-solving-the-race-equation" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1300,6 +1415,7 @@
             
             
             
+            
             <span class="badge seenb">Seen it</span>
             
           </div>
@@ -1308,6 +1424,7 @@
         <p class="acclaim">30+ five-star reviews <span class="reviews"><a href="https://www.theskinny.co.uk/festivals/edinburgh-fringe/theatre/mythos-ragnarok-underbelly-circus-hub" target="_blank" rel="noopener">The Skinny</a></span></p>
         <p class="why">Norse gods, professional wrestling, hard-rock Viking soundtrack.</p>
         <div class="marks">
+          <button type="button" class="mark mark-maybe" data-slug="mythos-ragnarok" data-mark="maybe" aria-pressed="false" title="Maybe — interested, not decided"><span class="sr-only">Maybe — interested, not decided</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg></button>
           <button type="button" class="mark mark-booked" data-slug="mythos-ragnarok" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
           <button type="button" class="mark mark-seen on" data-slug="mythos-ragnarok" data-mark="seen" aria-pressed="true" title="Mark as seen"><span class="sr-only">Mark as seen</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
           <button type="button" class="mark mark-dropped" data-slug="mythos-ragnarok" data-mark="dropped" aria-pressed="false" title="Not interested"><span class="sr-only">Not interested</span><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></button>
@@ -1382,13 +1499,14 @@
   }
 
   function paint(card, state) {
-    card.classList.remove('booked', 'seen', 'dropped');
+    card.classList.remove('maybe', 'booked', 'seen', 'dropped');
     if (state) card.classList.add(state);
     card.dataset.state = state || '';
 
     var badges = card.querySelector('.badges');
-    var stale = badges.querySelector('.bookedb, .seenb, .droppedb');
+    var stale = badges.querySelector('.maybeb, .bookedb, .seenb, .droppedb');
     if (stale) stale.remove();
+    if (state === 'maybe') badges.insertAdjacentHTML('beforeend', '<span class="badge maybeb">Maybe</span>');
     if (state === 'booked') badges.insertAdjacentHTML('beforeend', '<span class="badge bookedb">Booked</span>');
     if (state === 'seen') badges.insertAdjacentHTML('beforeend', '<span class="badge seenb">Seen it</span>');
     if (state === 'dropped') badges.insertAdjacentHTML('beforeend', '<span class="badge droppedb">Not for us</span>');

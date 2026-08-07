@@ -56,6 +56,12 @@ separate stylesheet. All interpolated values pass through `esc()`.
 - `doNotReadd[]` — `{title, reason}` for shows that must never come back. Consult
   this before adding anything.
 
+**Marks** are held outside `shows.json`, in `/var/lib/fringe/status.json` on the
+droplet, and there are four: `maybe`, `booked`, `seen`, `dropped`. Only `seen`
+and `dropped` move a card out of its category — `maybe` and `booked` stay put,
+since both are still shows you might go to. `maybe` is also the one mark that
+does not quieten the card: undecided means still needing attention.
+
 **On the no-clowns rule.** Exclude a show only when clowning *is what the show is*
 — a clown persona piece, red-nose or whiteface character comedy, a bouffon or
 clown-troupe show. Do not exclude one merely because a blurb mentions clowning,
