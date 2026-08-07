@@ -35,6 +35,24 @@
      card is full and the auto margin below resolves to zero. */
   .why { margin:.45rem 0 .8rem; font-size:.92rem; }
   .badge.bookedb { background:#e5dcf2; color:#54317f; }
+  html { scroll-behavior:smooth; }
+  h2 .backlink { color:inherit; text-decoration:none; }
+  h2 .backlink:hover { text-decoration:underline; }
+  /* Heading links back to the contents; the arrow makes that discoverable
+     without adding a second tap target beside it. */
+  h2 .backlink::after { content:" ↑"; font-size:.8em; color:var(--muted); }
+  .recent-section > h2 .backlink::after { color:#c3ab74; }
+
+  .toc { margin:1.4rem 0 .4rem; padding:.8rem 1rem; background:var(--card);
+         border:1px solid var(--line); border-radius:10px; }
+  .toc ul { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.4rem .5rem; }
+  .toc a { display:inline-block; padding:.4rem .7rem; border-radius:999px;
+           background:var(--paper); border:1px solid var(--line);
+           color:var(--accent); text-decoration:none;
+           font:.85rem/1.2 Verdana, sans-serif; }
+  .toc a:hover { border-color:var(--accent); }
+  .toc .n { color:var(--muted); font-size:.9em; }
+
   .reviews { font-weight:400; }
   .reviews a { color:var(--accent); }
   /* The "Just added" band repeats recent finds so they are not buried. Tinted
@@ -116,12 +134,12 @@
   </div>
   <h1>Jason &amp; Julia's Fringe 2026 Shortlist</h1>
   <p>Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns</p>
-  <span class="stamp">Last updated Fri 7 Aug, 14:57 (UK)</span>
+  <span class="stamp">Last updated Fri 7 Aug, 15:03 (UK)</span>
 </header>
 <main>
 
-    <section class="recent-section">
-      <h2>Just added</h2>
+    <section class="recent-section" id="sec-recent">
+      <h2><a href="#toc" class="backlink">Just added</a></h2>
       <div class="grid">
       <article class="card copy" data-slug="my-grandpa-doesn-t-follow-me-on-instagram" data-state="" data-cat="2" data-copy="1">
         <div class="card-head">
@@ -251,8 +269,20 @@
       </article></div>
     </section>
 
-    <section data-cat="0">
-      <h2>Drama &amp; New Writing</h2>
+    <nav class="toc" id="toc" aria-label="Contents">
+      <ul>
+        <li data-for="sec-0"><a href="#sec-0">Drama &amp; New Writing <span class="n">10</span></a></li>
+        <li data-for="sec-1"><a href="#sec-1">Visual &amp; Inventive Theatre <span class="n">2</span></a></li>
+        <li data-for="sec-2"><a href="#sec-2">Comedy &amp; Storytelling <span class="n">12</span></a></li>
+        <li data-for="sec-3"><a href="#sec-3">Music, Musicals &amp; Cabaret <span class="n">9</span></a></li>
+        <li data-for="sec-4"><a href="#sec-4">Magic, Circus &amp; Spectacle <span class="n">5</span></a></li>
+        <li data-for="sec-5"><a href="#sec-5">Spoken Word <span class="n">2</span></a></li>
+        <li data-for="sec-seen"><a href="#sec-seen">Already seen <span class="n">1</span></a></li>
+      </ul>
+    </nav>
+
+    <section data-cat="0" id="sec-0">
+      <h2><a href="#toc" class="backlink">Drama &amp; New Writing</a></h2>
       <div class="grid">
       <article class="card" data-slug="cathy" data-state="" data-cat="0">
         <div class="card-head">
@@ -435,8 +465,8 @@
         </div>
       </article></div>
     </section>
-    <section data-cat="1">
-      <h2>Visual &amp; Inventive Theatre</h2>
+    <section data-cat="1" id="sec-1">
+      <h2><a href="#toc" class="backlink">Visual &amp; Inventive Theatre</a></h2>
       <div class="grid">
       <article class="card" data-slug="book-of-shadows" data-state="" data-cat="1">
         <div class="card-head">
@@ -475,8 +505,8 @@
         </div>
       </article></div>
     </section>
-    <section data-cat="2">
-      <h2>Comedy &amp; Storytelling</h2>
+    <section data-cat="2" id="sec-2">
+      <h2><a href="#toc" class="backlink">Comedy &amp; Storytelling</a></h2>
       <div class="grid">
       <article class="card" data-slug="elf-lyons-is-the-woman-on-the-edge" data-state="" data-cat="2">
         <div class="card-head">
@@ -525,7 +555,7 @@
           </div>
         </div>
         <p class="meta">see edfringe.com · August</p>
-        <p class="acclaim">Insider must-see pick</p>
+        <p class="acclaim">Insider must-see pick <span class="reviews"><a href="https://exeuntnyc.com/reviews/review-steve-burns-alive-at-la-mama/" target="_blank" rel="noopener">Exeunt (New York run)</a></span></p>
         <p class="why">The former Blue's Clues host on parasocial fame and internet mythology.</p>
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="steve-burns-alive" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
@@ -579,7 +609,7 @@
           </div>
         </div>
         <p class="meta">Assembly George Square · 20:45 · 5–30 Aug (not 17)</p>
-        <p class="acclaim">Fest comedy pick</p>
+        <p class="acclaim">Fest comedy pick <span class="reviews"><a href="https://festmag.com/2026/08/06/review-susie-mccabe-coming-of-rage/" target="_blank" rel="noopener">Fest (Fringe 2026)</a> · <a href="https://www.scotsman.com/arts-and-culture/theatre-and-stage/susie-mccabe-coming-of-rage-glasgow-comedy-festival-review-scathing-humour-6527837" target="_blank" rel="noopener">The Scotsman</a></span></p>
         <p class="why">Glasgow favourite on the health crisis that hit her at 44.</p>
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="susie-mccabe-coming-of-rage" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
@@ -615,7 +645,7 @@
           </div>
         </div>
         <p class="meta">see edfringe.com · 8–9 Aug only</p>
-        <p class="acclaim">Rare Fringe appearance</p>
+        <p class="acclaim">Rare Fringe appearance <span class="reviews"><a href="https://www.chortle.co.uk/review/2026/02/28/60022/simon_amstell:_i_love_it_here" target="_blank" rel="noopener">Chortle</a></span></p>
         <p class="why">In town for two nights only.</p>
         <div class="marks">
           <button type="button" class="mark mark-booked" data-slug="simon-amstell-i-love-it-here" data-mark="booked" aria-pressed="false" title="Mark as booked"><span class="sr-only">Mark as booked</span><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg></button>
@@ -695,8 +725,8 @@
         </div>
       </article></div>
     </section>
-    <section data-cat="3">
-      <h2>Music, Musicals &amp; Cabaret</h2>
+    <section data-cat="3" id="sec-3">
+      <h2><a href="#toc" class="backlink">Music, Musicals &amp; Cabaret</a></h2>
       <div class="grid">
       <article class="card" data-slug="sh-t-theatre-evita-too" data-state="" data-cat="3">
         <div class="card-head">
@@ -861,8 +891,8 @@
         </div>
       </article></div>
     </section>
-    <section data-cat="4">
-      <h2>Magic, Circus &amp; Spectacle</h2>
+    <section data-cat="4" id="sec-4">
+      <h2><a href="#toc" class="backlink">Magic, Circus &amp; Spectacle</a></h2>
       <div class="grid">
       <article class="card" data-slug="ben-hart-the-labyrinth" data-state="" data-cat="4">
         <div class="card-head">
@@ -955,8 +985,8 @@
         </div>
       </article></div>
     </section>
-    <section data-cat="5">
-      <h2>Spoken Word</h2>
+    <section data-cat="5" id="sec-5">
+      <h2><a href="#toc" class="backlink">Spoken Word</a></h2>
       <div class="grid">
       <article class="card" data-slug="loud-poets" data-state="" data-cat="5">
         <div class="card-head">
@@ -996,8 +1026,8 @@
       </article></div>
     </section>
 
-    <section class="seen-section">
-      <h2>Already seen (loved, but done)</h2>
+    <section class="seen-section" id="sec-seen">
+      <h2><a href="#toc" class="backlink">Already seen (loved, but done)</a></h2>
       <div class="grid">
       <article class="card seen" data-slug="mythos-ragnarok" data-state="seen" data-cat="4">
         <div class="card-head">
@@ -1044,7 +1074,18 @@
 
   function grids() { return document.querySelectorAll('main section'); }
   function tidy() {
-    grids().forEach(function (s) { s.hidden = !s.querySelector('.card'); });
+    Array.prototype.forEach.call(grids(), function (s) {
+      var cards = s.querySelectorAll('.card:not([hidden])').length;
+      s.hidden = !cards;
+      // Keep the contents in step: hide the entry for an emptied section and
+      // update its count, so the list never points somewhere with nothing in it.
+      var entry = document.querySelector('.toc li[data-for="' + s.id + '"]');
+      if (entry) {
+        entry.hidden = !cards;
+        var n = entry.querySelector('.n');
+        if (n) n.textContent = cards;
+      }
+    });
   }
 
   function place(card, state) {

@@ -116,10 +116,23 @@ const recent = data.shows
   .sort((a, b) => String(b.addedAt).localeCompare(String(a.addedAt)));
 
 const recentSection = `
-    <section class="recent-section"${recent.length ? '' : ' hidden'}>
-      <h2>Just added</h2>
+    <section class="recent-section" id="sec-recent"${recent.length ? '' : ' hidden'}>
+      <h2><a href="#toc" class="backlink">Just added</a></h2>
       <div class="grid">${recent.map(s => card(s, true)).join('')}</div>
     </section>`;
+
+// Forty cards is a lot of thumb on a phone. The contents sit under the recent
+// band, and every heading links back up to them.
+const liveCount = cat => data.shows.filter(s => s.category === cat && stateOf(s) !== 'seen').length;
+const seenCount = data.shows.filter(s => stateOf(s) === 'seen').length;
+
+const toc = `
+    <nav class="toc" id="toc" aria-label="Contents">
+      <ul>
+${data.categoryOrder.map((cat, i) => `        <li data-for="sec-${i}"${liveCount(cat) ? '' : ' hidden'}><a href="#sec-${i}">${esc(cat)} <span class="n">${liveCount(cat)}</span></a></li>`).join('\n')}
+        <li data-for="sec-seen"${seenCount ? '' : ' hidden'}><a href="#sec-seen">Already seen <span class="n">${seenCount}</span></a></li>
+      </ul>
+    </nav>`;
 
 // Sections are always emitted, hidden when empty, so the client has somewhere
 // to move a card when its state changes — including the last card leaving a
@@ -127,16 +140,16 @@ const recentSection = `
 const sections = data.categoryOrder.map((cat, i) => {
   const shows = data.shows.filter(s => s.category === cat && stateOf(s) !== 'seen');
   return `
-    <section data-cat="${i}"${shows.length ? '' : ' hidden'}>
-      <h2>${esc(cat)}</h2>
+    <section data-cat="${i}" id="sec-${i}"${shows.length ? '' : ' hidden'}>
+      <h2><a href="#toc" class="backlink">${esc(cat)}</a></h2>
       <div class="grid">${shows.map(s => card(s)).join('')}</div>
     </section>`;
 }).join('');
 
 const seenShows = data.shows.filter(s => stateOf(s) === 'seen');
 const seenSection = `
-    <section class="seen-section"${seenShows.length ? '' : ' hidden'}>
-      <h2>Already seen (loved, but done)</h2>
+    <section class="seen-section" id="sec-seen"${seenShows.length ? '' : ' hidden'}>
+      <h2><a href="#toc" class="backlink">Already seen (loved, but done)</a></h2>
       <div class="grid">${seenShows.map(s => card(s)).join('')}</div>
     </section>`;
 
@@ -164,7 +177,18 @@ const clientScript = `
 
   function grids() { return document.querySelectorAll('main section'); }
   function tidy() {
-    grids().forEach(function (s) { s.hidden = !s.querySelector('.card'); });
+    Array.prototype.forEach.call(grids(), function (s) {
+      var cards = s.querySelectorAll('.card:not([hidden])').length;
+      s.hidden = !cards;
+      // Keep the contents in step: hide the entry for an emptied section and
+      // update its count, so the list never points somewhere with nothing in it.
+      var entry = document.querySelector('.toc li[data-for="' + s.id + '"]');
+      if (entry) {
+        entry.hidden = !cards;
+        var n = entry.querySelector('.n');
+        if (n) n.textContent = cards;
+      }
+    });
   }
 
   function place(card, state) {
@@ -385,6 +409,24 @@ const html = `<!DOCTYPE html>
      card is full and the auto margin below resolves to zero. */
   .why { margin:.45rem 0 .8rem; font-size:.92rem; }
   .badge.bookedb { background:#e5dcf2; color:#54317f; }
+  html { scroll-behavior:smooth; }
+  h2 .backlink { color:inherit; text-decoration:none; }
+  h2 .backlink:hover { text-decoration:underline; }
+  /* Heading links back to the contents; the arrow makes that discoverable
+     without adding a second tap target beside it. */
+  h2 .backlink::after { content:" ↑"; font-size:.8em; color:var(--muted); }
+  .recent-section > h2 .backlink::after { color:#c3ab74; }
+
+  .toc { margin:1.4rem 0 .4rem; padding:.8rem 1rem; background:var(--card);
+         border:1px solid var(--line); border-radius:10px; }
+  .toc ul { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.4rem .5rem; }
+  .toc a { display:inline-block; padding:.4rem .7rem; border-radius:999px;
+           background:var(--paper); border:1px solid var(--line);
+           color:var(--accent); text-decoration:none;
+           font:.85rem/1.2 Verdana, sans-serif; }
+  .toc a:hover { border-color:var(--accent); }
+  .toc .n { color:var(--muted); font-size:.9em; }
+
   .reviews { font-weight:400; }
   .reviews a { color:var(--accent); }
   /* The "Just added" band repeats recent finds so they are not buried. Tinted
@@ -470,6 +512,7 @@ const html = `<!DOCTYPE html>
 </header>
 <main>
 ${recentSection}
+${toc}
 ${sections}
 ${seenSection}
 </main>

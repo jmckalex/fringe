@@ -177,7 +177,13 @@
       "acclaim": "Insider must-see pick",
       "why": "The former Blue's Clues host on parasocial fame and internet mythology.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "Exeunt (New York run)",
+          "url": "https://exeuntnyc.com/reviews/review-steve-burns-alive-at-la-mama/"
+        }
+      ]
     },
     {
       "title": "Ahir Shah: Golden",
@@ -210,7 +216,17 @@
       "acclaim": "Fest comedy pick",
       "why": "Glasgow favourite on the health crisis that hit her at 44.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "Fest (Fringe 2026)",
+          "url": "https://festmag.com/2026/08/06/review-susie-mccabe-coming-of-rage/"
+        },
+        {
+          "outlet": "The Scotsman",
+          "url": "https://www.scotsman.com/arts-and-culture/theatre-and-stage/susie-mccabe-coming-of-rage-glasgow-comedy-festival-review-scathing-humour-6527837"
+        }
+      ]
     },
     {
       "title": "Mark Thomas: 40 in Stand-up Years",
@@ -239,7 +255,13 @@
       "why": "In town for two nights only.",
       "status": "go",
       "limited": "8–9 Aug only",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "reviews": [
+        {
+          "outlet": "Chortle",
+          "url": "https://www.chortle.co.uk/review/2026/02/28/60022/simon_amstell:_i_love_it_here"
+        }
+      ]
     },
     {
       "title": "Mr Chonkers: Work in Chonkers",
