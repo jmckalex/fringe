@@ -1,12 +1,17 @@
 # Makefile for fringe.jmckalex.org — Jason & Julia's Fringe 2026 Shortlist
 #
-# Usage:
+# The normal path to production is git, not rsync: push to GitHub and the
+# droplet's cron picks it up within 10 minutes (see fringe-deploy.sh). That is
+# the same path Claude Cowork's updates take from the phone.
+#
+#   make push       Push to GitHub and publish immediately (the usual route)
 #   make build      Regenerate index.html from shows.json
-#   make sync       Build, then upload the page to the droplet
-#   make dry-run    Preview what would be uploaded (no changes made)
 #   make preview    Open the local index.html in a browser
+#   make publish    Trigger the droplet's deploy script now, without waiting
+#   make deploy-log Show the droplet's recent deploy activity
 #   make ls         List remote files
 #   make tail-log   Tail the nginx access log for this site
+#   make sync       Manual override: rsync the page straight to the droplet
 #   make provision  One-time: create the remote web root (safe to re-run)
 #   make help       Show available targets
 
@@ -34,18 +39,20 @@ RSYNC_FLAGS := -avz \
                --chmod=F644,D755 \
                --rsync-path="sudo rsync"
 
-.PHONY: help build check sync dry-run preview ls tail-log provision
+.PHONY: help build check push publish deploy-log sync dry-run preview ls tail-log provision
 
 help:
 	@echo "Targets:"
-	@echo "  make build     - Regenerate index.html from shows.json"
-	@echo "  make sync      - Build, then upload to $(REMOTE_HOST):$(REMOTE_PATH)"
-	@echo "  make dry-run   - Preview changes without uploading"
-	@echo "  make preview   - Open the local index.html in a browser"
-	@echo "  make ls        - List remote files with permissions"
-	@echo "  make tail-log  - Tail the nginx access log"
-	@echo "  make check     - Verify local files exist before sync"
-	@echo "  make provision - Create the remote web root (one-time, idempotent)"
+	@echo "  make push       - Push to GitHub, then publish (the usual route)"
+	@echo "  make build      - Regenerate index.html from shows.json"
+	@echo "  make preview    - Open the local index.html in a browser"
+	@echo "  make publish    - Trigger the droplet's deploy now"
+	@echo "  make deploy-log - Show recent deploy activity on the droplet"
+	@echo "  make ls         - List remote files with permissions"
+	@echo "  make tail-log   - Tail the nginx access log"
+	@echo "  make sync       - Manual override: rsync straight to $(REMOTE_PATH)"
+	@echo "  make check      - Verify local files exist before sync"
+	@echo "  make provision  - Create the remote web root (one-time, idempotent)"
 
 # shows.json is the single source of truth; index.html is derived from it.
 # Make rebuilds only when the data or the generator is newer than the page.
@@ -62,6 +69,21 @@ check:
 	done
 	@echo "All local files present."
 
+# The usual route to production. The droplet rebuilds from shows.json itself,
+# so a push is all that is strictly needed; publish just skips the cron wait.
+push: build
+	git push origin main
+	@$(MAKE) --no-print-directory publish
+
+publish:
+	ssh $(REMOTE_HOST) '/usr/local/bin/fringe-deploy'
+	@echo "Published to $(SITE_URL)"
+
+deploy-log:
+	ssh $(REMOTE_HOST) 'tail -n 20 /var/log/fringe-deploy.log 2>/dev/null || echo "(no deploys logged yet)"'
+
+# Manual override — bypasses git entirely. Useful if GitHub is unreachable, but
+# the next push will overwrite whatever this uploads.
 sync: build check
 	rsync $(RSYNC_FLAGS) $(FILES) $(REMOTE_HOST):$(REMOTE_PATH)/
 	@echo ""

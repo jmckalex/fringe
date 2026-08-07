@@ -68,11 +68,36 @@ only — the page's visible timestamp comes from build time, in Europe/London.
 
 ## Deployment
 
-`make sync` rsyncs **only `index.html`** to `do:/var/www/fringe/`, chowned `web:web`.
-`shows.json` and `build.js` stay on the laptop by design — the server needs no build
-step and the raw data is not published. `do` is the ssh alias for the droplet
-(144.126.236.254); the rsync runs via `--rsync-path="sudo rsync"` to write into
-`/var/www`.
+Production is <https://fringe.jmckalex.org>. The route there is **git, not rsync**:
+
+```
+Claude Cowork (phone) → git push → GitHub → droplet cron (10 min) → /var/www/fringe
+```
+
+Cowork can push to GitHub but cannot reach a web server, so GitHub is the transport.
+On the droplet, `/usr/local/bin/fringe-deploy` (source of truth:
+`fringe-deploy.sh` here) runs every 10 minutes from root's crontab. It fetches,
+hard-resets to `origin/main`, and — only if HEAD actually moved — runs `node
+build.js` and installs `index.html` into the web root.
+
+Two consequences worth knowing:
+
+- **The droplet rebuilds the page itself.** Cowork only ever needs to append to
+  `shows.json`; it does not have to run `build.js`. A commit touching only the data
+  still produces a correctly rebuilt page.
+- **The clone at `/srv/fringe` is not the web root.** Only `index.html` is copied to
+  `/var/www/fringe`, so `.git/`, `shows.json` and the `Makefile` are never
+  web-accessible. Do not be tempted to clone straight into `/var/www`.
+
+The deploy script *hard resets* rather than pulls, because `build.js` writes
+`index.html` inside the clone and a dirty tree would make `--ff-only` refuse. The
+droplet never authors commits, so discarding local state there is correct.
+
+`make push` is the normal laptop workflow (push, then trigger the deploy without
+waiting for cron). `make sync` still exists as a manual override that rsyncs
+`index.html` directly, bypassing git — useful if GitHub is unreachable, but the next
+push overwrites it. `do` is the ssh alias for the droplet (144.126.236.254); rsync
+runs via `--rsync-path="sudo rsync"` to write into `/var/www`.
 
 `fringe.nginx.conf` is the local copy of the server config, mirroring the convention
 in the sibling projects under `~/Sites/digital_ocean/`. The droplet's copy lives at
@@ -87,5 +112,9 @@ only holds source files and pushes them.
 ## Updating from press reviews
 
 New finds are appended to `shows.json` → `shows` with `addedAt` set to the current
-date, then `make sync`. The curation is deliberately narrow: drama, music,
-storytelling, magic and spectacle — strictly no clowns.
+date, then committed and pushed. The curation is deliberately narrow: drama, music,
+storytelling, magic and spectacle — strictly no clowns. Check `doNotReadd` before
+adding anything.
+
+The repo is public, so **never commit a token**. The PAT that lets Cowork push lives
+in Cowork's configuration only.
