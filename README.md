@@ -56,10 +56,14 @@ configuration only.
 ## How the updater edits the data
 
 New shows are appended to `shows.json` → `shows` with `addedAt` set to the current
-time (shows added in the last 3 days get a "New" badge). Shows that should never be
-re-added (seen already, or clown shows) live in `doNotReadd`. To retire a show
-without re-triggering the watcher, set its `status` to `"seen"` rather than deleting
-it.
+time. Shows added in the last 3 days also appear in a **Just added** band at the top
+of the page, as well as in their category. Shows that should never be re-added (seen
+already, or genuine clown shows) live in `doNotReadd`. To retire a show without
+re-triggering the watcher, set its `status` to `"seen"` rather than deleting it.
+
+Entries may carry a `link` (the show's edfringe page) and `reviews`
+(`[{outlet, url}]`, shown as links on the card). `make check-links` reports any
+whose ticket link does not resolve.
 
 `addedAt` takes two shapes, and the difference matters: the hand-seeded batch uses a
 plain date (`"2026-08-07"`, matching the top-level `seeded` value), while shows found

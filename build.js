@@ -32,7 +32,12 @@ const stateOf = show => {
 };
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const ticketLink = show => show.link || `https://tickets.edfringe.com/whats-on?q=${encodeURIComponent('"' + show.title + '"')}`;
+// edfringe's what's-on listing renders in JavaScript and ignores ?q= entirely,
+// so the old search link dumped you in the full alphabetical programme. Real
+// show pages live at /tickets/whats-on/<slug>, and that slug is usually just
+// the kebab-cased title — 35 of 40 resolve. Set `link` explicitly when it does
+// not; `make check-links` finds the ones that need it.
+const ticketLink = show => show.link || `https://www.edfringe.com/tickets/whats-on/${slugify(show.title)}`;
 
 const buildDate = new Date();
 const NEW_WINDOW_DAYS = 3;
@@ -57,6 +62,19 @@ const ICON = {
   gear: '<svg viewBox="0 0 512 512" aria-hidden="true"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>'
 };
 
+// reviews[] is [{outlet, url}]; a bare `reviewUrl` is accepted too, so entries
+// written before this existed keep working.
+const reviewLinks = show => {
+  const list = Array.isArray(show.reviews) ? show.reviews
+    : show.reviewUrl ? [{ outlet: 'the review', url: show.reviewUrl }]
+    : [];
+  const good = list.filter(r => r && r.url);
+  if (!good.length) return '';
+  return ` <span class="reviews">${good.map(r =>
+    `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.outlet || 'review')}</a>`
+  ).join(' · ')}</span>`;
+};
+
 const marker = (show, kind, icon, label) => {
   const on = stateOf(show) === kind;
   return `<button type="button" class="mark mark-${kind}${on ? ' on' : ''}" data-slug="${esc(slug(show))}" data-mark="${kind}" aria-pressed="${on}" title="${esc(label)}"><span class="sr-only">${esc(label)}</span>${icon}</button>`;
@@ -67,10 +85,10 @@ const marker = (show, kind, icon, label) => {
 // without having to match category names through attribute-selector escaping.
 const catIndex = show => data.categoryOrder.indexOf(show.category);
 
-const card = show => {
+const card = (show, isCopy = false) => {
   const state = stateOf(show);
   return `
-      <article class="card${state ? ' ' + state : ''}" data-slug="${esc(slug(show))}" data-state="${state || ''}" data-cat="${catIndex(show)}">
+      <article class="card${state ? ' ' + state : ''}${isCopy ? ' copy' : ''}" data-slug="${esc(slug(show))}" data-state="${state || ''}" data-cat="${catIndex(show)}"${isCopy ? ' data-copy="1"' : ''}>
         <div class="card-head">
           <h3><a href="${esc(ticketLink(show))}" target="_blank" rel="noopener">${esc(show.title)}</a></h3>
           <div class="badges">
@@ -81,7 +99,7 @@ const card = show => {
           </div>
         </div>
         <p class="meta">${esc(show.venue)}${show.time && show.time !== 'varies' ? ' · ' + esc(show.time) : ''} · ${esc(show.dates)}</p>
-        ${show.acclaim ? `<p class="acclaim">${esc(show.acclaim)}</p>` : ''}
+        ${show.acclaim ? `<p class="acclaim">${esc(show.acclaim)}${reviewLinks(show)}</p>` : ''}
         <p class="why">${esc(show.why)}</p>
         <div class="marks">
           ${marker(show, 'booked', ICON.bookmark, 'Mark as booked')}
@@ -89,6 +107,19 @@ const card = show => {
         </div>
       </article>`;
 };
+
+// Recent finds are repeated in a band at the top so they do not have to be
+// hunted for among 40 cards. These are copies — the canonical card stays in its
+// category, and the client keeps the two in step.
+const recent = data.shows
+  .filter(s => isNew(s) && stateOf(s) !== 'seen')
+  .sort((a, b) => String(b.addedAt).localeCompare(String(a.addedAt)));
+
+const recentSection = `
+    <section class="recent-section"${recent.length ? '' : ' hidden'}>
+      <h2>Just added</h2>
+      <div class="grid">${recent.map(s => card(s, true)).join('')}</div>
+    </section>`;
 
 // Sections are always emitted, hidden when empty, so the client has somewhere
 // to move a card when its state changes — including the last card leaving a
@@ -98,7 +129,7 @@ const sections = data.categoryOrder.map((cat, i) => {
   return `
     <section data-cat="${i}"${shows.length ? '' : ' hidden'}>
       <h2>${esc(cat)}</h2>
-      <div class="grid">${shows.map(card).join('')}</div>
+      <div class="grid">${shows.map(s => card(s)).join('')}</div>
     </section>`;
 }).join('');
 
@@ -106,7 +137,7 @@ const seenShows = data.shows.filter(s => stateOf(s) === 'seen');
 const seenSection = `
     <section class="seen-section"${seenShows.length ? '' : ' hidden'}>
       <h2>Already seen (loved, but done)</h2>
-      <div class="grid">${seenShows.map(card).join('')}</div>
+      <div class="grid">${seenShows.map(s => card(s)).join('')}</div>
     </section>`;
 
 const updatedStamp = buildDate.toLocaleString('en-GB', { timeZone: 'Europe/London', weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
@@ -137,6 +168,14 @@ const clientScript = `
   }
 
   function place(card, state) {
+    // Copies in the "Just added" band stay put; only the canonical card moves
+    // between sections. A copy of a seen show is hidden instead, since it has
+    // no business sitting at the top of the page any more.
+    if (card.dataset.copy) {
+      card.hidden = state === 'seen';
+      tidy();
+      return;
+    }
     var target = state === 'seen'
       ? document.querySelector('.seen-section .grid')
       : document.querySelector('main section[data-cat="' + card.dataset.cat + '"] .grid');
@@ -144,7 +183,7 @@ const clientScript = `
     tidy();
   }
 
-  function apply(card, state) {
+  function paint(card, state) {
     card.classList.remove('booked', 'seen');
     if (state) card.classList.add(state);
     card.dataset.state = state || '';
@@ -161,6 +200,13 @@ const clientScript = `
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
     place(card, state);
+  }
+
+  // A show can appear twice — once in its category, once in "Just added" — so
+  // every state change has to reach both or they drift apart.
+  function apply(card, state) {
+    var all = document.querySelectorAll('.card[data-slug="' + card.dataset.slug + '"]');
+    Array.prototype.forEach.call(all, function (c) { paint(c, state); });
   }
 
   function save(slug, state) {
@@ -339,6 +385,12 @@ const html = `<!DOCTYPE html>
      card is full and the auto margin below resolves to zero. */
   .why { margin:.45rem 0 .8rem; font-size:.92rem; }
   .badge.bookedb { background:#e5dcf2; color:#54317f; }
+  .reviews { font-weight:400; }
+  .reviews a { color:var(--accent); }
+  /* The "Just added" band repeats recent finds so they are not buried. Tinted
+     so it reads as a summary rather than another category. */
+  .recent-section > h2 { color:var(--gold); border-bottom-color:#e8d6ac; }
+  .recent-section .card { background:#fffdf7; border-color:#ecdcb4; }
   .seen-section { opacity:.75; }
   .card.seen { background:#f3f1ee; }
 
@@ -417,6 +469,7 @@ const html = `<!DOCTYPE html>
   <span class="stamp">Last updated ${esc(updatedStamp)} (UK)</span>
 </header>
 <main>
+${recentSection}
 ${sections}
 ${seenSection}
 </main>

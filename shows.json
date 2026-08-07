@@ -244,7 +244,8 @@
       "acclaim": "4★ Time Out",
       "why": "\"Hilarious, shambolic\" song-driven show about Isabel Perón — smart, musical, very Fringe.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "link": "https://www.edfringe.com/tickets/whats-on/evita-too"
     },
     {
       "title": "Salty Brine: How Strange It Is",
@@ -255,7 +256,8 @@
       "acclaim": "Fest cabaret pick",
       "why": "Acclaimed cabaret storyteller splicing Neutral Milk Hotel's In the Aeroplane Over the Sea with Anne Frank's diary.",
       "status": "go",
-      "addedAt": "2026-08-07"
+      "addedAt": "2026-08-07",
+      "link": "https://www.edfringe.com/tickets/whats-on/salty-brine-how-strange-it-is-the-neutral-milk-hotel-show"
     },
     {
       "title": "Tether",
@@ -456,6 +458,24 @@
       "why": "A true story about giving his best mate a Viking funeral — a comic ode to death, friendship and the absurdity of life. Pure Adam Kay territory: storytelling with real substance.",
       "status": "go",
       "addedAt": "2026-08-07T13:20:00Z"
+    },
+    {
+      "title": "My Grandpa Doesn't Follow Me On Instagram",
+      "category": "Comedy & Storytelling",
+      "venue": "Underbelly Cowgate",
+      "time": "20:25",
+      "dates": "5–30 Aug",
+      "acclaim": "5★ Binge Fringe",
+      "why": "Trans storyteller Yoz Mensch retraces a Cornwall-to-Highlands road trip with her grandpa. A trained clown, she uses the craft for character and physicality, not face paint — this is Adam Kay-style storytelling with real substance.",
+      "link": "https://www.edfringe.com/tickets/whats-on/my-grandpa-doesn-t-follow-me-on-instagram",
+      "reviews": [
+        {
+          "outlet": "Binge Fringe 5★",
+          "url": "https://www.bingefringe.com/2026/08/07/review-my-grandpa-doesnt-follow-me-on-instagram-cackling-jackal-productions-edinburgh-fringe-2026-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85/"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-07T13:30:14Z"
     }
   ],
   "doNotReadd": [
@@ -474,10 +494,6 @@
     {
       "title": "Mythos: Ragnarök",
       "reason": "already seen in a previous year"
-    },
-    {
-      "title": "My Grandpa Doesn't Follow Me On Instagram",
-      "reason": "5★ Binge Fringe, but billed as blending comedy with clowning — excluded by taste"
     }
   ],
   "seeded": "2026-08-07"

@@ -44,10 +44,26 @@ separate stylesheet. All interpolated values pass through `esc()`.
   rendered only if it appears here *and* has at least one non-seen show; a show whose
   `category` is absent from `categoryOrder` is silently dropped from the page.
 - `shows[]` fields: `title`, `category`, `venue`, `time`, `dates`, `acclaim`, `why`,
-  `status`, `addedAt`. Optional: `link`, `limited`.
-- `doNotReadd[]` — `{title, reason}` for shows that must never come back (already
-  seen, or clown shows, which are excluded by taste). Consult this before adding
-  anything.
+  `status`, `addedAt`. Optional: `link`, `limited`, `reviews`.
+- `link` — the show's edfringe page. Without it the build derives
+  `https://www.edfringe.com/tickets/whats-on/<slug>`, which resolves for about
+  nine in ten titles. **Do not fall back to an edfringe *search* URL**: the
+  what's-on listing renders client-side and ignores `?q=`, so a search link
+  silently dumps the reader in the full alphabetical programme. `make check-links`
+  reports titles whose derived URL 404s so a `link` can be set.
+- `reviews` — `[{outlet, url}]`, rendered as links beside the acclaim line. A bare
+  `reviewUrl` string is still honoured.
+- `doNotReadd[]` — `{title, reason}` for shows that must never come back. Consult
+  this before adding anything.
+
+**On the no-clowns rule.** Exclude a show only when clowning *is what the show is*
+— a clown persona piece, red-nose or whiteface character comedy, a bouffon or
+clown-troupe show. Do not exclude one merely because a blurb mentions clowning,
+physical comedy, or the performer's clown training: Fringe copy uses the word
+loosely for any heightened physicality, and the taste here actively includes weird
+and absurd comedy. This has already produced one wrong call — a 5★ storytelling
+show was excluded for "blending comedy with clowning" and had to be reinstated.
+When genuinely borderline, include it and flag it rather than dropping it.
 
 **Two behaviours worth knowing before you touch the data:**
 

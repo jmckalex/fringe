@@ -46,7 +46,7 @@ RSYNC_FLAGS := -avz \
                --exclude='*token*' \
                --rsync-path="sudo rsync"
 
-.PHONY: help build check push publish deploy-log sync dry-run preview dev ls tail-log provision
+.PHONY: help build check check-links push publish deploy-log sync dry-run preview dev ls tail-log provision
 
 help:
 	@echo "Targets:"
@@ -119,6 +119,17 @@ dev:
 	  FRINGE_USERS=$(PWD)/$(DEV_DIR)/users.json \
 	  FRINGE_STATUS=$(PWD)/$(DEV_DIR)/status.json FRINGE_OUT=$(PWD)/$(DEV_DIR)/index.html \
 	  node status-api.js
+
+# edfringe show pages are usually /tickets/whats-on/<kebab-cased title>, but not
+# always. This reports the ones that 404 so a `link` can be set explicitly.
+check-links:
+	@node -e "const d=require('./shows.json'),s=require('./slug');\
+	  d.shows.forEach(x=>console.log((x.link||'https://www.edfringe.com/tickets/whats-on/'+s(x.title))+'\t'+x.title))" \
+	| while IFS=$$'\t' read -r url title; do \
+	    code=$$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 -L "$$url"); \
+	    [ "$$code" = "200" ] || printf "  %s  %s\n    %s\n" "$$code" "$$title" "$$url"; \
+	  done; \
+	echo "link check complete (nothing listed above = all resolve)"
 
 ls:
 	ssh $(REMOTE_HOST) 'ls -la $(REMOTE_PATH)'
