@@ -1,7 +1,7 @@
 {
   "title": "Julia & Jason's Fringe 2026 Shortlist",
   "subtitle": "Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns",
-  "updated": "2026-08-07",
+  "updated": "2026-08-08",
   "categoryOrder": [
     "Drama & New Writing",
     "Visual & Inventive Theatre",
@@ -745,6 +745,50 @@
       ],
       "status": "go",
       "addedAt": "2026-08-07T23:20:00Z"
+    },
+    {
+      "title": "Andrew White: What a Life!",
+      "category": "Comedy & Storytelling",
+      "venue": "Monkey Barrel Comedy (Cabaret Voltaire)",
+      "time": "17:45",
+      "dates": "From 3 Aug",
+      "acclaim": "4.5★ Chortle",
+      "why": "A show about three deaths that refuses to be maudlin — Steve Bennett notes every moment of sentimentality gets knocked back with a gag, for \"hard, life-affirming laughs from a place of real heart\". Storytelling with substance in the Adam Kay line, and the impishness keeps it well clear of twee.",
+      "link": "https://www.edfringe.com/tickets/whats-on/andrew-white-what-a-life",
+      "reviews": [
+        {
+          "outlet": "Chortle 4.5★",
+          "url": "https://www.chortle.co.uk/review/2026/08/04/61184/andrew_white:_what_a_life!"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-08T09:25:00Z"
+    },
+    {
+      "title": "Jenny Gorelick: SORRY",
+      "category": "Comedy & Storytelling",
+      "venue": "The Studio, Monkey Barrel Comedy (Niddry Street)",
+      "time": "18:25",
+      "dates": "3–30 Aug, not 17 & 18",
+      "acclaim": "4★ Chortle, 4★ Fest, 4★ Snack",
+      "why": "The vapid-Jersey-girl persona is a disguise for perceptive commentary on gender expectations — why women apologise for everything and men for nothing — and the hour darkens as it goes. Sharp, confident and unsentimental: the Katherine Ryan signal almost exactly.",
+      "link": "https://www.edfringe.com/tickets/whats-on/jenny-gorelick-sorry",
+      "reviews": [
+        {
+          "outlet": "Chortle 4★",
+          "url": "https://www.chortle.co.uk/review/2026/08/06/61198/jenny_gorelick:_sorry"
+        },
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/06/review-jenny-gorelick-sorry/"
+        },
+        {
+          "outlet": "Snack 4★",
+          "url": "https://snackmag.co.uk/jenny-gorelick-sorry-fringe-comedy-review-4-stars"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-08T09:25:00Z"
     }
   ],
   "doNotReadd": [
