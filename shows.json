@@ -869,6 +869,24 @@
       ],
       "status": "go",
       "addedAt": "2026-08-08T17:20:00Z"
+    },
+    {
+      "title": "Bunny!",
+      "category": "Music, Musicals & Cabaret",
+      "venue": "Summerhall – Anatomy Lecture Theatre",
+      "time": "22:15",
+      "dates": "Until 31 Aug, not 17, 24",
+      "acclaim": "5★ The Reviews Hub",
+      "why": "Craig Manson's murderous aspiring starlet, told through Broadway parodies and a tonal pivot from bright opener to outright horror — a satire on the brutality of making it in the arts, from the man whose Instagram eviscerates arts-organisation nonsense. High camp, but sardonic rather than cosy: unsentimental bite in the Katherine Ryan register, with none of the twee. Cabaret character piece, not a clown persona show.",
+      "link": "https://www.edfringe.com/tickets/whats-on/bunny",
+      "reviews": [
+        {
+          "outlet": "The Reviews Hub 5★",
+          "url": "https://www.thereviewshub.com/edinburgh-fringe-2026-bunny-anatomy-lecture-theatre-at-summerhall/"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-08T18:15:00Z"
     }
   ],
   "doNotReadd": [
