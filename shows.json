@@ -825,6 +825,50 @@
       ],
       "status": "go",
       "addedAt": "2026-08-08T14:20:00Z"
+    },
+    {
+      "title": "Kate Dehnert: Echo",
+      "category": "Comedy & Storytelling",
+      "venue": "Pleasance Courtyard – Baby Grand",
+      "time": "19:05",
+      "dates": "5–30 Aug",
+      "acclaim": "4½★ Chortle, 5★ ArtsHub",
+      "why": "A breakup show with the sentiment burned off — Dehnert bills it as a third play, a third stand-up, a third rave, and Chortle calls it \"relentlessly fast\", swinging from fury to silly in a beat. Rage about being left, played as force rather than fragility: the Katherine Ryan register, and about as far from twee as the Fringe gets.",
+      "link": "https://www.edfringe.com/tickets/whats-on/kate-dehnert-echo",
+      "reviews": [
+        {
+          "outlet": "Chortle 4½★",
+          "url": "https://www.chortle.co.uk/review/2026/04/15/60380/kate_dehnert:_echo"
+        },
+        {
+          "outlet": "ArtsHub 5★",
+          "url": "https://www.artshub.com.au/news/reviews/funny-tonne-micf-reviews-dan-rath-grace-jarvis-kate-dehnert-kate-dolan-lara-ricote-and-more-2854862/"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-08T17:20:00Z"
+    },
+    {
+      "title": "Lara Ricote: INKLING",
+      "category": "Comedy & Storytelling",
+      "venue": "Monkey Barrel Comedy",
+      "time": "17:40",
+      "dates": "Until 30 Aug, not 17",
+      "acclaim": "4½★ Chortle — \"thrillingly ambitious\", 4★ Fest",
+      "why": "An hour built out from the three Delphic maxims into a genuine argument about what it is to exist — a withering routine on atheists, a Buddhist parable acted out, people sorted into free-spirited \"naked babies\" and clothed ones. Chortle calls it thought-provoking and hilarious in the same breath, which is the Arcadia shape in stand-up form. Ricote describes herself as a clown, but this is philosophising at speed, not a clown persona piece — flagged rather than dropped.",
+      "link": "https://www.edfringe.com/tickets/whats-on/lara-ricote-inkling",
+      "reviews": [
+        {
+          "outlet": "Chortle 4½★",
+          "url": "https://www.chortle.co.uk/review/2026/04/01/60252/lara_ricote:_inkling"
+        },
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/08/review-lara-ricote-inkling/"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-08T17:20:00Z"
     }
   ],
   "doNotReadd": [
