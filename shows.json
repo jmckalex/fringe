@@ -1095,6 +1095,46 @@
       ],
       "status": "go",
       "addedAt": "2026-08-09T18:15:00Z"
+    },
+    {
+      "title": "Kate Dolan: Trout",
+      "category": "Comedy & Storytelling",
+      "venue": "Monkey Barrel Comedy (Monkey Barrel 2)",
+      "time": "8:35pm",
+      "dates": "until 30 Aug",
+      "acclaim": "4★ Fest · 4★ Chortle · 4★ The Scotsman · Melbourne Comedy Festival Director's Choice winner 2026",
+      "why": "Absurdist stand-up at full tilt — a gazillion accents, dance breaks, a silicone fish helmet — but Fest notes the gear change at 45 minutes that puts a real emotional throughline under the chaos: “a madcap hour which impressively balances chaotic vibes with a strong emotional throughline”. Chortle says her performance “screams star quality”, the Scotsman “irrepressibly funny”. Weird-and-absurd comedy done with craft, chaotic rather than cosy. It borrows physical technique, but this is stand-up, not a clown persona piece.",
+      "status": "go",
+      "addedAt": "2026-08-09T19:15:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/kate-dolan-trout",
+      "reviews": [
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/06/review-kate-dolan-trout/"
+        },
+        {
+          "outlet": "Chortle 4★",
+          "url": "https://www.chortle.co.uk/review/2026/04/09/60325/kate_dolan:_trout"
+        }
+      ]
+    },
+    {
+      "title": "Rob Preston: Amazing Global Solutions",
+      "category": "Comedy & Storytelling",
+      "venue": "Pleasance Courtyard",
+      "time": "8:20pm",
+      "dates": "until 30 Aug (not 18)",
+      "acclaim": "4★ Fest",
+      "why": "Debut character hour: a gallery of modern grotesques — influencer-bros, corporate stooges — taken past cliché to farcical limits. Fest praises the “comedic peacocking” and the men “cucked by their own emotional insecurities”: satire of masculinity with the knife out and no warmth offered as consolation. Sharp and unsentimental, the Katherine Ryan register.",
+      "status": "go",
+      "addedAt": "2026-08-09T19:16:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/rob-preston-amazing-global-solutions",
+      "reviews": [
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/06/review-rob-preston-amazing-global-solutions/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
