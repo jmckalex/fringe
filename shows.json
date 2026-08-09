@@ -967,6 +967,32 @@
           "url": "https://www.thestage.co.uk/reviews/non-human-animal-review-gilded-balloon-teviot-edinburgh-kat-woods"
         }
       ]
+    },
+    {
+      "title": "Bliss",
+      "category": "Music, Musicals & Cabaret",
+      "venue": "Pleasance Courtyard",
+      "time": "13:00",
+      "dates": "5–31 Aug",
+      "acclaim": "5★ The Stage — 'genuine musical treat'",
+      "why": "A fairy tale taken apart rather than served up warm: four over-educated sisters let out of their tower, a razor-sharp book about the price of perfection, and a pop-rock score with actual bite. The biggest new musical of the Fringe, and subversive where it could have been sweet.",
+      "status": "go",
+      "addedAt": "2026-08-09T13:14:30Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/bliss",
+      "reviews": [
+        {
+          "outlet": "The Stage 5★",
+          "url": "https://www.thestage.co.uk/reviews"
+        },
+        {
+          "outlet": "British Theatre Guide",
+          "url": "https://www.britishtheatreguide.info/reviews/bliss-the-music-pleasance-court-25792"
+        },
+        {
+          "outlet": "WhatsOnStage",
+          "url": "https://www.whatsonstage.com/news/bliss-musical-review-a-bright-future-might-beckon-for-this-enchanting-musical_1728822/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
