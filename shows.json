@@ -949,6 +949,24 @@
       ],
       "status": "go",
       "addedAt": "2026-08-09T09:20:00Z"
+    },
+    {
+      "title": "Non Human Animal",
+      "category": "Drama & New Writing",
+      "venue": "Gilded Balloon Teviot",
+      "time": "16:00",
+      "dates": "5–31 Aug",
+      "acclaim": "4★ The Stage (Lyn Gardner, 9 Aug): \"fierce and spiked with dark humour\"",
+      "why": "Kat Woods' semi-autobiographical Northern Irish drama: a playwright whose father was murdered is asked to meet his killer, while her mother's dementia closes in. An argument play — victim trauma against offender rehabilitation, and what happens when forgiveness does not heal — carried on dark wit rather than uplift, with a heroine who compares herself to Batman and binges Gilmore Girls. Gardner: \"Woods speaks up; perhaps it's time we listened?\"",
+      "status": "go",
+      "addedAt": "2026-08-09T10:25:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/non-human-animal",
+      "reviews": [
+        {
+          "outlet": "The Stage 4★",
+          "url": "https://www.thestage.co.uk/reviews/non-human-animal-review-gilded-balloon-teviot-edinburgh-kat-woods"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -983,6 +1001,10 @@
     {
       "title": "Dee Allum: Raumdeuter",
       "reason": "4★ Fest (also reviewed by Chortle), but the verdict is \"admirably honest, upbeat stand-up is a joy to spend time with\" — warm and gentle rather than sharp. Cosiness without edge."
+    },
+    {
+      "title": "House of Life",
+      "reason": "4★ Fest (8 Aug), but the verdict is an \"irresistibly earnest rally cry for joy\" — a rave-church cabaret whose satire of self-help serves a sincere uplift. Joyful-celebration register, ruled out."
     }
   ],
   "seeded": "2026-08-07"
