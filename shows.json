@@ -905,6 +905,28 @@
       ],
       "status": "go",
       "addedAt": "2026-08-09T06:35:00Z"
+    },
+    {
+      "title": "Overtone",
+      "category": "Drama & New Writing",
+      "venue": "Pleasance Dome (Jack Dome)",
+      "time": "14:40",
+      "dates": "5–30 Aug (not 12, 19, 26)",
+      "acclaim": "4★ The Stage; WhatsOnStage: \"a devastating, deeply reflective piece of theatre\"",
+      "why": "Hard-hitting new drama in the Punch mould — a non-linear two-hander on the aftermath of a coercive choirmaster, from Fringe First winner Tom Brennan. \"Terrifically tightly wound performances\" wrestling with \"prickly, profound questions\"; opens comic and direct-address, builds to a shocking close. No sentimentality anywhere near it.",
+      "status": "go",
+      "addedAt": "2026-08-09T07:30:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/overtone",
+      "reviews": [
+        {
+          "outlet": "The Stage 4★",
+          "url": "https://www.thestage.co.uk/reviews/overtone-review-pleasance-dome-edinburgh-tom-brennan"
+        },
+        {
+          "outlet": "WhatsOnStage",
+          "url": "https://www.whatsonstage.com/news/overtone-at-pleasance-dome-edinburgh-fringe-review_1728978/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
