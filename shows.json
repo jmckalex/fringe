@@ -927,6 +927,28 @@
           "url": "https://www.whatsonstage.com/news/overtone-at-pleasance-dome-edinburgh-fringe-review_1728978/"
         }
       ]
+    },
+    {
+      "title": "For Dolores",
+      "category": "Drama & New Writing",
+      "venue": "Traverse Theatre (Traverse 2)",
+      "time": "times vary",
+      "dates": "7–30 Aug (not Mons)",
+      "acclaim": "5★ The Arts Review · 5★ BroadwayWorld · 4★ The Guardian · Irish Times rave",
+      "why": "Eva O'Connor two-hander for Fishamble (four-time Fringe First winners) — two friends, one Scottish, one Irish, reckoning with addiction, motherhood and the worst thing they ever did. \"Funny, bruising and brilliantly written and acted\" (Irish Times): the wit and the damage in the same line, which is the Traverse doing what Punch did.",
+      "link": "https://www.edfringe.com/tickets/whats-on/for-dolores",
+      "reviews": [
+        {
+          "outlet": "The Arts Review 5★",
+          "url": "https://www.theartsreview.com/single-post/galway-international-arts-festival-2026-for-dolores"
+        },
+        {
+          "outlet": "The Irish Times",
+          "url": "https://www.irishtimes.com/culture/stage/review/2026/07/20/for-dolores-review-funny-bruising-and-brilliantly-written-and-acted/"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-09T09:20:00Z"
     }
   ],
   "doNotReadd": [
