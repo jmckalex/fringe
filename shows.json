@@ -1069,6 +1069,32 @@
           "url": "https://www.timeout.com/edinburgh/comedy/andrew-doherty-reviewers-welcome-to-die"
         }
       ]
+    },
+    {
+      "title": "Supposing:",
+      "category": "Drama & New Writing",
+      "venue": "Traverse Theatre (Traverse 2)",
+      "time": "times vary",
+      "dates": "7–30 Aug (not Mons)",
+      "acclaim": "4★ The Stage (Lyn Gardner) · 4★ All Edinburgh Theatre · WhatsOnStage: \"subtle, slow-burning power\"",
+      "why": "Zinnie Harris writes and directs a modern Cassandra: Sally falls down a hole, comes up able to see what is coming, and nobody believes her. Greek myth used as an argument about belief, evidence and a society's willed blindness to injustice — the ideas are the drama, not decoration on it, and Harris plays it dark and comic rather than earnest. Gardner: \"quietly effective and deftly done\".",
+      "link": "https://www.edfringe.com/tickets/whats-on/supposing",
+      "reviews": [
+        {
+          "outlet": "The Stage 4★",
+          "url": "https://www.thestage.co.uk/reviews/supposing-review-traverse-theatre-edinburgh-zinnie-harris"
+        },
+        {
+          "outlet": "All Edinburgh Theatre 4★",
+          "url": "https://www.alledinburghtheatre.com/tag/supposing/"
+        },
+        {
+          "outlet": "WhatsOnStage",
+          "url": "https://www.whatsonstage.com/news/supposing-at-traverse-theatre-edinburgh-fringe-review_1728814/"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-09T18:15:00Z"
     }
   ],
   "doNotReadd": [
