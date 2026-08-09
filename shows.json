@@ -1,7 +1,7 @@
 {
   "title": "Julia & Jason's Fringe 2026 Shortlist",
   "subtitle": "Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns",
-  "updated": "2026-08-08",
+  "updated": "2026-08-09",
   "categoryOrder": [
     "Drama & New Writing",
     "Visual & Inventive Theatre",
@@ -887,6 +887,24 @@
       ],
       "status": "go",
       "addedAt": "2026-08-08T18:15:00Z"
+    },
+    {
+      "title": "Paul Foot: The Future",
+      "category": "Comedy & Storytelling",
+      "venue": "Underbelly Cowgate – Belly Dancer",
+      "time": "19:20",
+      "dates": "Until 30 Aug, not 19",
+      "acclaim": "4★ Fest",
+      "why": "Alt-comedy's great eccentric builds an hour out of niche statistics into an actual argument — that our appetite for cruelty, not scarcity, is what keeps the socio-economic future bleak — with his Jewish grandmother's suitcase from her escape from Nazi Germany at its centre. Absurdism doing the work of a thesis rather than decorating one, which is the Arcadia signal in stand-up form; Fest calls it \"unexpectedly rousing\". Weird and acerbic, nowhere near twee.",
+      "link": "https://www.edfringe.com/tickets/whats-on/paul-foot-the-future",
+      "reviews": [
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/06/review-paul-foot-the-future/"
+        }
+      ],
+      "status": "go",
+      "addedAt": "2026-08-09T06:35:00Z"
     }
   ],
   "doNotReadd": [
@@ -913,6 +931,14 @@
     {
       "title": "Sammy J: Hero Complex",
       "reason": "Marketed as five-star, but the actual Fringe 2026 notice is Chortle 3.5★ (Tim Harding, 8 Aug): \"exuberant innocence and gentle laughs\", an earnest dorky persona, \"a dispatch from a blessedly less edgy era\". Structurally masterful storytelling, but the tone is precisely the gentle/twee register ruled out."
+    },
+    {
+      "title": "House Fly",
+      "reason": "4★ Fest, but it is a fly-drag clown persona piece from clown Tess O'Shea — \"unstoppably silly, gleeful\". Clowning is what the show is, and the register is the gleeful/twee one ruled out."
+    },
+    {
+      "title": "Dee Allum: Raumdeuter",
+      "reason": "4★ Fest (also reviewed by Chortle), but the verdict is \"admirably honest, upbeat stand-up is a joy to spend time with\" — warm and gentle rather than sharp. Cosiness without edge."
     }
   ],
   "seeded": "2026-08-07"
