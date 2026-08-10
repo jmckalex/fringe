@@ -1363,6 +1363,46 @@
           "url": "https://theatreweekly.com/edinburgh-fringe-review-dusk-night-dawn-at-assembly-roxy/"
         }
       ]
+    },
+    {
+      "title": "Will Adamsdale: AI, AI, Oh…",
+      "category": "Comedy & Storytelling",
+      "venue": "Underbelly George Square",
+      "time": "13:45",
+      "dates": "to 29 Aug",
+      "acclaim": "The Scotsman — \"narrative comedy at its peak\"",
+      "why": "The Perrier winner's true(ish) robo-bromance about writing a sitcom with ChatGPT — The Scotsman says watching him is \"like watching Fred Astaire, at his peak, tapdance\", with \"tiny verbal callbacks seeded through\" beautifully crafted prose. Absurd premise carrying a real argument about technology: ideas and wit in the same breath.",
+      "status": "go",
+      "addedAt": "2026-08-10T18:20:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/will-adamsdale-ai-ai-oh-or-how-i-wrote-a-hit-sitcom-with-chatgpt-but-we-re-not-talking-now",
+      "reviews": [
+        {
+          "outlet": "The Scotsman",
+          "url": "https://www.scotsman.com/arts-and-culture/edinburgh-festivals/comedy/fringe-comedy-reviews-will-adamsdale-sofie-hagen-paul-foot-8847339"
+        }
+      ]
+    },
+    {
+      "title": "Scout Boxall: God's Favourite",
+      "category": "Comedy & Storytelling",
+      "venue": "Assembly George Square (The Box)",
+      "time": "16:20",
+      "dates": "5–30 Aug (not Mondays)",
+      "acclaim": "5★ Time Out, 4★ Chortle, 4★ The List; The Scotsman — \"cuttingly funny above all else\"",
+      "why": "A dark night of the soul told through Joan of Arc and Hildegard of Bingen — Chortle calls it \"an evocative piece of magical realism storytelling\" rather than stand-up, and The Scotsman finds it \"cuttingly funny above all else\". Dense, allusive and unsentimental: the Katherine Ryan edge with the reading behind it.",
+      "status": "go",
+      "addedAt": "2026-08-10T18:21:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/scout-boxall-god-s-favourite",
+      "reviews": [
+        {
+          "outlet": "The Scotsman",
+          "url": "https://www.scotsman.com/arts-and-culture/edinburgh-festivals/comedy/fringe-comedy-reviews-scout-boxall-tom-towelling-8848315"
+        },
+        {
+          "outlet": "Chortle 4★",
+          "url": "https://www.chortle.co.uk/review/2025/04/04/57823/micf:_scout_boxall:_gods_favourite"
+        }
+      ]
     }
   ],
   "doNotReadd": [
