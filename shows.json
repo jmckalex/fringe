@@ -1341,6 +1341,28 @@
           "url": "https://www.thestage.co.uk/reviews/alone-review-assembly-george-square-edinburgh-luke-thornborough"
         }
       ]
+    },
+    {
+      "title": "DUSK/NIGHT/DAWN",
+      "category": "Magic, Circus & Spectacle",
+      "venue": "Assembly Roxy",
+      "time": "21:30",
+      "dates": "5–30 Aug",
+      "acclaim": "5★ The Stage (\"Breathtaking\"), 4★ Theatre Weekly",
+      "why": "NYC collective Vertical Dreamscape turn pole into serious stagecraft — a dark, cinematic night-shift dreamscape that Theatre Weekly calls physical theatre, dance and visual art at once. Spectacle with an edge, nowhere near twee; the same slot as Circa: Wolf.",
+      "status": "go",
+      "addedAt": "2026-08-10T17:20:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/dusk-night-dawn",
+      "reviews": [
+        {
+          "outlet": "The Stage 5★",
+          "url": "https://www.thestage.co.uk/reviews/dusknightdawn-review-assembly-roxy-edinburgh-vertical-dreamscape"
+        },
+        {
+          "outlet": "Theatre Weekly 4★",
+          "url": "https://theatreweekly.com/edinburgh-fringe-review-dusk-night-dawn-at-assembly-roxy/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
