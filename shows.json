@@ -1171,6 +1171,42 @@
           "url": "https://www.thestage.co.uk/reviews/the-jolly-fisherman-review-underbelly-george-square-edinburgh-john-dinneen-alex-hill-johny-khan"
         }
       ]
+    },
+    {
+      "title": "This Is Not America",
+      "category": "Drama & New Writing",
+      "venue": "Pleasance Courtyard (Bunker Two)",
+      "time": "11:05am",
+      "dates": "5–31 Aug",
+      "acclaim": "5★ Theatre Weekly",
+      "why": "Philip Stokes's world-premiere thriller: a body in a Brooklyn house, three identical brothers hauled in for questioning, and Jack Stokes playing every one of them — switching voice and body between interrogations until truth, identity and power come apart. Theatre Weekly calls it \"one of the strongest dramas at this year’s Fringe\" and Stokes's work \"one of the most electrifying performances in Edinburgh this year\", with a final act of \"terrifying force\". Hard-hitting new drama in the Punch register, and the argument about American myth-making is the play rather than its setting.",
+      "status": "go",
+      "addedAt": "2026-08-10T09:20:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/this-is-not-america-a-razor-edge-new-play-to-start-your-day",
+      "reviews": [
+        {
+          "outlet": "Theatre Weekly 5★",
+          "url": "https://theatreweekly.com/edinburgh-fringe-review-this-is-not-america-at-pleasance-courtyard/"
+        }
+      ]
+    },
+    {
+      "title": "Ethan & Gigi Present: THE MOVEMENT",
+      "category": "Comedy & Storytelling",
+      "venue": "Underbelly Cowgate (Big Belly)",
+      "time": "11pm",
+      "dates": "5–30 Aug",
+      "acclaim": "4★ Fest (Evan Beswick)",
+      "why": "Two overconfident American theatremakers set out to liberate the masses through the power of theatre and undermine themselves at every turn — a mock-heroic demolition of revolutionary art, political posturing and the form itself. Fest calls the Hamilton parody \"the single funniest thing I’ve ever seen\" and credits \"superior comedic writing\" behind the chaos, signing off \"Vive THE MOVEMENT\". Weird, absurd and satirical with real bite, nothing gentle about it. Flagged: the company tags itself Clown/Alternative Comedy, but the show is a written two-hander satire rather than a red-nose persona piece, so it stays in per the no-clowns rule.",
+      "status": "go",
+      "addedAt": "2026-08-10T09:21:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/ethan-gigi-present-the-movement",
+      "reviews": [
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/09/ethan-gigi-present-the-movement/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
