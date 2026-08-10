@@ -1319,6 +1319,28 @@
           "url": "https://www.chortle.co.uk/review/2026/08/09/61232/amy_matthews:_definitions_of_toast"
         }
       ]
+    },
+    {
+      "title": "ALONE",
+      "category": "Drama & New Writing",
+      "venue": "Assembly George Square (The Box)",
+      "time": "13:35",
+      "dates": "5–30 Aug (not 17, 24); also 17:40 on 25–28 Aug",
+      "acclaim": "5★ The Skinny, 4★ The Stage",
+      "why": "Two women — a pilot and a scientist — trapped on a failing spacecraft, with The Stage praising a script that \"skilfully and shrewdly explores themes ranging from misogyny in science to the climate emergency\". Ideas-driven two-hander where the argument is the drama, and it ends in darkness rather than reassurance.",
+      "status": "go",
+      "addedAt": "2026-08-10T15:40:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/alone",
+      "reviews": [
+        {
+          "outlet": "The Skinny 5★",
+          "url": "https://www.theskinny.co.uk/festivals/edinburgh-fringe/theatre/alone-the-box-george-square"
+        },
+        {
+          "outlet": "The Stage 4★",
+          "url": "https://www.thestage.co.uk/reviews/alone-review-assembly-george-square-edinburgh-luke-thornborough"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -1361,6 +1383,10 @@
     {
       "title": "Jonathan Oldfield: Exquisite Corpse",
       "reason": "4★ Fest (10 Aug), sketch and character comedy praised as \"utterly singular in its unpredictable joy\" with \"unique warmth\" — gentle and whimsical in register. Cosiness without edge, ruled out."
+    },
+    {
+      "title": "Dane Buckley: Darling",
+      "reason": "5★ The Skinny (10 Aug), debut hour about the women who raised him — but reviewed as \"a warm hug of a show: an explosive celebration of queerness, family and heritage\", heartfelt rather than biting. Warmth in place of edge, ruled out."
     }
   ],
   "seeded": "2026-08-07"
