@@ -1,7 +1,7 @@
 {
   "title": "Julia & Jason's Fringe 2026 Shortlist",
   "subtitle": "Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns",
-  "updated": "2026-08-09",
+  "updated": "2026-08-10",
   "categoryOrder": [
     "Drama & New Writing",
     "Visual & Inventive Theatre",
@@ -1133,6 +1133,24 @@
         {
           "outlet": "Fest 4★",
           "url": "https://festmag.com/2026/08/06/review-rob-preston-amazing-global-solutions/"
+        }
+      ]
+    },
+    {
+      "title": "The Plot",
+      "category": "Drama & New Writing",
+      "venue": "Summerhall",
+      "time": "7:30pm",
+      "dates": "6–31 Aug",
+      "acclaim": "4★ The Stage (Fergus Morgan)",
+      "why": "Emma Howlett's world premiere reopens the Gunpowder Plot as a fight over who gets to write the story — courtroom drama, backstage comedy and Shakespeare folded into one 70-minute argument about spin, myth-making and who controls history. The Stage calls it a \"slippery, shifting study\" and \"thrillingly smart riff on conspiracy, spin and Shakespeare\", signing off \"Remember, remember the name Emma Howlett. She is going places.\" The ideas are the drama, not decoration on it — the Arcadia signal, done with wit rather than earnestness.",
+      "status": "go",
+      "addedAt": "2026-08-10T07:20:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/the-plot",
+      "reviews": [
+        {
+          "outlet": "The Stage 4★",
+          "url": "https://www.thestage.co.uk/reviews/the-plot-review-summerhall-edinburgh-emma-howlett-theatregoose"
         }
       ]
     }
