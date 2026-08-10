@@ -1301,6 +1301,24 @@
           "url": "https://www.comedy.co.uk/fringe/2026/frankie-thompson/"
         }
       ]
+    },
+    {
+      "title": "Amy Matthews: Definitions of Toast",
+      "category": "Comedy & Storytelling",
+      "venue": "Monkey Barrel Comedy (The Tron)",
+      "time": "15:00",
+      "dates": "5–30 Aug (not 12, 19, 26)",
+      "acclaim": "4★ Chortle",
+      "why": "Chortle calls it the hour where everything clicks into place — \"smart, clinical wit, emotional vulnerability\" from a comic writing about rage she cannot access. The clinical wit is the Katherine Ryan register, sharp rather than consoling.",
+      "status": "go",
+      "addedAt": "2026-08-10T14:45:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/amy-matthews-definitions-of-toast",
+      "reviews": [
+        {
+          "outlet": "Chortle 4★",
+          "url": "https://www.chortle.co.uk/review/2026/08/09/61232/amy_matthews:_definitions_of_toast"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -1339,6 +1357,10 @@
     {
       "title": "House of Life",
       "reason": "4★ Fest (8 Aug), but the verdict is an \"irresistibly earnest rally cry for joy\" — a rave-church cabaret whose satire of self-help serves a sincere uplift. Joyful-celebration register, ruled out."
+    },
+    {
+      "title": "Jonathan Oldfield: Exquisite Corpse",
+      "reason": "4★ Fest (10 Aug), sketch and character comedy praised as \"utterly singular in its unpredictable joy\" with \"unique warmth\" — gentle and whimsical in register. Cosiness without edge, ruled out."
     }
   ],
   "seeded": "2026-08-07"
