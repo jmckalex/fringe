@@ -1225,6 +1225,60 @@
           "url": "https://www.thestage.co.uk/reviews/buggers-review-pleasance-courtyard-edinburgh-alistair-hall"
         }
       ]
+    },
+    {
+      "title": "Jack Brookmyre: Impressionable",
+      "category": "Comedy & Storytelling",
+      "venue": "The Stand Comedy Club 3 & 4",
+      "time": "18:55",
+      "dates": "6–30 Aug (not 17)",
+      "acclaim": "4★ Fest (Si Hawkins)",
+      "why": "An impressionist hour that is really an argument about accents — how a voice decides whether we trust a politician — with the impressions carrying the thesis rather than decorating it. Fest, openly sceptical going in, came out praising “whip-smart storytelling, savvy observations and caustic gags”. Caustic and idea-led rather than warm: the Katherine Ryan register with something to say.",
+      "status": "go",
+      "addedAt": "2026-08-10T11:35:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/jack-brookmyre-impressionable",
+      "reviews": [
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/10/review-jack-brookmyre-impressionable/"
+        }
+      ]
+    },
+    {
+      "title": "Demi Adejuyigbe Sells Out",
+      "category": "Comedy & Storytelling",
+      "venue": "Pleasance Dome",
+      "time": "18:45",
+      "dates": "5–30 Aug (not 17)",
+      "acclaim": "4★ Fest (Evan Beswick)",
+      "why": "Songs, sketches, one-liners and audience interaction welded onto a bit about selling out for money — controlled chaos held together by, in Fest’s words, “super sharp comebacks” and a performer confident enough to run genuinely risky material. Weird, fast and deliciously silly, with the wit doing the work rather than charm.",
+      "status": "go",
+      "addedAt": "2026-08-10T11:36:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/demi-adejuyigbe-sells-out",
+      "reviews": [
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/10/review-demi-adejuyigbe-sells-out/"
+        }
+      ]
+    },
+    {
+      "title": "PLASTIC",
+      "category": "Music, Musicals & Cabaret",
+      "venue": "Summerhall",
+      "time": "20:45",
+      "dates": "6–31 Aug (not 17, 24)",
+      "acclaim": "4★ Fest (Xuanlin Tham)",
+      "why": "Minyoung Kim plays the geomungo — the ancient Korean zither — against electronics and jeongga poetry-song, with psychedelic projection, building an argument about climate collapse and cultural inheritance out of the collision of the two. Fest calls it “a startlingly cinematic journey” and comes out the other side calling it cathartic. Gig-theatre with real intellectual weight; austere and strange rather than pretty.",
+      "status": "go",
+      "addedAt": "2026-08-10T11:37:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/plastic",
+      "reviews": [
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/10/review-plastic/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
