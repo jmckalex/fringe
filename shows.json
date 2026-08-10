@@ -1443,6 +1443,28 @@
           "url": "https://festmag.com/2026/08/10/the-very-best-of-the-edinburgh-festivals-2026/"
         }
       ]
+    },
+    {
+      "title": "Alice Fraser: Oh Man!",
+      "category": "Comedy & Storytelling",
+      "venue": "Monkey Barrel Comedy at O'Neill's (The Tron)",
+      "time": "20:40",
+      "dates": "5–30 Aug (not 17)",
+      "acclaim": "5★ Broadway Baby & EdinburghGuide; 4.5★ Edinburgh Reviews; rave in BroadwayWorld",
+      "why": "Fraser takes on the manosphere with a sentient Roomba and Ancient Greek philosophy — \"an intellectually rich hour\" blending philosophy, social commentary and sharp observational comedy, \"cutting-edge\" rather than consoling. Ideas that ARE the comedy, done with real craft: the Arcadia signal in stand-up form, and Jason the philosopher gets the Greeks thrown in.",
+      "status": "go",
+      "addedAt": "2026-08-10T22:25:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/alice-fraser-oh-man",
+      "reviews": [
+        {
+          "outlet": "BroadwayWorld",
+          "url": "https://www.broadwayworld.com/scotland/article/EDINBURGH-2026-Review-ALICE-FRASER-OH-MAN-Monkey-Barrel-at-ONeills-The-Tron-20260809"
+        },
+        {
+          "outlet": "Edinburgh Reviews 4.5★",
+          "url": "https://edinburgh-reviews.co.uk/review-alice-fraser-oh-man/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -1493,6 +1515,10 @@
     {
       "title": "Shotgunned",
       "reason": "The “5★ The Stage” on the edfringe page is a marketing quote from the sold-out 2024 run, not a Fringe 2026 notice. The actual 2026 review is Theatre Weekly 4★ (8 Aug) and lukewarm — a non-linear relationship two-hander on “familiar territory”, the reviewer asking “what is the actual point of this play?” before the ending redeems it. Heartfelt and endearing rather than sharp; warmth without bite."
+    },
+    {
+      "title": "Freddie Meredith: Need A Light?",
+      "reason": "Chortle 4★ (Steve Bennett, 9 Aug) for an assured debut, but the show is a lonely, insecure alter-ego styling out his insecurities in a nightclub smoking area — the humour is \"exquisitely realistic\" observation rather than satire, and the review turns on sympathy for his \"intrinsic sadness\" and a \"slightly hopeful resolution\". Poignant sad-sack character comedy: warmth in place of bite."
     }
   ],
   "seeded": "2026-08-07"
