@@ -1,7 +1,7 @@
 {
   "title": "Julia & Jason's Fringe 2026 Shortlist",
   "subtitle": "Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns",
-  "updated": "2026-08-10",
+  "updated": "2026-08-11",
   "categoryOrder": [
     "Drama & New Writing",
     "Visual & Inventive Theatre",
@@ -1481,6 +1481,24 @@
         {
           "outlet": "Fest 4★",
           "url": "https://festmag.com/2026/08/10/review-amanda-dwyer-better-than-revenge/"
+        }
+      ]
+    },
+    {
+      "title": "Krapp's Last Tape",
+      "category": "Drama & New Writing",
+      "venue": "Assembly Roxy (Upstairs)",
+      "time": "13:25",
+      "dates": "until 31 Aug (not 17)",
+      "acclaim": "4★ Fest",
+      "why": "Beckett's man dissected across time — a 69-year-old listening back to the tapes of his younger, hopeful self, and growling at him. Ideas as the drama, not decoration; bleak and exact, with no whimsy anywhere near it. David Westhead's performance is Fest's 'exceptional', and it is Stockard Channing's directorial debut at 82.",
+      "status": "go",
+      "addedAt": "2026-08-11T08:25:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/krapp-s-last-tape",
+      "reviews": [
+        {
+          "outlet": "Fest 4★",
+          "url": "https://festmag.com/2026/08/09/review-krapps-last-tape/"
         }
       ]
     }
