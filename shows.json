@@ -1,7 +1,7 @@
 {
   "title": "Julia & Jason's Fringe 2026 Shortlist",
   "subtitle": "Edinburgh Festival Fringe · 7–31 August 2026 · curated to taste: drama, music, storytelling, magic and spectacle — strictly no clowns",
-  "updated": "2026-08-11",
+  "updated": "2026-08-12",
   "categoryOrder": [
     "Drama & New Writing",
     "Visual & Inventive Theatre",
@@ -1611,6 +1611,24 @@
       "status": "go",
       "addedAt": "2026-08-11T20:20:00Z",
       "link": "https://www.edfringe.com/tickets/whats-on/adam-riches-the-captain"
+    },
+    {
+      "title": "Casual Receptionist of the Quarter",
+      "category": "Comedy & Storytelling",
+      "venue": "Gilded Balloon Patter House",
+      "time": "17:20",
+      "dates": "until 31 Aug (not 17)",
+      "acclaim": "5★ The Reviews Hub",
+      "why": "Nicole Gulasekharam spent ten years on the front desk of an Australian commercial gym and has turned it into a workplace mockumentary with teeth: a pathological people-pleaser made the face of her employer's International Women's Day campaign while management and members grind her down. The review calls it biting, eloquent about how customer-facing labour is exploited, and sparkling in its wit — satire with a real argument in it rather than a fond workplace romp. Character comedy with light, non-scary audience participation.",
+      "status": "go",
+      "addedAt": "2026-08-11T23:20:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/casual-receptionist-of-the-quarter",
+      "reviews": [
+        {
+          "outlet": "The Reviews Hub 5★",
+          "url": "https://www.thereviewshub.com/edinburgh-fringe-20116-casual-receptionist-of-the-quarter-gilded-balloon-patter-house-edinburgh/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -1669,6 +1687,10 @@
     {
       "title": "B48Y Crash Lands on Earth!",
       "reason": "4★ Fest (11 Aug), but the show is a camp alien-persona clown piece — Lukas Meintjes in character teaching the audience to walk and talk like RuPaul. The review is explicit that there are no deeper ideas, just \"unadulterated silliness\". Clowning is what the show is, and the register is silliness without bite."
+    },
+    {
+      "title": "Absolute Bus Stops of Northern Europe and Beyond",
+      "reason": "5★ The Reviews Hub (11 Aug) for Jim Judges's hour on the geography, history and design of bus stops. The nerdy-lecture premise is tempting, but the review describes it as \"clever, affectionate and original\", warm rather than sharp, built from \"deceptively meandering stories\" — enthusiast whimsy, not ideas with bite. Twee side of the line."
     }
   ],
   "seeded": "2026-08-07"
