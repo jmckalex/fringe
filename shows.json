@@ -1728,6 +1728,46 @@
           "url": "https://www.chortle.co.uk/review/2026/06/30/60890/ania_magliano:_peach_fuzz"
         }
       ]
+    },
+    {
+      "title": "HAM",
+      "category": "Visual & Inventive Theatre",
+      "venue": "Summerhall (Old Lab)",
+      "time": "19:30",
+      "dates": "6–30 Aug (not 18, 25)",
+      "acclaim": "4★ Time Out — \"brilliantly accomplished\"",
+      "why": "Hotter Project's eco-hijacking of Hamlet: a grief-stricken vegan avenging the death of a pig, who — like the prince — thinks for far too long, blames his mother, and finally takes revenge by putting on a play. Time Out's verdict is the reason it is here rather than the star count: \"a dumb Hamlet parody, a clever Hamlet parody, a show about how useless eco theatre is that is also an effective piece of eco theatre\", with Shakespeare's own language handled in a \"deft, funny way\". That triple move — making the argument and undercutting it in the same gesture — is the Arcadia shape done as farce, and the wit and the thesis are inseparable. Mary Higgins and Ell Potter draw on clowning and cabaret, but this is a literary parody with a case to argue, not a clown persona piece.",
+      "status": "go",
+      "addedAt": "2026-08-12T17:20:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/ham",
+      "reviews": [
+        {
+          "outlet": "Time Out 4★",
+          "url": "https://www.timeout.com/edinburgh/theatre/ham"
+        }
+      ]
+    },
+    {
+      "title": "As Far As We Know",
+      "category": "Visual & Inventive Theatre",
+      "venue": "Summerhall (Main Hall)",
+      "time": "10:40",
+      "dates": "until 31 Aug (not 18, 25)",
+      "acclaim": "4★ The Skinny — \"a masterclass in storytelling\"; WhatsOnStage: \"a smart, meta-theatrical triumph\"",
+      "why": "Sam Ward's sixth YESYESNONO hour: a woman finds humming holes multiplying in her garden and sets out to learn why, and the show turns that into a cerebral inquiry into the mechanics of narrative and our compulsion to be given answers. It opens looking like an on-stage audiobook and mutates into something absurd and Lynchian. The Skinny calls it \"another surprising tour de force\"; WhatsOnStage puts the company \"at the absolute vanguard of experimental fringe theatre\". Ideas doing the dramatic work, formally rather than decoratively — the Arcadia signal at the inventive-theatre end, and strange and unsettling rather than warm. Flagging one dissent: Binge Fringe gave it three stars.",
+      "status": "go",
+      "addedAt": "2026-08-12T17:21:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/as-far-as-we-know",
+      "reviews": [
+        {
+          "outlet": "The Skinny 4★",
+          "url": "https://www.theskinny.co.uk/festivals/edinburgh-fringe/theatre/as-far-as-we-know-summerhall"
+        },
+        {
+          "outlet": "WhatsOnStage",
+          "url": "https://www.whatsonstage.com/news/as-far-as-we-know-at-summerhall-edinburgh-fringe-review_1729043/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -1794,6 +1834,18 @@
     {
       "title": "Man Sings the Same Song Over and Over Again for an Hour",
       "reason": "4★ The Skinny and a rave in The List (11 Aug) — but the show is a single repetition bit performed fifteen times by Conk in an electric blue suit, and The List calls it \"clowning in its purest form\". Clowning is what the show is, not a technique it borrows, and the verdict register is \"deliriously joyous\" / \"pure euphoria\" — the joyful-celebration tone ruled out. Excluded on both counts."
+    },
+    {
+      "title": "Most of My Moms Are Gay",
+      "reason": "5★ The Reviews Hub (12 Aug) for Abby Goldfarb's Fringe debut, a 13-song comedy musical about being raised by five mothers — but the show bills itself as \"a celebration of unconventional family life\", \"heartfelt and irreverent\", and the material (gay divorce, Jewish identity, OCD, career struggles) is played for warmth rather than bite. Squarely the joyful-celebration register ruled out by the no-twee rule."
+    },
+    {
+      "title": "ROLEPLAY",
+      "reason": "4★ The Skinny for Hannah Reilly's Francesca Moody-produced one-woman comedy-thriller about a feminist podcaster reinventing herself as a slutfluencer — but Time Out, also on the priority list, calls it \"muddled\" and \"overhyped\", says \"the story doesn't convince\" and that it \"tries needlessly hard to provoke when it doesn't have anything to back it up with\". The premise is right for them; the execution is contested by a major outlet, so not on the list."
+    },
+    {
+      "title": "Song Swap-o-Rama 5 with Pauline Vallance",
+      "reason": "5★ The Reviews Hub (12 Aug), but it is a genial afternoon singalong in a piano bar — \"an afternoon treat we never knew existed\". Cosiness without edge; the no-twee rule."
     }
   ],
   "seeded": "2026-08-07"
