@@ -1790,6 +1790,28 @@
           "url": "https://www.thestage.co.uk/features/copy-of-edinburgh-fringe-2026-the-best-shows-to-see-so-far"
         }
       ]
+    },
+    {
+      "title": "COPYCAT",
+      "category": "Drama & New Writing",
+      "venue": "Pleasance Dome (Jack Dome)",
+      "time": "16:10",
+      "dates": "5–31 Aug",
+      "acclaim": "4★ The Stage; Theatre Weekly (12 Aug)",
+      "why": "Joe Sellman-Leava turns a run of sharp impressions — Miliband, Patrick Stewart — into a meditation on AI, authorship and creeping authoritarianism. The Stage calls it thoughtful and multi-stranded; Theatre Weekly, inventive and thought-provoking. Ideas carried on wit rather than decorated with it: the Arcadia signal.",
+      "status": "go",
+      "addedAt": "2026-08-12T18:20:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/copycat",
+      "reviews": [
+        {
+          "outlet": "The Stage 4★",
+          "url": "https://www.thestage.co.uk/reviews/copycat-review-pleasance-dome-edinburgh-joe-sellman-leava"
+        },
+        {
+          "outlet": "Theatre Weekly",
+          "url": "https://theatreweekly.com/edinburgh-fringe-review-copycat-at-pleasance-dome-jack-dome/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -1876,6 +1898,10 @@
     {
       "title": "Tamsyn Kelly: Rat’s Ass",
       "reason": "Fest’s 12 Aug write-up calls it a “crucial, well observed” stand-up hour on class barriers in the arts, but The Skinny gave it 2★ the same day — “haphazard callbacks and a lacklustre finale”, a performer “unable to dive headlong into their beliefs for now”. Right subject, execution not there."
+    },
+    {
+      "title": "The Trials of Magnus Coffinkey",
+      "reason": "4★ Theatre Weekly (12 Aug), \"a triumph of storytelling\" — but the show is a whimsical fairytale of a village bell maker completing three trials in a magical realm, using enchantment as a metaphor for grief and child loss. Tender and affecting rather than sharp; the whimsical register ruled out by the no-twee rule."
     }
   ],
   "seeded": "2026-08-07"
