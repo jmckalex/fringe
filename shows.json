@@ -1768,6 +1768,28 @@
           "url": "https://www.whatsonstage.com/news/as-far-as-we-know-at-summerhall-edinburgh-fringe-review_1729043/"
         }
       ]
+    },
+    {
+      "title": "Turn Your F*cking Phones Off",
+      "category": "Visual & Inventive Theatre",
+      "venue": "Summerhall",
+      "time": "15:40",
+      "dates": "August",
+      "acclaim": "4★ The Stage; rave notice in The Scotsman",
+      "why": "Hannah Maxwell’s one-woman investigation into how digital society has been weaponised against us — surveillance capitalism, the rise of Big Tech, her own phone addiction and bid for a life in analogue, and a spell in Strategic Communications in the Baltics countering Kremlin-backed disinformation. She stages all of it as semi-interactive sketch comedy: pass the parcel, Give Us a Clue, a drunken singsong in a Baltic karaoke bar, costume changes throughout. The Scotsman calls it “very funny, fast and audience-interactive in the most enjoyable and least threatening way possible” and “the perfect way to cut through the endless scroll”, noting that the argument lands with “no small amount of hope, laughter and human connection”. Real ideas carried by real wit — the Arcadia shape in interactive-theatre form, political rather than cosy. She describes it herself as “a town hall meeting at the end of the world”. Run dates were not readable from the listing; check before booking.",
+      "status": "go",
+      "addedAt": "2026-08-12T17:35:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/turn-your-f-cking-phones-off",
+      "reviews": [
+        {
+          "outlet": "The Scotsman",
+          "url": "https://www.scotsman.com/arts-and-culture/edinburgh-festivals/theatre-and-stage/fringe-theatre-reviews-giraffe-turn-your-fcking-phones-off-a-gay-masseurs-guide-to-happy-endings-the-toe-poke-8886153"
+        },
+        {
+          "outlet": "The Stage 4★",
+          "url": "https://www.thestage.co.uk/features/copy-of-edinburgh-fringe-2026-the-best-shows-to-see-so-far"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -1846,6 +1868,14 @@
     {
       "title": "Song Swap-o-Rama 5 with Pauline Vallance",
       "reason": "5★ The Reviews Hub (12 Aug), but it is a genial afternoon singalong in a piano bar — \"an afternoon treat we never knew existed\". Cosiness without edge; the no-twee rule."
+    },
+    {
+      "title": "Bucksomly Betrothals",
+      "reason": "5★ All Edinburgh Theatre (12 Aug, headlined “Bucksome Brilliance”), but the show is a matchmaking-agency farce — a former bowling champion looking for love, an agency facing ruin, a mysterious stranger bent on revenge — billed as a “quirky narrative” promising “laughter and heartwarming moments”. Squarely the whimsical/heartwarming register ruled out by the no-twee rule, and the outlet is outside the priority list."
+    },
+    {
+      "title": "Tamsyn Kelly: Rat’s Ass",
+      "reason": "Fest’s 12 Aug write-up calls it a “crucial, well observed” stand-up hour on class barriers in the arts, but The Skinny gave it 2★ the same day — “haphazard callbacks and a lacklustre finale”, a performer “unable to dive headlong into their beliefs for now”. Right subject, execution not there."
     }
   ],
   "seeded": "2026-08-07"
