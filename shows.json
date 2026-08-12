@@ -1665,6 +1665,42 @@
           "url": "https://festmag.com/2026/08/12/review-joseph-morpurgo-highlander-70/"
         }
       ]
+    },
+    {
+      "title": "The Real Kyle McCarren",
+      "category": "Music, Musicals & Cabaret",
+      "venue": "Pleasance Courtyard (Forth)",
+      "time": "13:50",
+      "dates": "until 30 Aug",
+      "acclaim": "5★ The Stage",
+      "why": "Andy Roninson writes a musical about the best friend and bandmate who died in a freak hurricane accident, and the show is the writing of it — a \"musical-meets-live concert séance\" in which six performers reconstruct a memory that keeps refusing to hold still, the dead man played live by indie songwriter Sean McVerry. The Stage makes it one of its five-star picks, \"nuanced, impeccably written musical theatre exploring grief\"; the interest is in the reconstruction rather than the loss, which is what keeps it formally sharp. Flagging the risk honestly: other notices land on \"warm, deeply moving, undeniably heartfelt\", and that is the register you two usually bounce off — the metatheatrical frame is what earns it a place, so drop it if the sincerity outweighs the structure.",
+      "status": "go",
+      "addedAt": "2026-08-12T12:45:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/the-real-kyle-mccarren",
+      "reviews": [
+        {
+          "outlet": "The Stage 5★",
+          "url": "https://www.thestage.co.uk/features/copy-of-edinburgh-fringe-2026-the-best-shows-to-see-so-far"
+        }
+      ]
+    },
+    {
+      "title": "QFWFQ",
+      "category": "Visual & Inventive Theatre",
+      "venue": "Summerhall",
+      "time": "11:40",
+      "dates": "until 31 Aug",
+      "acclaim": "4★ The Stage",
+      "why": "Gregory Nussen's solo piece takes its title from Calvino's ageless narrator in Cosmicomics and its structure from If On a Winter's Night a Traveller — a metatheatrical hour on the politics of storytelling and truth that runs from architecture to improvised jazz to gender to Israel-Palestine, with no fourth wall to hide behind. The Stage calls it \"exhilarating, surreal and wildly ambitious\"; it won Best Solo Theatre at Hollywood Fringe 2025. The closest thing this week to an Arcadia signal: the ideas are the drama, not decoration on it, and the Calvino frame is doing real structural work rather than being name-checked.",
+      "status": "go",
+      "addedAt": "2026-08-12T12:45:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/qfwfq",
+      "reviews": [
+        {
+          "outlet": "The Stage 4★",
+          "url": "https://www.thestage.co.uk/features/copy-of-edinburgh-fringe-2026-the-best-shows-to-see-so-far"
+        }
+      ]
     }
   ],
   "doNotReadd": [
