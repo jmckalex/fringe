@@ -1830,6 +1830,24 @@
           "url": "https://www.chortle.co.uk/review/2026/08/12/61270/sam_eley_is_basil_crumbwick:_soul_sewage"
         }
       ]
+    },
+    {
+      "title": "Burning Down the Horse",
+      "category": "Visual & Inventive Theatre",
+      "venue": "Underbelly Bristo Square (Friesian)",
+      "time": "12:35",
+      "dates": "5–30 Aug",
+      "acclaim": "5★ Theatre Weekly (12 Aug)",
+      "why": "Fishing4Chips put the audience inside the Trojan Horse as the rank and file, waiting on orders from Odysseus while Ajax, Acamus and the carpenter Epeius — trapped in there by accident, not being a fighter — work through heroic egos, class clashes and sword supply issues. Theatre Weekly’s 5★ calls it “completely reimagines the Trojan horse in an entirely original and hilarious way”, with a cast of “incredible chemistry” who “seamlessly integrate the audience into the show”. Absurd comedy played straight off a classical text, in the round, with real audience participation — the weird end of their taste with something to chew on, and no whimsy in the register.",
+      "status": "go",
+      "addedAt": "2026-08-12T23:25:00Z",
+      "link": "https://www.edfringe.com/tickets/whats-on/burning-down-the-horse",
+      "reviews": [
+        {
+          "outlet": "Theatre Weekly 5★",
+          "url": "https://theatreweekly.com/edinburgh-fringe-review-burning-down-the-horse-at-underbelly-bristo-square-fresian/"
+        }
+      ]
     }
   ],
   "doNotReadd": [
@@ -1924,6 +1942,10 @@
     {
       "title": "Coco The Time-Travelling Tart",
       "reason": "4★ The Skinny calls it \"a master class in character comedy; slutty, outrageous, camp, and completely insane\", but Chortle (Steve Bennett, 9 Aug) gave it 3.5★ and the read there is decisive: a drag-persona show of shambolic audience participation, cheap props and \"crude wordplay and double entendres rather than satirical commentary\" — \"dumb and disorderly entertainment that late Fringe nights were built for\". Anarchic rather than twee, so not a no-twee rejection, but the wit is not the sharp, ideas-carrying kind, and the one strong notice is contradicted by a second priority outlet."
+    },
+    {
+      "title": "Shane Torres @ Assembly Roxy",
+      "reason": "4★ The Skinny (12 Aug), but the verdict is \"the big-hearted Texan comic Shane Torres delivers a lesson in masculinity\" — big-hearted and instructive rather than sharp. Warmth in place of bite, and a 4★ without the exceptional praise the bar requires."
     }
   ],
   "seeded": "2026-08-07"
